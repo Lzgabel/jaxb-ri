@@ -170,7 +170,7 @@ public final class NamespaceContextImpl implements NamespaceContext2 {
                         if (current.elementLocalName!=null) {
     						current.setTagName(size, current.elementLocalName, current.getOuterPeer());
                         }
-                        
+
                         put(nsUris[i],null);
                         return put("", "");
                     }
@@ -460,6 +460,7 @@ public final class NamespaceContextImpl implements NamespaceContext2 {
         public void setTagName( Name tagName, Object outerPeer ) {
             assert tagName!=null;
             this.elementName = tagName;
+            this.elementLocalName = null;
             this.outerPeer = outerPeer;
         }
 
