@@ -17,17 +17,17 @@
     -->
     <Match>
         <Or>
-            <Class name="org.glassfish.jaxb.runtime.util.AttributesImpl"/>
-            <Class name="org.glassfish.jaxb.runtime.v2.runtime.NameBuilder"/>
-            <Class name="org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.TagName"/>
-            <Class name="org.glassfish.jaxb.runtime.v2.schemagen.Util"/>
-            <Class name="org.glassfish.jaxb.runtime.v2.util.QNameMap"/>
+            <Class name="cn.glassfish.jaxb.runtime.util.AttributesImpl"/>
+            <Class name="cn.glassfish.jaxb.runtime.v2.runtime.NameBuilder"/>
+            <Class name="cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.TagName"/>
+            <Class name="cn.glassfish.jaxb.runtime.v2.schemagen.Util"/>
+            <Class name="cn.glassfish.jaxb.runtime.v2.util.QNameMap"/>
         </Or>
         <Bug pattern="ES_COMPARING_PARAMETER_STRING_WITH_EQ"/>
     </Match>
-    
+
     <Match>
-        <Class name="org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext$State"/>
+        <Class name="cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext$State"/>
         <Bug pattern="NP_NULL_ON_SOME_PATH"/>
     </Match>
 

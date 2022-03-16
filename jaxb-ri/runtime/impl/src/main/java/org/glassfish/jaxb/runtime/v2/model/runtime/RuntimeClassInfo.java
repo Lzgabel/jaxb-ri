@@ -8,12 +8,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.runtime;
+package cn.glassfish.jaxb.runtime.v2.model.runtime;
 
-import org.glassfish.jaxb.core.annotation.XmlLocation;
-import org.glassfish.jaxb.core.v2.model.core.ClassInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
+import cn.glassfish.jaxb.core.annotation.XmlLocation;
+import cn.glassfish.jaxb.core.v2.model.core.ClassInfo;
+import cn.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
+import cn.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
 import org.xml.sax.Locator;
 
 import javax.xml.namespace.QName;
@@ -36,7 +36,7 @@ public interface RuntimeClassInfo extends ClassInfo<Type,Class>, RuntimeNonEleme
     RuntimePropertyInfo getProperty(String name);
 
     Method getFactoryMethod();
-    
+
     /**
      * If {@link #hasAttributeWildcard()} is true,
      * returns the accessor to access the property.

@@ -8,20 +8,20 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.schemagen;
+package cn.glassfish.jaxb.runtime.v2.schemagen;
 
 
 /**
  * TODO: JAX-WS dependes on this class - consider moving it somewhere more stable, Notify JAX-WS before modifying anything...
  *
- * Other miscellaneous utility methods. 
- * 
+ * Other miscellaneous utility methods.
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
 public final class Util {
     private Util() {}   // no instanciation please
-    
+
     /**
      * Escape any characters that would cause the single arg constructor
      * of java.net.URI to complain about illegal chars.
@@ -111,5 +111,5 @@ public final class Util {
             return s.equals(t);
         }
         return false;
-    }    
+    }
 }

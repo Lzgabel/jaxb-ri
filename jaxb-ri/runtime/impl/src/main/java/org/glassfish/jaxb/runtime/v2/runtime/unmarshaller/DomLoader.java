@@ -8,9 +8,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
 
-import org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
+import cn.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
 import jakarta.xml.bind.annotation.DomHandler;
 import org.xml.sax.SAXException;
 
@@ -32,7 +32,7 @@ public class DomLoader<ResultT extends Result> extends Loader {
      * This instance is created for each unmarshalling episode.
      */
     private final class State {
-        
+
         /** This handler will receive SAX events. */
         private TransformerHandler handler = null;
 
@@ -109,7 +109,7 @@ public class DomLoader<ResultT extends Result> extends Loader {
     @Override
     public void text(UnmarshallingContext.State state, CharSequence text) throws SAXException {
         if(text.length()==0)
-            return;     // there's no point in creating an empty Text node in DOM. 
+            return;     // there's no point in creating an empty Text node in DOM.
         try {
             State s = (State) state.getTarget();
             s.handler.characters(text.toString().toCharArray(),0,text.length());

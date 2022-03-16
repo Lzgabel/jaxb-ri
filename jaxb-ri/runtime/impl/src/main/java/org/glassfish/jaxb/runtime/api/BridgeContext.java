@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.api;
+package cn.glassfish.jaxb.runtime.api;
 
 import jakarta.xml.bind.ValidationEventHandler;
 import jakarta.xml.bind.attachment.AttachmentMarshaller;
@@ -41,7 +41,7 @@ import jakarta.xml.bind.attachment.AttachmentUnmarshaller;
 @Deprecated
 public abstract class BridgeContext {
     protected BridgeContext() {}
-    
+
     /**
      * Registers the error handler that receives unmarshalling/marshalling errors.
      *

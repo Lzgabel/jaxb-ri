@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.annotation;
+package cn.glassfish.jaxb.runtime.v2.model.annotation;
 
 /**
  * <p><b>Auto-generated, do not edit.</b></p>

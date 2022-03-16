@@ -13,9 +13,9 @@ package com.sun.tools.xjc.model;
 import jakarta.activation.MimeType;
 import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 
-import org.glassfish.jaxb.core.v2.TODO;
-import org.glassfish.jaxb.core.v2.model.core.Adapter;
-import org.glassfish.jaxb.core.v2.model.core.ID;
+import cn.glassfish.jaxb.core.v2.TODO;
+import cn.glassfish.jaxb.core.v2.model.core.Adapter;
+import cn.glassfish.jaxb.core.v2.model.core.ID;
 
 /**
  * Factory methods to create a new {@link TypeUse} from an existing one.

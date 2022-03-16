@@ -8,15 +8,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime;
+package cn.glassfish.jaxb.runtime.v2.runtime;
 
 import com.sun.istack.NotNull;
-import org.glassfish.jaxb.core.marshaller.SAX2DOMEx;
-import org.glassfish.jaxb.runtime.api.Bridge;
-import org.glassfish.jaxb.runtime.api.TypeReference;
-import org.glassfish.jaxb.runtime.v2.runtime.output.SAXOutput;
-import org.glassfish.jaxb.runtime.v2.runtime.output.XMLStreamWriterOutput;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallerImpl;
+import cn.glassfish.jaxb.core.marshaller.SAX2DOMEx;
+import cn.glassfish.jaxb.runtime.api.Bridge;
+import cn.glassfish.jaxb.runtime.api.TypeReference;
+import cn.glassfish.jaxb.runtime.v2.runtime.output.SAXOutput;
+import cn.glassfish.jaxb.runtime.v2.runtime.output.XMLStreamWriterOutput;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallerImpl;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;

@@ -8,12 +8,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core;
+package cn.glassfish.jaxb.core;
 
 import junit.framework.TestCase;
 
 public class UtilsTest extends TestCase {
-    
+
     public void testGetClassLogger() {
         assertEquals(UtilsTest.class.getName(), Utils.getClassLogger().getName());
     }

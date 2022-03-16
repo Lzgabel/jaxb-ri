@@ -8,16 +8,16 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.glassfish.jaxb.runtime.v2.model.impl;
 
-import org.glassfish.jaxb.core.v2.model.core.ID;
-import org.glassfish.jaxb.core.v2.model.core.NonElement;
-import org.glassfish.jaxb.core.v2.model.core.PropertyInfo;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeNonElementRef;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
-import org.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
-import org.glassfish.jaxb.runtime.v2.runtime.Transducer;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
+import cn.glassfish.jaxb.core.v2.model.core.ID;
+import cn.glassfish.jaxb.core.v2.model.core.NonElement;
+import cn.glassfish.jaxb.core.v2.model.core.PropertyInfo;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimeNonElementRef;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
+import cn.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
+import cn.glassfish.jaxb.runtime.v2.runtime.Transducer;
+import cn.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
 import jakarta.xml.bind.annotation.XmlList;
 
 import java.util.Collections;

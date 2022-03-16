@@ -35,8 +35,8 @@ import com.sun.tools.xjc.outline.Outline;
 import com.sun.tools.xjc.reader.Ring;
 import com.sun.tools.xjc.reader.xmlschema.BGMBuilder;
 import com.sun.tools.xjc.reader.xmlschema.bindinfo.BIFactoryMethod;
-import org.glassfish.jaxb.core.v2.model.core.ClassInfo;
-import org.glassfish.jaxb.core.v2.model.core.Element;
+import cn.glassfish.jaxb.core.v2.model.core.ClassInfo;
+import cn.glassfish.jaxb.core.v2.model.core.Element;
 import com.sun.xml.xsom.ForeignAttributes;
 import com.sun.xml.xsom.XSComponent;
 
@@ -78,7 +78,7 @@ public final class CClassInfo extends AbstractCElement implements ClassInfo<NTyp
      * Custom {@link #getSqueezedName() squeezed name}, if any.
      */
     private /*almost final*/ @Nullable String squeezedName;
-    
+
     /**
      * If this class also gets {@link XmlRootElement}, the class name.
      */
@@ -141,7 +141,7 @@ public final class CClassInfo extends AbstractCElement implements ClassInfo<NTyp
                 this.squeezedName = factoryMethod.name;
             }
         }
-        
+
         model.add(this);
     }
 
@@ -302,7 +302,7 @@ public final class CClassInfo extends AbstractCElement implements ClassInfo<NTyp
     public CNonElement getInfo() {
         return this;
     }
-    
+
     @Override
     public Element<NType,NClass> asElement() {
         if(isElement())
@@ -417,7 +417,7 @@ public final class CClassInfo extends AbstractCElement implements ClassInfo<NTyp
             return null;
         }
     }
-    
+
     public CClassRef getRefBaseClass() {
         if (baseClass instanceof CClassRef) {
             return (CClassRef) baseClass;

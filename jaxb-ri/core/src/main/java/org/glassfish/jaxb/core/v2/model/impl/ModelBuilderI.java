@@ -8,10 +8,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.model.impl;
+package cn.glassfish.jaxb.core.v2.model.impl;
 
-import org.glassfish.jaxb.core.v2.model.annotation.AnnotationReader;
-import org.glassfish.jaxb.core.v2.model.nav.Navigator;
+import cn.glassfish.jaxb.core.v2.model.annotation.AnnotationReader;
+import cn.glassfish.jaxb.core.v2.model.nav.Navigator;
 
 /**
  * User: Iaroslav Savytskyi

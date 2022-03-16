@@ -8,10 +8,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
 
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.TransducedAccessor;
+import cn.glassfish.jaxb.runtime.api.AccessorException;
+import cn.glassfish.jaxb.runtime.v2.runtime.reflect.TransducedAccessor;
 import jakarta.xml.bind.JAXBElement;
 import org.xml.sax.SAXException;
 

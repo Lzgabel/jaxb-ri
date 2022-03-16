@@ -8,9 +8,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.model.core;
+package cn.glassfish.jaxb.core.v2.model.core;
 
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
+import cn.glassfish.jaxb.core.v2.WellKnownNamespace;
 
 import javax.xml.XMLConstants;
 import javax.xml.namespace.QName;

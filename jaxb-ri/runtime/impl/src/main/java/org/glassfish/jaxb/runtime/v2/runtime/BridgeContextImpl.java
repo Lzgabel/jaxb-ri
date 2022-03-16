@@ -8,10 +8,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime;
+package cn.glassfish.jaxb.runtime.v2.runtime;
 
-import org.glassfish.jaxb.runtime.api.BridgeContext;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallerImpl;
+import cn.glassfish.jaxb.runtime.api.BridgeContext;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallerImpl;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.ValidationEventHandler;
 import jakarta.xml.bind.attachment.AttachmentMarshaller;

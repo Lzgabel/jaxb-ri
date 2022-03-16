@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.api;
+package cn.glassfish.jaxb.runtime.api;
 
 import javax.xml.namespace.QName;
 import java.lang.annotation.Annotation;
@@ -57,7 +57,7 @@ public final class TypeReference {
             if(annotations == null) nullArgs += (nullArgs.length() > 0 ? ", annotations" : "annotations");
 
             Messages.ARGUMENT_CANT_BE_NULL.format(nullArgs);
-            
+
             throw new IllegalArgumentException(Messages.ARGUMENT_CANT_BE_NULL.format(nullArgs));
         }
 
@@ -84,7 +84,7 @@ public final class TypeReference {
      * Otherwise returns an identical type.
      */
     public TypeReference toItemType() {
-        // if we are to reinstitute this check, check JAXB annotations only 
+        // if we are to reinstitute this check, check JAXB annotations only
         // assert annotations.length==0;   // not designed to work with adapters.
 
         Type base = Utils.REFLECTION_NAVIGATOR.getBaseClass(type, Collection.class);

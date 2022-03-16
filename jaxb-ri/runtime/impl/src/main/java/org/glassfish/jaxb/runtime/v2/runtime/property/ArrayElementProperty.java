@@ -8,21 +8,21 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.property;
+package cn.glassfish.jaxb.runtime.v2.runtime.property;
 
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.core.v2.model.core.PropertyKind;
-import org.glassfish.jaxb.core.v2.model.core.TypeRef;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeElementPropertyInfo;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeTypeRef;
-import org.glassfish.jaxb.core.v2.runtime.RuntimeUtil;
-import org.glassfish.jaxb.runtime.v2.runtime.*;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Lister;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.NullSafeAccessor;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.*;
-import org.glassfish.jaxb.runtime.v2.util.QNameMap;
+import cn.glassfish.jaxb.runtime.api.AccessorException;
+import cn.glassfish.jaxb.core.v2.model.core.PropertyKind;
+import cn.glassfish.jaxb.core.v2.model.core.TypeRef;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimeElementPropertyInfo;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimeTypeRef;
+import cn.glassfish.jaxb.core.v2.runtime.RuntimeUtil;
+import cn.glassfish.jaxb.runtime.v2.runtime.*;
+import cn.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
+import cn.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator;
+import cn.glassfish.jaxb.runtime.v2.runtime.reflect.Lister;
+import cn.glassfish.jaxb.runtime.v2.runtime.reflect.NullSafeAccessor;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.*;
+import cn.glassfish.jaxb.runtime.v2.util.QNameMap;
 import jakarta.xml.bind.JAXBException;
 import org.xml.sax.SAXException;
 

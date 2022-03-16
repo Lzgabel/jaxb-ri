@@ -42,12 +42,12 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.glassfish.jaxb</groupId>
             <artifactId>jaxb-core</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.glassfish.jaxb</groupId>
             <artifactId>txw2</artifactId>
             <scope>provided</scope>
         </dependency>
@@ -84,13 +84,13 @@
                     <scope>test</scope>
                 </dependency>
                 <dependency>
-                    <groupId>org.glassfish.jaxb</groupId>
+                    <groupId>cn.glassfish.jaxb</groupId>
                     <artifactId>osgi-test-core</artifactId>
                     <version>${project.version}</version>
                     <scope>test</scope>
                 </dependency>
                 <dependency>
-                    <groupId>org.glassfish.jaxb</groupId>
+                    <groupId>cn.glassfish.jaxb</groupId>
                     <artifactId>osgi-test-parent</artifactId>
                     <version>${project.version}</version>
                     <scope>test</scope>
@@ -147,7 +147,7 @@
                             <goal>unpack-dependencies</goal>
                         </goals>
                         <configuration>
-                            <includeGroupIds>org.glassfish.jaxb,com.sun.istack</includeGroupIds>
+                            <includeGroupIds>cn.glassfish.jaxb,com.sun.istack</includeGroupIds>
                             <includeScope>provided</includeScope>
                             <classifier>sources</classifier>
                             <excludeTransitive>true</excludeTransitive>

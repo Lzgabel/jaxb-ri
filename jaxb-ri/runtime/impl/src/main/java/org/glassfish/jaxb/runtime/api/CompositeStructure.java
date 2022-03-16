@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.api;
+package cn.glassfish.jaxb.runtime.api;
 
 /**
  * A JAXB Bean that works like a DOM.
@@ -21,7 +21,7 @@ package org.glassfish.jaxb.runtime.api;
  * <p>
  * This object allows you to treat multiple unrelated JAXB beans as a single tree.
  * This in turn allows you to marshal this tree in one marshal method invocation,
- * which is faster than multiple invocations of the marshal method. 
+ * which is faster than multiple invocations of the marshal method.
  *
  * <p>
  * The binding of this class is always known to {@link JAXBRIContext}, so it can be

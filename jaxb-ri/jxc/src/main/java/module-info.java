@@ -11,14 +11,14 @@
 /**
  * JAXB schema generator.The *tool* to generate XML schema based on java classes.
  */
-module org.glassfish.jaxb.jxc {
+module cn.glassfish.jaxb.jxc {
 
     requires transitive jakarta.xml.bind;
     requires java.compiler;
     requires jdk.compiler;
     requires java.logging;
-    requires transitive org.glassfish.jaxb.runtime;
-    requires transitive org.glassfish.jaxb.xjc;
+    requires transitive cn.glassfish.jaxb.runtime;
+    requires transitive cn.glassfish.jaxb.xjc;
     requires transitive com.sun.xml.txw2;
 
 

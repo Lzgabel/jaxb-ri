@@ -20,7 +20,7 @@ import com.sun.tools.xjc.model.CTypeInfo;
 import com.sun.tools.xjc.model.CTypeRef;
 import com.sun.tools.xjc.model.Multiplicity;
 import com.sun.tools.xjc.reader.RawTypeSet;
-import org.glassfish.jaxb.core.v2.model.core.ID;
+import cn.glassfish.jaxb.core.v2.model.core.ID;
 
 import com.sun.tools.rngom.digested.DAttributePattern;
 import com.sun.tools.rngom.digested.DElementPattern;

@@ -8,10 +8,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.output;
+package cn.glassfish.jaxb.runtime.v2.runtime.output;
 
-import org.glassfish.jaxb.core.marshaller.SAX2DOMEx;
-import org.glassfish.jaxb.runtime.v2.runtime.AssociationMap;
+import cn.glassfish.jaxb.core.marshaller.SAX2DOMEx;
+import cn.glassfish.jaxb.runtime.v2.runtime.AssociationMap;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 

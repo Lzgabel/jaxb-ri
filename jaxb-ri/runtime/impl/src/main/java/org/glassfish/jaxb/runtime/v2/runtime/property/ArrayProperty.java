@@ -8,14 +8,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.property;
+package cn.glassfish.jaxb.runtime.v2.runtime.property;
 
 
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Lister;
+import cn.glassfish.jaxb.runtime.api.AccessorException;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
+import cn.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
+import cn.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
+import cn.glassfish.jaxb.runtime.v2.runtime.reflect.Lister;
 
 
 /**

@@ -34,26 +34,26 @@ public class JaxbRuntimeOsgiTest extends JaxbOsgiTest {
     }
 
     public void testAccessorFactory() {
-        checkClassInBundle("org.glassfish.jaxb.runtime.AccessorFactory", bundle);
+        checkClassInBundle("cn.glassfish.jaxb.runtime.AccessorFactory", bundle);
     }
 
     public void testJaxbRiContext() {
-        checkClassInBundle("org.glassfish.jaxb.runtime.api.JAXBRIContext", bundle);
+        checkClassInBundle("cn.glassfish.jaxb.runtime.api.JAXBRIContext", bundle);
     }
 
     public void testNamespacePrefixMapper() {
-        checkClassInBundle("org.glassfish.jaxb.runtime.marshaller.NamespacePrefixMapper", bundle);
+        checkClassInBundle("cn.glassfish.jaxb.runtime.marshaller.NamespacePrefixMapper", bundle);
     }
 
     public void testPatcher() {
-        checkClassInBundle("org.glassfish.jaxb.runtime.unmarshaller.Patcher", bundle);
+        checkClassInBundle("cn.glassfish.jaxb.runtime.unmarshaller.Patcher", bundle);
     }
 
     public void testAttributesImpl() {
-        checkClassInBundle("org.glassfish.jaxb.runtime.util.AttributesImpl", bundle);
+        checkClassInBundle("cn.glassfish.jaxb.runtime.util.AttributesImpl", bundle);
     }
 
     public void testContextFactory() {
-        checkClassInBundle("org.glassfish.jaxb.runtime.v2.ContextFactory", bundle);
+        checkClassInBundle("cn.glassfish.jaxb.runtime.v2.ContextFactory", bundle);
     }
 }

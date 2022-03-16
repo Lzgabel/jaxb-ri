@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.api;
+package cn.glassfish.jaxb.core.api;
 
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXParseException;

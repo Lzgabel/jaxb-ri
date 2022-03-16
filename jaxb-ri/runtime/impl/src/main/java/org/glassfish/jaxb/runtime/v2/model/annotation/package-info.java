@@ -11,4 +11,4 @@
 /**
  * Abstraction around reading annotations, to support internal/external annotations.
  */
-package org.glassfish.jaxb.runtime.v2.model.annotation;
+package cn.glassfish.jaxb.runtime.v2.model.annotation;

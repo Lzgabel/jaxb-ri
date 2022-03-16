@@ -4,7 +4,7 @@ This example shows how to use the JAXB RI locator extension.
 
 This extension changes the generated code in the following way:
 
-  - Each generated impl class will now implement "org.glassfish.jaxb.core.Locatable"
+  - Each generated impl class will now implement "cn.glassfish.jaxb.core.Locatable"
     (contained in jaxb-core.jar)
 
   - This interface allows you to obtain an "org.xml.sax.Locator" object,

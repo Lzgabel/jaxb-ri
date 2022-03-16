@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.runtime;
+package cn.glassfish.jaxb.core.v2.runtime;
 
 import java.lang.annotation.Annotation;
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ import java.util.List;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 
-import org.glassfish.jaxb.core.v2.model.annotation.Locatable;
+import cn.glassfish.jaxb.core.v2.model.annotation.Locatable;
 
 /**
  * Signals an incorrect use of JAXB annotations.

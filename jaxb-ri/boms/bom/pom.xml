@@ -22,7 +22,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>org.glassfish.jaxb</groupId>
+    <groupId>cn.glassfish.jaxb</groupId>
     <artifactId>jaxb-bom</artifactId>
     <version>4.0.0-SNAPSHOT</version>
 
@@ -32,10 +32,10 @@
     <url>https://eclipse-ee4j.github.io/jaxb-ri/</url>
 
     <properties>
-        <xml.bind-api.version>4.0.0</xml.bind-api.version>
-        <istack.version>4.1.0</istack.version>
-        <fastinfoset.version>2.1.0</fastinfoset.version>
-        <stax-ex.version>2.1.0</stax-ex.version>
+        <xml.bind-api.version>4.0.0-RC2</xml.bind-api.version>
+        <istack.version>4.1.0-M1</istack.version>
+        <fastinfoset.version>2.0.0</fastinfoset.version>
+        <stax-ex.version>2.1.0-M1</stax-ex.version>
         <activation-api.version>2.1.0</activation-api.version>
         <angus-activation.version>1.0.0</angus-activation.version>
     </properties>
@@ -45,43 +45,43 @@
             <!-- *** SOURCES *** -->
             <!-- new -->
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.glassfish.jaxb</groupId>
                 <artifactId>jaxb-runtime</artifactId>
                 <version>${project.version}</version>
                 <classifier>sources</classifier>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.glassfish.jaxb</groupId>
                 <artifactId>jaxb-core</artifactId>
                 <version>${project.version}</version>
                 <classifier>sources</classifier>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.glassfish.jaxb</groupId>
                 <artifactId>jaxb-xjc</artifactId>
                 <version>${project.version}</version>
                 <classifier>sources</classifier>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.glassfish.jaxb</groupId>
                 <artifactId>jaxb-jxc</artifactId>
                 <version>${project.version}</version>
                 <classifier>sources</classifier>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.glassfish.jaxb</groupId>
                 <artifactId>codemodel</artifactId>
                 <version>${project.version}</version>
                 <classifier>sources</classifier>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.glassfish.jaxb</groupId>
                 <artifactId>txw2</artifactId>
                 <version>${project.version}</version>
                 <classifier>sources</classifier>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.glassfish.jaxb</groupId>
                 <artifactId>xsom</artifactId>
                 <version>${project.version}</version>
                 <classifier>sources</classifier>
@@ -142,37 +142,37 @@
             <!-- *** BINARIES *** -->
             <!-- new -->
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.glassfish.jaxb</groupId>
                 <artifactId>jaxb-runtime</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.glassfish.jaxb</groupId>
                 <artifactId>jaxb-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.glassfish.jaxb</groupId>
                 <artifactId>jaxb-xjc</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.glassfish.jaxb</groupId>
                 <artifactId>jaxb-jxc</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.glassfish.jaxb</groupId>
                 <artifactId>codemodel</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.glassfish.jaxb</groupId>
                 <artifactId>txw2</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.glassfish.jaxb</groupId>
                 <artifactId>xsom</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -268,4 +268,15 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>private-releases</id>
+            <url>http://116.62.222.54/repository/maven-releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>private-snapshots</id>
+            <url>http://116.62.222.54/repository/maven-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>

@@ -14,8 +14,8 @@ import javax.xml.namespace.QName;
 
 import com.sun.tools.xjc.model.nav.NClass;
 import com.sun.tools.xjc.model.nav.NType;
-import org.glassfish.jaxb.core.v2.model.core.AttributePropertyInfo;
-import org.glassfish.jaxb.core.v2.model.core.PropertyKind;
+import cn.glassfish.jaxb.core.v2.model.core.AttributePropertyInfo;
+import cn.glassfish.jaxb.core.v2.model.core.PropertyKind;
 import com.sun.xml.xsom.XSComponent;
 import com.sun.istack.Nullable;
 

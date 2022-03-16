@@ -8,11 +8,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
 
-import org.glassfish.jaxb.core.Utils;
-import org.glassfish.jaxb.core.WhiteSpaceProcessor;
-import org.glassfish.jaxb.core.v2.runtime.unmarshaller.LocatorEx;
+import cn.glassfish.jaxb.core.Utils;
+import cn.glassfish.jaxb.core.WhiteSpaceProcessor;
+import cn.glassfish.jaxb.core.v2.runtime.unmarshaller.LocatorEx;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.UnmarshallerHandler;
 import org.xml.sax.Attributes;
@@ -32,7 +32,7 @@ public final class SAXConnector implements UnmarshallerHandler {
     private LocatorEx loc;
 
     private static final Logger logger = Utils.getClassLogger();
-    
+
     /**
      * SAX may fire consecutive characters event, but we don't allow it.
      * so use this buffer to perform buffering.

@@ -8,14 +8,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.model.annotation;
+package cn.glassfish.jaxb.core.v2.model.annotation;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 import com.sun.istack.Nullable;
-import org.glassfish.jaxb.core.v2.model.core.ErrorHandler;
+import cn.glassfish.jaxb.core.v2.model.core.ErrorHandler;
 
 /**
  * Reads annotations for the given property.

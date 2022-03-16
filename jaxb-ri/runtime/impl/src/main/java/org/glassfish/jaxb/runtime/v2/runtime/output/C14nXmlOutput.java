@@ -8,12 +8,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.output;
+package cn.glassfish.jaxb.runtime.v2.runtime.output;
 
 import com.sun.istack.FinalArrayList;
-import org.glassfish.jaxb.core.marshaller.CharacterEscapeHandler;
-import org.glassfish.jaxb.runtime.api.JAXBRIContext;
-import org.glassfish.jaxb.runtime.v2.runtime.Name;
+import cn.glassfish.jaxb.core.marshaller.CharacterEscapeHandler;
+import cn.glassfish.jaxb.runtime.api.JAXBRIContext;
+import cn.glassfish.jaxb.runtime.v2.runtime.Name;
 
 import java.io.IOException;
 import java.io.OutputStream;

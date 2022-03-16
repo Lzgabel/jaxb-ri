@@ -8,12 +8,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.glassfish.jaxb.runtime.v2.model.impl;
 
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeNonElement;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeTypeRef;
-import org.glassfish.jaxb.runtime.v2.runtime.Transducer;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimeNonElement;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimeTypeRef;
+import cn.glassfish.jaxb.runtime.v2.runtime.Transducer;
 
 import javax.xml.namespace.QName;
 import java.lang.reflect.Type;

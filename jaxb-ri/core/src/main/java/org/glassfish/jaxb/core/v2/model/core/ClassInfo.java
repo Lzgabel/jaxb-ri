@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.model.core;
+package cn.glassfish.jaxb.core.v2.model.core;
 
 import java.util.List;
 
@@ -107,7 +107,7 @@ public interface ClassInfo<T,C> extends MaybeElement<T,C> {
      * @return null
      *      if the property was not found.
      *
-     * @see PropertyInfo#getName() 
+     * @see PropertyInfo#getName()
      */
     PropertyInfo<T,C> getProperty(String name);
 
@@ -115,7 +115,7 @@ public interface ClassInfo<T,C> extends MaybeElement<T,C> {
      * If the class has properties, return true.  This is only
      * true if the Collection object returned by {@link #getProperties()}
      * is not empty.
-     */ 
+     */
     boolean hasProperties();
 
     /**

@@ -16,7 +16,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.glassfish.jaxb</groupId>
+        <groupId>cn.glassfish.jaxb</groupId>
         <artifactId>jaxb-bom</artifactId>
         <relativePath>../bom/pom.xml</relativePath>
         <version>4.0.0-SNAPSHOT</version>
@@ -50,7 +50,7 @@
             </dependency>
             <!-- Dependencies -->
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.glassfish.jaxb</groupId>
                 <artifactId>xsom</artifactId>
                 <version>${xsom.version}</version>
             </dependency>
@@ -65,13 +65,13 @@
                 <version>${istack.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.glassfish.jaxb</groupId>
                 <artifactId>codemodel</artifactId>
                 <version>${codemodel.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.glassfish.jaxb</groupId>
                 <artifactId>txw2</artifactId>
                 <version>${project.version}</version>
             </dependency>

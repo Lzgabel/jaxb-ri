@@ -8,9 +8,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
 
-import org.glassfish.jaxb.runtime.v2.runtime.JaxBeanInfo;
+import cn.glassfish.jaxb.runtime.v2.runtime.JaxBeanInfo;
 import jakarta.xml.bind.Unmarshaller;
 import jakarta.xml.bind.ValidationEvent;
 import jakarta.xml.bind.helpers.ValidationEventImpl;

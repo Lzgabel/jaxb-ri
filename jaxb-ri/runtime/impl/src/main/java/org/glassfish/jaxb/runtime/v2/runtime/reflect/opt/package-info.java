@@ -10,12 +10,12 @@
 
 /**
  * Hosts optimized
- * {@link org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor},
- * {@link org.glassfish.jaxb.runtime.v2.runtime.reflect.TransducedAccessor}, and {@link org.glassfish.jaxb.runtime.v2.runtime.Transducer}.
+ * {@link cn.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor},
+ * {@link cn.glassfish.jaxb.runtime.v2.runtime.reflect.TransducedAccessor}, and {@link cn.glassfish.jaxb.runtime.v2.runtime.Transducer}.
  *
  * <h2>How it works</h2>
  * <p>
  * Most of the classes in this package are "templates." At run-time, A template class file is slightly modified to match
  * the target Java Bean, then it will be loaded into the VM.
  */
-package org.glassfish.jaxb.runtime.v2.runtime.reflect.opt;
+package cn.glassfish.jaxb.runtime.v2.runtime.reflect.opt;

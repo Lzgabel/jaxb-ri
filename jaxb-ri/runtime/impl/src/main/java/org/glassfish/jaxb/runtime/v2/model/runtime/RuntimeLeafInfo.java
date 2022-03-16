@@ -8,10 +8,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.runtime;
+package cn.glassfish.jaxb.runtime.v2.model.runtime;
 
-import org.glassfish.jaxb.core.v2.model.core.LeafInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.Transducer;
+import cn.glassfish.jaxb.core.v2.model.core.LeafInfo;
+import cn.glassfish.jaxb.runtime.v2.runtime.Transducer;
 
 import javax.xml.namespace.QName;
 import java.lang.reflect.Type;
@@ -44,7 +44,7 @@ public interface RuntimeLeafInfo extends LeafInfo<Type,Class>, RuntimeNonElement
      * While conceptually this method belongs to {@link RuntimeNonElement},
      * if we do that we have to put a lot of dummy implementations everywhere,
      * so it's placed here, where it's actually needed.
-     * 
+     *
      * @return
      *      Always non-null. Do not modify the returned array.
      */

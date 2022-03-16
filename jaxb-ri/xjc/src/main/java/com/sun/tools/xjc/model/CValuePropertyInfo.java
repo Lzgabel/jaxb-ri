@@ -14,15 +14,15 @@ import javax.xml.namespace.QName;
 
 import com.sun.tools.xjc.model.nav.NClass;
 import com.sun.tools.xjc.model.nav.NType;
-import org.glassfish.jaxb.core.v2.model.core.PropertyKind;
-import org.glassfish.jaxb.core.v2.model.core.ValuePropertyInfo;
+import cn.glassfish.jaxb.core.v2.model.core.PropertyKind;
+import cn.glassfish.jaxb.core.v2.model.core.ValuePropertyInfo;
 import com.sun.xml.xsom.XSComponent;
 
 import org.xml.sax.Locator;
 
 /**
  * {@link ValuePropertyInfo} implementation for XJC.
- * 
+ *
  * @author Kohsuke Kawaguchi
  */
 public final class CValuePropertyInfo extends CSingleTypePropertyInfo implements ValuePropertyInfo<NType,NClass> {

@@ -16,20 +16,20 @@ import java.util.Collections;
 import com.sun.codemodel.JCodeModel;
 import com.sun.tools.xjc.reader.Ring;
 import com.sun.tools.xjc.reader.xmlschema.BGMBuilder;
-import org.glassfish.jaxb.core.annotation.XmlLocation;
+import cn.glassfish.jaxb.core.annotation.XmlLocation;
 import com.sun.xml.xsom.XSComponent;
 
 import org.xml.sax.Locator;
 
 /**
  * Abstract partial implementation of {@link BIDeclaration}
- * 
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
 abstract class AbstractDeclarationImpl implements BIDeclaration {
 
-    @Deprecated // eventually delete this in favor of using JAXB    
+    @Deprecated // eventually delete this in favor of using JAXB
     protected AbstractDeclarationImpl(Locator loc) {
         this.loc = loc;
     }
@@ -41,7 +41,7 @@ abstract class AbstractDeclarationImpl implements BIDeclaration {
     Locator loc;    // set by JAXB
     @Override
     public Locator getLocation() { return loc; }
-    
+
     protected BindInfo parent;
     @Override
     public void setParent(BindInfo p) { this.parent=p; }
@@ -58,7 +58,7 @@ abstract class AbstractDeclarationImpl implements BIDeclaration {
 
 
     private boolean isAcknowledged = false;
-    
+
     @Override
     public final boolean isAcknowledged() { return isAcknowledged; }
 

@@ -8,20 +8,20 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime;
+package cn.glassfish.jaxb.runtime;
 
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
+import cn.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
 import jakarta.xml.bind.JAXBException;
 
 import java.lang.reflect.Field;
 
 /**
- * A means to allow the user to provide customized Accessor  
+ * A means to allow the user to provide customized Accessor
  * to be used by JAXB. Adds ability to suppress warnings.
  */
 public interface InternalAccessorFactory extends AccessorFactory {
     /**
-     * Access a field of the class. 
+     * Access a field of the class.
      *
      * @param bean the class to be processed.
      * @param f the field within the class to be accessed.
@@ -32,5 +32,5 @@ public interface InternalAccessorFactory extends AccessorFactory {
      * @throws JAXBException reports failures of the method.
      */
     Accessor createFieldAccessor(Class bean, Field f, boolean readOnly, boolean supressWarnings) throws JAXBException;
-    
+
 }

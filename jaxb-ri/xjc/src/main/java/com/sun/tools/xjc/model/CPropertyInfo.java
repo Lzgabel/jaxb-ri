@@ -29,9 +29,9 @@ import com.sun.tools.xjc.generator.bean.field.FieldRenderer;
 import com.sun.tools.xjc.model.nav.NClass;
 import com.sun.tools.xjc.model.nav.NType;
 import com.sun.tools.xjc.reader.Ring;
-import org.glassfish.jaxb.core.api.impl.NameConverter;
-import org.glassfish.jaxb.core.v2.model.core.PropertyInfo;
-import org.glassfish.jaxb.core.v2.runtime.RuntimeUtil;
+import cn.glassfish.jaxb.core.api.impl.NameConverter;
+import cn.glassfish.jaxb.core.v2.model.core.PropertyInfo;
+import cn.glassfish.jaxb.core.v2.runtime.RuntimeUtil;
 import com.sun.xml.xsom.XSComponent;
 
 import org.xml.sax.ErrorHandler;
@@ -101,7 +101,7 @@ public abstract class CPropertyInfo implements PropertyInfo<NType,NClass>, CCust
         } else {
             n = NameConverter.standard.toVariableName(name);
         }
-        
+
         if(!JJavaName.isJavaIdentifier(n))
             n = '_'+n;  // avoid colliding with the reserved names like 'abstract'.
         this.privateName = n;
@@ -170,7 +170,7 @@ public abstract class CPropertyInfo implements PropertyInfo<NType,NClass>, CCust
      *
      * @deprecated
      *      marked as deprecated so that we can spot the use of this method.
-     * 
+     *
      * @see #getName(boolean)
      */
     @Deprecated

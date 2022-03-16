@@ -14,7 +14,7 @@
 <project basedir="." default="run">
   <description>
         This sample application demonstrates how to use the new JAXB RI
-        Marshaller property "org.glassfish.jaxb.namespacePrefixMapper" to
+        Marshaller property "cn.glassfish.jaxb.namespacePrefixMapper" to
         customize the namespace prefixes generated during marshalling.
     </description>
   <property name="jaxb.home" value="../.." />

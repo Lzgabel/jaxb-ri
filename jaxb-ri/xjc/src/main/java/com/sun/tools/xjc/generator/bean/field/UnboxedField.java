@@ -22,11 +22,11 @@ import com.sun.tools.xjc.generator.bean.MethodWriter;
 import com.sun.tools.xjc.model.CPropertyInfo;
 import com.sun.tools.xjc.outline.Aspect;
 import com.sun.tools.xjc.outline.FieldAccessor;
-import org.glassfish.jaxb.core.api.impl.NameConverter;
+import cn.glassfish.jaxb.core.api.impl.NameConverter;
 
 /**
  * A required primitive property.
- * 
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
@@ -45,7 +45,7 @@ public class UnboxedField extends AbstractFieldWithVar {
 
         ptype = (JPrimitiveType) implType;
         assert ptype!=null;
-        
+
         createField();
 
         // apparently a required attribute can be still defaulted.
@@ -56,7 +56,7 @@ public class UnboxedField extends AbstractFieldWithVar {
         NameConverter nc = outline.parent().getModel().getNameConverter();
 
         JBlock body;
-        
+
         // [RESULT]
         // Type getXXX() {
         //     return value;
@@ -96,12 +96,12 @@ public class UnboxedField extends AbstractFieldWithVar {
     @Override
     public FieldAccessor create(JExpression targetObject) {
         return new Accessor(targetObject) {
-            
+
             @Override
             public void unsetValues( JBlock body ) {
                 // you can't unset a value
             }
-            
+
             @Override
             public JExpression hasSetValue() {
                 return JExpr.TRUE;

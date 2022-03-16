@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.unmarshaller;
+package cn.glassfish.jaxb.core.unmarshaller;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -30,7 +30,7 @@ import org.xml.sax.SAXException;
 import junit.framework.TestCase;
 
 public class DOMScannerTest extends TestCase {
-	
+
 	public void testParentDefaultNamespace() throws ParserConfigurationException, SAXException, IOException {
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = dbf.newDocumentBuilder();
@@ -38,7 +38,7 @@ public class DOMScannerTest extends TestCase {
 		Document doc = builder.parse(is);
 		NodeList testElems = doc.getElementsByTagName("test");
 		Node testElem = testElems.item(0);
-		
+
 		DOMScanner scanner = new DOMScanner();
 		MockContentHandler mockHandler = new MockContentHandler();
 		Map<String,String> assertMapping = new HashMap<String,String>();
@@ -49,14 +49,14 @@ public class DOMScannerTest extends TestCase {
 		scanner.setContentHandler(mockHandler);
 		scanner.scan(testElem);
 	}
-	
+
 	private class MockContentHandler implements ContentHandler {
-		
+
 		private Map<String,String> prefixMapping = new HashMap<String,String>();
-		
+
 		private Map<String,String> assertMapping = new HashMap<String,String>();
 		private String assertElement = null;
-		
+
 		public void setAssertion(String elementName, Map<String,String> mapping) {
 			this.assertElement = elementName;
 			this.assertMapping.putAll(mapping);
@@ -64,17 +64,17 @@ public class DOMScannerTest extends TestCase {
 
 		@Override
 		public void setDocumentLocator(Locator locator) {
-			
+
 		}
 
 		@Override
 		public void startDocument() throws SAXException {
-			
+
 		}
 
 		@Override
 		public void endDocument() throws SAXException {
-			
+
 		}
 
 		@Override
@@ -96,29 +96,29 @@ public class DOMScannerTest extends TestCase {
 
 		@Override
 		public void endElement(String uri, String localName, String qName) throws SAXException {
-			
+
 		}
 
 		@Override
 		public void characters(char[] ch, int start, int length) throws SAXException {
-			
+
 		}
 
 		@Override
 		public void ignorableWhitespace(char[] ch, int start, int length) throws SAXException {
-			
+
 		}
 
 		@Override
 		public void processingInstruction(String target, String data) throws SAXException {
-			
+
 		}
 
 		@Override
 		public void skippedEntity(String name) throws SAXException {
-			
+
 		}
-		
+
 	}
 
 }

@@ -141,11 +141,11 @@
                 This release is integrated into JDK 8. (Build <literal>2.2.8-b130911.1802</literal>)
             </para></listitem>
             <listitem><para>
-                JAXB RI project is now mavenized. New maven groupId introduced: org.glassfish.jaxb
+                JAXB RI project is now mavenized. New maven groupId introduced: cn.glassfish.jaxb
                 So if you are use maven you can simply add dependency block:
                 <programlisting>
                     &lt;dependency&gt;
-                        &lt;groupId&gt;org.glassfish.jaxb&lt;/groupId&gt;
+                        &lt;groupId&gt;cn.glassfish.jaxb&lt;/groupId&gt;
                         &lt;artifactId&gt;jaxb-bom&lt;/artifactId&gt;
                         &lt;version&gt;2.2.8&lt;/version&gt;
                         &lt;type&gt;pom&lt;/type&gt;

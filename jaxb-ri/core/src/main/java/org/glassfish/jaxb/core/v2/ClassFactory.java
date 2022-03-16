@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2;
+package cn.glassfish.jaxb.core.v2;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -22,7 +22,7 @@ import java.util.WeakHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.glassfish.jaxb.core.Utils;
+import cn.glassfish.jaxb.core.Utils;
 
 /**
  * Creates new instances of classes.
@@ -189,7 +189,7 @@ public final class ClassFactory {
         exp.initCause(errorMsg);
         throw exp;
     }
-    
+
     /**
      * Infers the instanciable implementation class that can be assigned to the given field type.
      *

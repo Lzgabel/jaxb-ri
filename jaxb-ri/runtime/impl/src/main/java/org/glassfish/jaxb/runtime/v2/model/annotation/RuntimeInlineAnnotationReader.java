@@ -8,9 +8,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.annotation;
+package cn.glassfish.jaxb.runtime.v2.model.annotation;
 
-import org.glassfish.jaxb.core.v2.model.annotation.Locatable;
+import cn.glassfish.jaxb.core.v2.model.annotation.Locatable;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * {@link org.glassfish.jaxb.core.v2.model.annotation.AnnotationReader} that uses {@code java.lang.reflect} to
+ * {@link cn.glassfish.jaxb.core.v2.model.annotation.AnnotationReader} that uses {@code java.lang.reflect} to
  * read annotations from class files.
  *
  * @author Kohsuke Kawaguchi (kk@kohsuke.org)

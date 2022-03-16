@@ -8,17 +8,17 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.reflect;
+package cn.glassfish.jaxb.runtime.v2.runtime.reflect;
 
 import com.sun.istack.Nullable;
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.runtime.api.JAXBRIContext;
-import org.glassfish.jaxb.core.v2.model.core.Adapter;
-import org.glassfish.jaxb.runtime.v2.model.impl.RuntimeModelBuilder;
-import org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Loader;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Receiver;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
+import cn.glassfish.jaxb.runtime.api.AccessorException;
+import cn.glassfish.jaxb.runtime.api.JAXBRIContext;
+import cn.glassfish.jaxb.core.v2.model.core.Adapter;
+import cn.glassfish.jaxb.runtime.v2.model.impl.RuntimeModelBuilder;
+import cn.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Loader;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Receiver;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 import org.xml.sax.SAXException;
@@ -191,7 +191,7 @@ public abstract class Accessor<BeanT, ValueT> implements Receiver {
     public static class FieldReflection<BeanT, ValueT> extends Accessor<BeanT, ValueT> {
         public final Field f;
 
-        private static final Logger logger = org.glassfish.jaxb.core.Utils.getClassLogger();
+        private static final Logger logger = cn.glassfish.jaxb.core.Utils.getClassLogger();
 
         public FieldReflection(Field f) {
             this(f, false);
@@ -276,7 +276,7 @@ public abstract class Accessor<BeanT, ValueT> implements Receiver {
         public final Method getter;
         public final Method setter;
 
-        private static final Logger logger = org.glassfish.jaxb.core.Utils.getClassLogger();
+        private static final Logger logger = cn.glassfish.jaxb.core.Utils.getClassLogger();
 
         public GetterSetterReflection(Method getter, Method setter) {
             super(

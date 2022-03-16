@@ -12,7 +12,7 @@ package com.sun.tools.jxc;
 
 import com.sun.tools.jxc.ap.Options;
 import com.sun.tools.xjc.BadCommandLineException;
-import org.glassfish.jaxb.core.util.Which;
+import cn.glassfish.jaxb.core.util.Which;
 
 import javax.lang.model.SourceVersion;
 import javax.tools.Diagnostic;

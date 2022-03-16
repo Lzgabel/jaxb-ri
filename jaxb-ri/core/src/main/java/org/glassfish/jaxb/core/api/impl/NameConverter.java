@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.api.impl;
+package cn.glassfish.jaxb.core.api.impl;
 
 import javax.lang.model.SourceVersion;
 import java.util.ArrayList;

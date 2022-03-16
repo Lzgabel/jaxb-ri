@@ -8,13 +8,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
 
-import org.glassfish.jaxb.runtime.util.AttributesImpl;
+import cn.glassfish.jaxb.runtime.util.AttributesImpl;
 
 /**
  * {@link AttributesEx} implementation.
- * 
+ *
  * TODO: proper implementation that holds CharSequence
  *
  * @author Kohsuke Kawaguchi

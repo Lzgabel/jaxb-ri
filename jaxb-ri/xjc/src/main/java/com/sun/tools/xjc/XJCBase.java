@@ -29,7 +29,7 @@ import com.sun.tools.xjc.model.Model;
 import com.sun.tools.xjc.reader.Util;
 import com.sun.tools.xjc.util.ForkEntityResolver;
 import com.sun.tools.xjc.api.SpecVersion;
-import org.glassfish.jaxb.core.v2.util.EditDistance;
+import cn.glassfish.jaxb.core.v2.util.EditDistance;
 import org.apache.tools.ant.AntClassLoader;
 import org.apache.tools.ant.BuildException;
 import org.apache.tools.ant.DirectoryScanner;

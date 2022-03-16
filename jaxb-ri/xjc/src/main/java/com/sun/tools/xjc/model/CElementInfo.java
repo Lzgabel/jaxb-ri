@@ -34,7 +34,7 @@ import com.sun.tools.xjc.reader.xmlschema.bindinfo.BIInlineBinaryData;
 import com.sun.tools.xjc.reader.xmlschema.bindinfo.BIFactoryMethod;
 import com.sun.tools.xjc.reader.xmlschema.BGMBuilder;
 import com.sun.tools.xjc.reader.Ring;
-import org.glassfish.jaxb.core.v2.model.core.ElementInfo;
+import cn.glassfish.jaxb.core.v2.model.core.ElementInfo;
 import com.sun.xml.xsom.XSElementDecl;
 import com.sun.xml.xsom.XmlString;
 
@@ -220,7 +220,7 @@ public final class CElementInfo extends AbstractCElement
     @XmlElement
     public String getSqueezedName() {
         if(squeezedName!=null)  return squeezedName;
-        
+
         StringBuilder b = new StringBuilder();
         CClassInfo s = getScope();
         if(s!=null)

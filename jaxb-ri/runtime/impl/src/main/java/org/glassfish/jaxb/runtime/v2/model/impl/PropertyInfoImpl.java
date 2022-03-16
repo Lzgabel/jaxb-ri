@@ -8,16 +8,16 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.glassfish.jaxb.runtime.v2.model.impl;
 
-import org.glassfish.jaxb.core.v2.TODO;
-import org.glassfish.jaxb.core.v2.model.annotation.AnnotationReader;
-import org.glassfish.jaxb.core.v2.model.annotation.Locatable;
-import org.glassfish.jaxb.core.v2.model.core.*;
-import org.glassfish.jaxb.core.v2.model.nav.Navigator;
-import org.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
-import org.glassfish.jaxb.core.v2.runtime.Location;
-import org.glassfish.jaxb.runtime.v2.runtime.SwaRefAdapter;
+import cn.glassfish.jaxb.core.v2.TODO;
+import cn.glassfish.jaxb.core.v2.model.annotation.AnnotationReader;
+import cn.glassfish.jaxb.core.v2.model.annotation.Locatable;
+import cn.glassfish.jaxb.core.v2.model.core.*;
+import cn.glassfish.jaxb.core.v2.model.nav.Navigator;
+import cn.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
+import cn.glassfish.jaxb.core.v2.runtime.Location;
+import cn.glassfish.jaxb.runtime.v2.runtime.SwaRefAdapter;
 import jakarta.activation.MimeType;
 import jakarta.xml.bind.annotation.*;
 import jakarta.xml.bind.annotation.adapters.XmlAdapter;
@@ -172,7 +172,7 @@ abstract class PropertyInfoImpl<T,C,F,M>
         T type = reader().getClassValue(jta,"type");
         if(nav().isSameType(declaredType, type))
             return true;    // for types explicitly marked in XmlJavaTypeAdapter.type()
-        
+
         T ad = reader().getClassValue(jta,"value");
         T ba = nav().getBaseClass(ad, nav().asDecl(XmlAdapter.class));
         if(!nav().isParameterizedType(ba))

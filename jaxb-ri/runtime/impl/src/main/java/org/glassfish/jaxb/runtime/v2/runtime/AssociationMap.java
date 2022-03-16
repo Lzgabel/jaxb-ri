@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime;
+package cn.glassfish.jaxb.runtime.v2.runtime;
 
 import java.util.HashSet;
 import java.util.IdentityHashMap;
@@ -18,12 +18,12 @@ import java.util.Set;
 /**
  * Bi-directional map between elements, inner peers,
  * and outer peers.
- * 
+ *
  * <p>
  * TODO: this should be rewritten for efficiency.
- * 
+ *
  * @since 2.0
- * 
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
@@ -35,7 +35,7 @@ public final class AssociationMap<XmlNode> {
         private Object inner;
         /** outer peer, or null. */
         private Object outer;
-        
+
         public XmlNode element() {
         	return element;
         }
@@ -46,7 +46,7 @@ public final class AssociationMap<XmlNode> {
         	return outer;
         }
     }
-    
+
     private final Map<XmlNode,Entry<XmlNode>> byElement = new IdentityHashMap<>();
     private final Map<Object,Entry<XmlNode>> byPeer = new IdentityHashMap<>();
     private final Set<XmlNode> usedNodes = new HashSet<>();
@@ -63,9 +63,9 @@ public final class AssociationMap<XmlNode> {
             e.element = element;
             e.inner = inner;
         }
-        
+
         byElement.put(element,e);
-        
+
         Entry<XmlNode> old = byPeer.put(inner,e);
         if(old!=null) {
             if(old.outer!=null)
@@ -74,7 +74,7 @@ public final class AssociationMap<XmlNode> {
                 byElement.remove(old.element);
         }
     }
-    
+
     /** Records the new {@code element <-> outer} peer association. */
     public void addOuter( XmlNode element, Object outer ) {
         Entry<XmlNode> e = byElement.get(element);
@@ -87,13 +87,13 @@ public final class AssociationMap<XmlNode> {
             e.element = element;
             e.outer = outer;
         }
-        
+
         byElement.put(element,e);
-        
+
         Entry<XmlNode> old = byPeer.put(outer,e);
         if(old!=null) {
             old.outer=null;
-            
+
             if(old.inner==null)
                 // remove this entry
                 byElement.remove(old.element);
@@ -107,17 +107,17 @@ public final class AssociationMap<XmlNode> {
     public Entry<XmlNode> byElement( Object e ) {
         return byElement.get(e);
     }
-    
+
     public Entry<XmlNode> byPeer( Object o ) {
         return byPeer.get(o);
     }
-    
+
     public Object getInnerPeer( XmlNode element ) {
         Entry e = byElement(element);
         if(e==null)     return null;
         else            return e.inner;
     }
-    
+
     public Object getOuterPeer( XmlNode element ) {
         Entry e = byElement(element);
         if(e==null)     return null;

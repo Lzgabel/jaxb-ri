@@ -8,18 +8,18 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.glassfish.jaxb.runtime.v2.model.impl;
 
-import org.glassfish.jaxb.core.WhiteSpaceProcessor;
-import org.glassfish.jaxb.core.util.Which;
-import org.glassfish.jaxb.core.v2.model.annotation.AnnotationReader;
-import org.glassfish.jaxb.runtime.v2.model.annotation.ClassLocatable;
-import org.glassfish.jaxb.core.v2.model.annotation.Locatable;
-import org.glassfish.jaxb.core.v2.model.core.*;
-import org.glassfish.jaxb.core.v2.model.impl.ModelBuilderI;
-import org.glassfish.jaxb.core.v2.model.nav.Navigator;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
-import org.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
+import cn.glassfish.jaxb.core.WhiteSpaceProcessor;
+import cn.glassfish.jaxb.core.util.Which;
+import cn.glassfish.jaxb.core.v2.model.annotation.AnnotationReader;
+import cn.glassfish.jaxb.runtime.v2.model.annotation.ClassLocatable;
+import cn.glassfish.jaxb.core.v2.model.annotation.Locatable;
+import cn.glassfish.jaxb.core.v2.model.core.*;
+import cn.glassfish.jaxb.core.v2.model.impl.ModelBuilderI;
+import cn.glassfish.jaxb.core.v2.model.nav.Navigator;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
+import cn.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.annotation.*;
 

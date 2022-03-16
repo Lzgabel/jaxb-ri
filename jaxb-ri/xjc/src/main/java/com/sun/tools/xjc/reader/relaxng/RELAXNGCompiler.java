@@ -30,7 +30,7 @@ import com.sun.tools.xjc.model.CNonElement;
 import com.sun.tools.xjc.model.CTypeInfo;
 import com.sun.tools.xjc.model.Model;
 import com.sun.tools.xjc.model.TypeUse;
-import org.glassfish.jaxb.core.api.impl.NameConverter;
+import cn.glassfish.jaxb.core.api.impl.NameConverter;
 
 import com.sun.tools.rngom.digested.DChoicePattern;
 import com.sun.tools.rngom.digested.DDefine;

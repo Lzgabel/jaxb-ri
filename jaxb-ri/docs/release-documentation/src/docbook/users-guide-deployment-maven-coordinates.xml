@@ -34,15 +34,15 @@
                     Required to compile against &binding.spec.name;.</para>
             </listitem>
             <listitem>
-                <para><emphasis role="bold">org.glassfish.jaxb:jaxb-runtime:</emphasis> Contains the main runtime used
+                <para><emphasis role="bold">cn.glassfish.jaxb:jaxb-runtime:</emphasis> Contains the main runtime used
                     for serialization and deserialization java objects to/from xml.</para>
             </listitem>
             <listitem>
-                <para><emphasis role="bold">org.glassfish.jaxb:jaxb-xjc:</emphasis> Tool to generate &binding.spec.name; java sources
+                <para><emphasis role="bold">cn.glassfish.jaxb:jaxb-xjc:</emphasis> Tool to generate &binding.spec.name; java sources
                     from XML representation.</para>
             </listitem>
             <listitem>
-                <para><emphasis role="bold">org.glassfish.jaxb:jaxb-jxc:</emphasis> Tool to generate XML schema from
+                <para><emphasis role="bold">cn.glassfish.jaxb:jaxb-jxc:</emphasis> Tool to generate XML schema from
                     &binding.spec.name; java sources.</para>
             </listitem>
         </itemizedlist>
@@ -62,7 +62,7 @@
                 <para><emphasis role="bold">com.sun.xml.bind:jaxb-jxc:</emphasis> Schema generation tool jar.</para>
             </listitem>
         </itemizedlist>
-        <para>In contrast to <literal>org.glassfish.jaxb</literal> artifacts, these jars have all dependency classes included inside.
+        <para>In contrast to <literal>cn.glassfish.jaxb</literal> artifacts, these jars have all dependency classes included inside.
             </para>
     </section>
 

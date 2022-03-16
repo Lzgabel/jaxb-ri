@@ -14,7 +14,7 @@ import com.sun.tools.xjc.reader.internalizer.AbstractReferenceFinderImpl;
 import com.sun.tools.xjc.reader.internalizer.DOMForest;
 import com.sun.tools.xjc.reader.internalizer.InternalizationLogic;
 import com.sun.tools.xjc.util.DOMUtils;
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
+import cn.glassfish.jaxb.core.v2.WellKnownNamespace;
 
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -25,7 +25,7 @@ import javax.xml.XMLConstants;
 
 /**
  * XML Schema specific internalization logic.
- * 
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
@@ -39,7 +39,7 @@ public class XMLSchemaInternalizationLogic implements InternalizationLogic {
         ReferenceFinder( DOMForest parent ) {
             super(parent);
         }
-        
+
         @Override
         protected String findExternalResource( String nsURI, String localName, Attributes atts) {
             if( XMLConstants.W3C_XML_SCHEMA_NS_URI.equals(nsURI)
@@ -67,20 +67,20 @@ public class XMLSchemaInternalizationLogic implements InternalizationLogic {
         if(annotation==null)
             // none exists. need to make one
             annotation = insertXMLSchemaElement( target, "annotation" );
-        
+
         // then look for appinfo
         Element appinfo = DOMUtils.getFirstChildElement(annotation, XMLConstants.W3C_XML_SCHEMA_NS_URI, "appinfo" );
         if(appinfo==null)
             // none exists. need to make one
             appinfo = insertXMLSchemaElement( annotation, "appinfo" );
-        
+
         return appinfo;
     }
 
     /**
      * Creates a new XML Schema element of the given local name
      * and insert it as the first child of the given parent node.
-     * 
+     *
      * @return
      *      Newly create element.
      */
@@ -91,16 +91,16 @@ public class XMLSchemaInternalizationLogic implements InternalizationLogic {
         int idx = qname.indexOf(':');
         if(idx==-1)     qname = localName;
         else            qname = qname.substring(0,idx+1)+localName;
-        
+
         Element child = parent.getOwnerDocument().createElementNS( XMLConstants.W3C_XML_SCHEMA_NS_URI, qname );
-        
+
         NodeList children = parent.getChildNodes();
-        
+
         if( children.getLength()==0 )
             parent.appendChild(child);
         else
             parent.insertBefore( child, children.item(0) );
-        
+
         return child;
     }
 }

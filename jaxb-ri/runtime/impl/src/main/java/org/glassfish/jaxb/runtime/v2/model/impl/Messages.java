@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.glassfish.jaxb.runtime.v2.model.impl;
 
 import java.text.MessageFormat;
 import java.util.ResourceBundle;
@@ -70,7 +70,7 @@ enum Messages {
     INCOMPATIBLE_API_VERSION, // 2 args
     INCOMPATIBLE_API_VERSION_MUSTANG, // 2 args
     RUNNING_WITH_1_0_RUNTIME, // 2 args
-    
+
     MISSING_JAXB_PROPERTIES, // 1arg
     TRANSIENT_FIELD_NOT_BINDABLE, // 1 arg
     THERE_MUST_BE_VALUE_IN_XMLVALUE, // 1 arg

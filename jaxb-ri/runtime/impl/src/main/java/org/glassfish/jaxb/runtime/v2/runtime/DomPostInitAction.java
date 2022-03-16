@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime;
+package cn.glassfish.jaxb.runtime.v2.runtime;
 
 import org.w3c.dom.Attr;
 import org.w3c.dom.NamedNodeMap;

@@ -10,7 +10,7 @@
 
 package com.sun.tools.xjc.reader;
 
-import org.glassfish.jaxb.core.api.impl.NameConverter;
+import cn.glassfish.jaxb.core.api.impl.NameConverter;
 
 
 public class NameConverterDriver

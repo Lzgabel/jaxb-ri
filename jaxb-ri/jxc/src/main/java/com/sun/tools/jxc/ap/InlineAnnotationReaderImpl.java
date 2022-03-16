@@ -25,10 +25,10 @@ import javax.lang.model.element.VariableElement;
 import javax.lang.model.type.MirroredTypeException;
 import javax.lang.model.type.MirroredTypesException;
 import javax.lang.model.type.TypeMirror;
-import org.glassfish.jaxb.runtime.v2.model.annotation.AbstractInlineAnnotationReaderImpl;
-import org.glassfish.jaxb.core.v2.model.annotation.AnnotationReader;
-import org.glassfish.jaxb.core.v2.model.annotation.Locatable;
-import org.glassfish.jaxb.runtime.v2.model.annotation.LocatableAnnotation;
+import cn.glassfish.jaxb.runtime.v2.model.annotation.AbstractInlineAnnotationReaderImpl;
+import cn.glassfish.jaxb.core.v2.model.annotation.AnnotationReader;
+import cn.glassfish.jaxb.core.v2.model.annotation.Locatable;
+import cn.glassfish.jaxb.runtime.v2.model.annotation.LocatableAnnotation;
 
 /**
  * {@link AnnotationReader} implementation that reads annotation inline from Annoation Processing.

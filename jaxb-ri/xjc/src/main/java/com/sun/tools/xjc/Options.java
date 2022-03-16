@@ -52,7 +52,7 @@ import com.sun.tools.xjc.generator.bean.field.FieldRendererFactory;
 import com.sun.tools.xjc.model.Model;
 import com.sun.tools.xjc.reader.Util;
 
-import org.glassfish.jaxb.core.api.impl.NameConverter;
+import cn.glassfish.jaxb.core.api.impl.NameConverter;
 import org.xml.sax.EntityResolver;
 import org.xml.sax.InputSource;
 
@@ -153,16 +153,16 @@ public class Options {
 
     private static final String JAVAX = "javax.xml.bind";
     private static final String JAKARTA = "jakarta.xml.bind";
-    private static final String JAXB_CORE = "org.glassfish.jaxb.core";
+    private static final String JAXB_CORE = "cn.glassfish.jaxb.core";
     private static final String BIND = "com.sun.xml.bind";
-    
+
     public final Map<String, String> classNameReplacer = new HashMap<>();
 
     public boolean isExtensionMode() {
         return compatibilityMode == EXTENSION;
     }
 
-    private static final Logger logger = org.glassfish.jaxb.core.Utils.getClassLogger();
+    private static final Logger logger = cn.glassfish.jaxb.core.Utils.getClassLogger();
 
     /**
      * Generates output for the specified version of the runtime.

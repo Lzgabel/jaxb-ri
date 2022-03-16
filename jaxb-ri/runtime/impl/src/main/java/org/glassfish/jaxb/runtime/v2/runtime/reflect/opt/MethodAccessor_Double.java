@@ -8,9 +8,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.reflect.opt;
+package cn.glassfish.jaxb.runtime.v2.runtime.reflect.opt;
 
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
+import cn.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
 
 /**
  * Template {@link Accessor} for boolean getter/setter.

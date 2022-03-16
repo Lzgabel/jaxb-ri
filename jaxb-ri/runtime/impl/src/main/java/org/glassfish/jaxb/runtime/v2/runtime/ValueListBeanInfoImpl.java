@@ -8,13 +8,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime;
+package cn.glassfish.jaxb.runtime.v2.runtime;
 
 import com.sun.istack.FinalArrayList;
-import org.glassfish.jaxb.core.WhiteSpaceProcessor;
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Loader;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
+import cn.glassfish.jaxb.core.WhiteSpaceProcessor;
+import cn.glassfish.jaxb.runtime.api.AccessorException;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Loader;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.ValidationEvent;
 import jakarta.xml.bind.helpers.ValidationEventImpl;
@@ -27,7 +27,7 @@ import java.util.List;
 
 /**
  * {@link JaxBeanInfo} implementation that binds T[] to a list of simple types.
- * 
+ *
  * @author Kohsuke Kawaguchi
  */
 final class ValueListBeanInfoImpl extends JaxBeanInfo {

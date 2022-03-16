@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.model.nav;
+package cn.glassfish.jaxb.core.v2.model.nav;
 
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
@@ -25,7 +25,7 @@ import java.security.PrivilegedAction;
 import java.util.Arrays;
 import java.util.Collection;
 
-import org.glassfish.jaxb.core.v2.runtime.Location;
+import cn.glassfish.jaxb.core.v2.runtime.Location;
 
 /**
  * {@link Navigator} implementation for {@code java.lang.reflect}.

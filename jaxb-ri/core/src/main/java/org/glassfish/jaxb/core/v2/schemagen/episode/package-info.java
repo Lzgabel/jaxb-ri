@@ -13,7 +13,7 @@
  * handle separate compilation.
  */
 @XmlNamespace(WellKnownNamespace.JAXB)
-package org.glassfish.jaxb.core.v2.schemagen.episode;
+package cn.glassfish.jaxb.core.v2.schemagen.episode;
 
 import com.sun.xml.txw2.annotation.XmlNamespace;
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
+import cn.glassfish.jaxb.core.v2.WellKnownNamespace;

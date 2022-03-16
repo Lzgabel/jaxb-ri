@@ -8,9 +8,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime;
+package cn.glassfish.jaxb.runtime;
 
-import org.glassfish.jaxb.core.WhiteSpaceProcessor;
+import cn.glassfish.jaxb.core.WhiteSpaceProcessor;
 import jakarta.xml.bind.DatatypeConverter;
 import jakarta.xml.bind.DatatypeConverterInterface;
 
@@ -27,7 +27,7 @@ import java.security.PrivilegedAction;
 import java.util.*;
 
 /**
- * This class is the JAXB RI's default implementation of the 
+ * This class is the JAXB RI's default implementation of the
  * {@link DatatypeConverterInterface}.
  *
  * <p>
@@ -48,7 +48,7 @@ public final class DatatypeConverterImpl implements DatatypeConverterInterface {
 
     @Deprecated
     public static final DatatypeConverterInterface theInstance = new DatatypeConverterImpl();
-    
+
     protected DatatypeConverterImpl() {
         // shall not be used
     }
@@ -117,7 +117,7 @@ public final class DatatypeConverterImpl implements DatatypeConverterInterface {
         return new BigDecimal(content.toString());
 
         // from purely XML Schema perspective,
-        // this implementation has a problem, since 
+        // this implementation has a problem, since
         // in xs:decimal "1.0" and "1" is equal whereas the above
         // code will return different values for those two forms.
         //
@@ -126,19 +126,19 @@ public final class DatatypeConverterImpl implements DatatypeConverterInterface {
         // could take non-trivial time.
         //
         // also, from the user's point of view, one might be surprised if
-        // 1 (not 1.0) is returned from "1.000" 
+        // 1 (not 1.0) is returned from "1.000"
     }
 
     public static float _parseFloat(CharSequence _val) {
         String s = WhiteSpaceProcessor.trim(_val).toString();
         /* Incompatibilities of XML Schema's float "xfloat" and Java's float "jfloat"
-        
+
          * jfloat.valueOf ignores leading and trailing whitespaces,
         whereas this is not allowed in xfloat.
          * jfloat.valueOf allows "float type suffix" (f, F) to be
         appended after float literal (e.g., 1.52e-2f), whereare
         this is not the case of xfloat.
-        
+
         gray zone
         ---------
          * jfloat allows ".523". And there is no clear statement that mentions
@@ -605,7 +605,7 @@ public final class DatatypeConverterImpl implements DatatypeConverterInterface {
         int remaining = len;
         int i;
         char[] buf = new char[4];
-        
+
         for (i = offset; remaining >= 3; remaining -= 3, i += 3) {
             buf[0] = encode(input[i] >> 2);
             buf[1] = encode(
@@ -635,7 +635,7 @@ public final class DatatypeConverterImpl implements DatatypeConverterInterface {
             output.writeCharacters(buf, 0, 4);
         }
     }
-    
+
     /**
      * Encodes a byte array into another byte array by first doing base64 encoding
      * then encoding the result in ASCII.
@@ -1153,5 +1153,5 @@ public final class DatatypeConverterImpl implements DatatypeConverterInterface {
     public String printAnySimpleType(String val) {
         return val;
     }
-    
+
 }

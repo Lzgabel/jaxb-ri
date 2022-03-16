@@ -28,8 +28,8 @@ import com.sun.tools.xjc.model.CValuePropertyInfo;
 import com.sun.tools.xjc.model.TypeUse;
 import com.sun.tools.xjc.reader.dtd.bindinfo.BIConversion;
 import com.sun.tools.xjc.reader.dtd.bindinfo.BIElement;
-import org.glassfish.jaxb.core.v2.model.core.ID;
-import org.glassfish.jaxb.core.v2.model.core.WildcardMode;
+import cn.glassfish.jaxb.core.v2.model.core.ID;
+import cn.glassfish.jaxb.core.v2.model.core.WildcardMode;
 import com.sun.xml.dtdparser.DTDEventListener;
 
 import org.xml.sax.Locator;

@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.annotation;
+package cn.glassfish.jaxb.core.annotation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;

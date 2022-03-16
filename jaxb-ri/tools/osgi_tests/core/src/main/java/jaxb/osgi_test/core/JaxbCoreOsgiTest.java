@@ -35,7 +35,7 @@ public class JaxbCoreOsgiTest extends JaxbOsgiTest {
     }
 
     public void testClassFactory() {
-        checkClassInBundle("org.glassfish.jaxb.core.v2.ClassFactory", bundle);
+        checkClassInBundle("cn.glassfish.jaxb.core.v2.ClassFactory", bundle);
     }
 
     public void testBuilder() {

@@ -25,9 +25,9 @@ import com.sun.codemodel.JCodeModel;
 import com.sun.codemodel.writer.SingleStreamCodeWriter;
 import com.sun.tools.xjc.ConsoleErrorReporter;
 import java.io.IOException;
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
+import cn.glassfish.jaxb.core.v2.WellKnownNamespace;
 
-import org.glassfish.jaxb.core.v2.util.XmlFactory;
+import cn.glassfish.jaxb.core.v2.util.XmlFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;

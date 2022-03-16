@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2;
+package cn.glassfish.jaxb.runtime.v2;
 
 import java.io.StringReader;
 import java.util.HashMap;
@@ -19,7 +19,7 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
-import org.glassfish.jaxb.runtime.api.JAXBRIContext;
+import cn.glassfish.jaxb.runtime.api.JAXBRIContext;
 
 import junit.framework.TestCase;
 
@@ -34,7 +34,7 @@ public class BackupWithParentNamespaceTest extends TestCase {
     @XmlType(namespace = "http://example.org")
     static class Nested {
         @XmlElement(namespace = "http://example.org")
-        String bar;    
+        String bar;
     }
 
     // bug#25092248/21667799/JAXB-867: lookup loader by parent namespace also
@@ -43,7 +43,7 @@ public class BackupWithParentNamespaceTest extends TestCase {
     // bar = example.org namepace with no namespace specified, example.org namespace should be used, instead of nested.example.org
     // by SPEC unmarshaller should fail, but due to JAXB-867 there were few releases (from 2.2.5 to 2.3 (not including)
     // that handled it gracefully, so some clients rely on this behavior and need support for this further on
-    // this is fullfilled with org.glassfish.jaxb.backupWithParentNamespace system property
+    // this is fullfilled with cn.glassfish.jaxb.backupWithParentNamespace system property
     public void test1() throws Exception {
         Map<String, Object> properties = new HashMap<>();
         properties.put(JAXBRIContext.BACKUP_WITH_PARENT_NAMESPACE, Boolean.TRUE);

@@ -8,9 +8,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.runtime;
+package cn.glassfish.jaxb.runtime.v2.model.runtime;
 
-import org.glassfish.jaxb.core.v2.model.core.ElementInfo;
+import cn.glassfish.jaxb.core.v2.model.core.ElementInfo;
 import jakarta.xml.bind.JAXBElement;
 
 import java.lang.reflect.Type;

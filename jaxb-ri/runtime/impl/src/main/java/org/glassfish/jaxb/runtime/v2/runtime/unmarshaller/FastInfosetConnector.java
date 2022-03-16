@@ -8,9 +8,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
 
-import org.glassfish.jaxb.core.WhiteSpaceProcessor;
+import cn.glassfish.jaxb.core.WhiteSpaceProcessor;
 import com.sun.xml.fastinfoset.stax.StAXDocumentParser;
 import org.jvnet.fastinfoset.EncodingAlgorithmIndexes;
 import org.xml.sax.SAXException;

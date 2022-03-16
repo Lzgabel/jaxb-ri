@@ -8,11 +8,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.output;
+package cn.glassfish.jaxb.runtime.v2.runtime.output;
 
-import org.glassfish.jaxb.runtime.v2.runtime.Name;
-import org.glassfish.jaxb.runtime.v2.runtime.NameList;
-import org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
+import cn.glassfish.jaxb.runtime.v2.runtime.Name;
+import cn.glassfish.jaxb.runtime.v2.runtime.NameList;
+import cn.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
 import jakarta.xml.bind.JAXBContext;
 import org.xml.sax.SAXException;
 
@@ -106,7 +106,7 @@ public interface XmlOutput {
      *      false if we are writing the whole document.
      */
     public void endDocument(boolean fragment) throws IOException, SAXException, XMLStreamException;
-    
+
     /**
      * Writes a start tag.
      *
@@ -118,11 +118,11 @@ public interface XmlOutput {
      * This method is used for writing tags that are indexed.
      */
     public void beginStartTag(Name name) throws IOException, XMLStreamException;
-    
+
     public void beginStartTag(int prefix, String localName) throws IOException, XMLStreamException;
 
     public void attribute( Name name, String value ) throws IOException, XMLStreamException;
-    
+
     /**
      * @param prefix
      *      -1 if this attribute does not have a prefix
@@ -133,7 +133,7 @@ public interface XmlOutput {
     public void endStartTag() throws IOException, SAXException;
 
     public void endTag(Name name) throws IOException, SAXException, XMLStreamException;
-    
+
     public void endTag(int prefix, String localName) throws IOException, SAXException, XMLStreamException;
 
     /**

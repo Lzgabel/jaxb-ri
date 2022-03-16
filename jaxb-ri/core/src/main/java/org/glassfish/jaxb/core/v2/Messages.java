@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2;
+package cn.glassfish.jaxb.core.v2;
 
 import java.text.MessageFormat;
 import java.util.ResourceBundle;

@@ -8,16 +8,16 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2;
+package cn.glassfish.jaxb.runtime.v2;
 
 import com.sun.istack.FinalArrayList;
-import org.glassfish.jaxb.core.Utils;
-import org.glassfish.jaxb.runtime.api.JAXBRIContext;
-import org.glassfish.jaxb.runtime.api.TypeReference;
-import org.glassfish.jaxb.runtime.v2.model.annotation.RuntimeAnnotationReader;
-import org.glassfish.jaxb.core.v2.Messages;
-import org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
-import org.glassfish.jaxb.runtime.v2.util.TypeCast;
+import cn.glassfish.jaxb.core.Utils;
+import cn.glassfish.jaxb.runtime.api.JAXBRIContext;
+import cn.glassfish.jaxb.runtime.api.TypeReference;
+import cn.glassfish.jaxb.runtime.v2.model.annotation.RuntimeAnnotationReader;
+import cn.glassfish.jaxb.core.v2.Messages;
+import cn.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
+import cn.glassfish.jaxb.runtime.v2.util.TypeCast;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 

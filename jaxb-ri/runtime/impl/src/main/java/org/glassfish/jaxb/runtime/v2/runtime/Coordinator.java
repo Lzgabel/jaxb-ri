@@ -8,10 +8,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime;
+package cn.glassfish.jaxb.runtime.v2.runtime;
 
-import org.glassfish.jaxb.core.v2.ClassFactory;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
+import cn.glassfish.jaxb.core.v2.ClassFactory;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
 import jakarta.xml.bind.ValidationEvent;
 import jakarta.xml.bind.ValidationEventHandler;
 import jakarta.xml.bind.ValidationEventLocator;
@@ -46,7 +46,7 @@ import java.util.HashMap;
  * @author Kohsuke Kawaguchi
  */
 public abstract class Coordinator implements ErrorHandler, ValidationEventHandler {
-    
+
     private final HashMap<Class<? extends XmlAdapter>,XmlAdapter> adapters =
             new HashMap<>();
 

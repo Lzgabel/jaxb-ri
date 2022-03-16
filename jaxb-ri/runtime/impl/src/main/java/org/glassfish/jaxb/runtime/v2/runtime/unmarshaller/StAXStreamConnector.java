@@ -8,9 +8,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
 
-import org.glassfish.jaxb.core.WhiteSpaceProcessor;
+import cn.glassfish.jaxb.core.WhiteSpaceProcessor;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 
@@ -26,7 +26,7 @@ import java.lang.reflect.Constructor;
  * <p>
  * TODO:
  * Finding the optimized FI implementations is a bit hacky and not very
- * extensible. Can we use the service provider mechanism in general for 
+ * extensible. Can we use the service provider mechanism in general for
  * concrete implementations of StAXConnector.
  *
  * @author Ryan.Shoemaker@Sun.COM
@@ -350,9 +350,9 @@ class StAXStreamConnector extends StAXConnector {
         try {
             if (FI_STAX_READER_CLASS == null)
                 return null;
-            
+
             Class c = Class.forName(
-                    "org.glassfish.jaxb.core.v2.runtime.unmarshaller.FastInfosetConnector");                
+                    "cn.glassfish.jaxb.core.v2.runtime.unmarshaller.FastInfosetConnector");
             return c.getConstructor(FI_STAX_READER_CLASS,XmlVisitor.class);
         } catch (Throwable e) {
             return null;
@@ -375,7 +375,7 @@ class StAXStreamConnector extends StAXConnector {
 
     private static Constructor<? extends StAXConnector> initStAXExConnector() {
         try {
-            Class c = Class.forName("org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.StAXExConnector");
+            Class c = Class.forName("cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.StAXExConnector");
             return c.getConstructor(STAX_EX_READER_CLASS,XmlVisitor.class);
         } catch (Throwable e) {
             return null;

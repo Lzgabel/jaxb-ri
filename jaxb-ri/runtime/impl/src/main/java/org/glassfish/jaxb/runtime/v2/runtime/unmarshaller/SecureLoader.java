@@ -8,11 +8,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
 
 /**
  * Class defined for safe calls of getClassLoader methods of any kind (context/system/class
- * classloader. This MUST be package private and defined in every package which 
+ * classloader. This MUST be package private and defined in every package which
  * uses such invocations.
  * @author snajper
  */
@@ -59,5 +59,5 @@ class SecureLoader {
                     });
         }
     }
-    
+
 }

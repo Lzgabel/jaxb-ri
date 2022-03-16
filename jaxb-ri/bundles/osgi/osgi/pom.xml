@@ -37,17 +37,17 @@
         </dependency>
 
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.glassfish.jaxb</groupId>
             <artifactId>jaxb-core</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.glassfish.jaxb</groupId>
             <artifactId>jaxb-runtime</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.glassfish.jaxb</groupId>
             <artifactId>txw2</artifactId>
             <scope>provided</scope>
         </dependency>
@@ -68,17 +68,17 @@
         </dependency>
 
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.glassfish.jaxb</groupId>
             <artifactId>jaxb-xjc</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.glassfish.jaxb</groupId>
             <artifactId>codemodel</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.glassfish.jaxb</groupId>
             <artifactId>xsom</artifactId>
             <scope>provided</scope>
         </dependency>
@@ -104,7 +104,7 @@
         </dependency>
 
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.glassfish.jaxb</groupId>
             <artifactId>jaxb-jxc</artifactId>
             <scope>provided</scope>
         </dependency>
@@ -148,7 +148,7 @@
                             <goal>unpack-dependencies</goal>
                         </goals>
                         <configuration>
-                            <includeGroupIds>org.glassfish.jaxb,com.sun.istack,com.sun.xml.bind.external,com.sun.xml.dtd-parser,com.sun.xml.fastinfoset,org.jvnet.staxex</includeGroupIds>
+                            <includeGroupIds>cn.glassfish.jaxb,com.sun.istack,com.sun.xml.bind.external,com.sun.xml.dtd-parser,com.sun.xml.fastinfoset,org.jvnet.staxex</includeGroupIds>
                             <includeScope>provided</includeScope>
                             <classifier>sources</classifier>
                             <excludeTransitive>true</excludeTransitive>
@@ -298,10 +298,10 @@
                                     com.sun.xml.txw2.*;version=${jaxb.osgiVersion},
                                     com.sun.xml.xsom;version=${jaxb.osgiVersion},
                                     com.sun.xml.xsom.*;version=${jaxb.osgiVersion},
-                                    org.glassfish.jaxb.core;version=${jaxb.osgiVersion},
-                                    org.glassfish.jaxb.core.*;version=${jaxb.osgiVersion},
-                                    org.glassfish.jaxb.runtime;version=${jaxb.osgiVersion},
-                                    org.glassfish.jaxb.runtime.*;version=${jaxb.osgiVersion},
+                                    cn.glassfish.jaxb.core;version=${jaxb.osgiVersion},
+                                    cn.glassfish.jaxb.core.*;version=${jaxb.osgiVersion},
+                                    cn.glassfish.jaxb.runtime;version=${jaxb.osgiVersion},
+                                    cn.glassfish.jaxb.runtime.*;version=${jaxb.osgiVersion},
                                     org.jvnet.fastinfoset;version=${fastinfoset.version},
                                     org.jvnet.fastinfoset.*;version=${fastinfoset.version},
                                     org.jvnet.staxex;version=${stax-ex.version},

@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.runtime;
+package cn.glassfish.jaxb.core.v2.runtime;
 
 import java.util.Collections;
 import java.util.HashMap;

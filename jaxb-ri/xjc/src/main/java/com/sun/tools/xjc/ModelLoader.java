@@ -30,7 +30,7 @@ import com.sun.tools.xjc.reader.xmlschema.parser.IncorrectNamespaceURIChecker;
 import com.sun.tools.xjc.reader.xmlschema.parser.SchemaConstraintChecker;
 import com.sun.tools.xjc.reader.xmlschema.parser.XMLSchemaInternalizationLogic;
 import com.sun.tools.xjc.util.ErrorReceiverFilter;
-import org.glassfish.jaxb.core.v2.util.XmlFactory;
+import cn.glassfish.jaxb.core.v2.util.XmlFactory;
 import com.sun.xml.xsom.XSSchemaSet;
 import com.sun.xml.xsom.parser.JAXPParser;
 import com.sun.xml.xsom.parser.XMLParser;
@@ -372,9 +372,9 @@ public final class ModelLoader {
     /**
      * Potentially problematic - make sure the parser instance passed is initialized
      * with proper security feature.
-     * 
+     *
      * @param parser
-     * @return 
+     * @return
      */
     public XSOMParser createXSOMParser(XMLParser parser) {
         // set up other parameters to XSOMParser

@@ -20,7 +20,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>org.glassfish.jaxb</groupId>
+    <groupId>cn.glassfish.jaxb</groupId>
     <artifactId>codemodel</artifactId>
     <name>Codemodel Core</name>
     <description>The core functionality of the CodeModel java source code generation library</description>

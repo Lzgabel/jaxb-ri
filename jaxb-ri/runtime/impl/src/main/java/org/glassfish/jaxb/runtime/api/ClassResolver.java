@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.api;
+package cn.glassfish.jaxb.runtime.api;
 
 import com.sun.istack.NotNull;
 import com.sun.istack.Nullable;

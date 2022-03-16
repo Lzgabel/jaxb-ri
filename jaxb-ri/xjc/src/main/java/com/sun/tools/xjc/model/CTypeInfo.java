@@ -16,7 +16,7 @@ import com.sun.tools.xjc.model.nav.NClass;
 import com.sun.tools.xjc.model.nav.NType;
 import com.sun.tools.xjc.outline.Aspect;
 import com.sun.tools.xjc.outline.Outline;
-import org.glassfish.jaxb.core.v2.model.core.TypeInfo;
+import cn.glassfish.jaxb.core.v2.model.core.TypeInfo;
 
 /**
  * {@link TypeInfo} at the compile-time.

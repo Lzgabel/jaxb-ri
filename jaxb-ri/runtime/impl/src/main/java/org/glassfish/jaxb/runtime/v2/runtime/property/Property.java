@@ -8,16 +8,16 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.property;
+package cn.glassfish.jaxb.runtime.v2.runtime.property;
 
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.core.v2.model.core.ID;
-import org.glassfish.jaxb.core.v2.model.core.PropertyInfo;
-import org.glassfish.jaxb.core.v2.model.core.PropertyKind;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.JaxBeanInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
+import cn.glassfish.jaxb.runtime.api.AccessorException;
+import cn.glassfish.jaxb.core.v2.model.core.ID;
+import cn.glassfish.jaxb.core.v2.model.core.PropertyInfo;
+import cn.glassfish.jaxb.core.v2.model.core.PropertyKind;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
+import cn.glassfish.jaxb.runtime.v2.runtime.JaxBeanInfo;
+import cn.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
+import cn.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBElement;
 import org.xml.sax.SAXException;
@@ -118,10 +118,10 @@ public interface Property<BeanT> extends StructureLoaderBuilder {
      *      null if RETAIN_REFERENCE_TO_INFO property is not set on the {@link JAXBContext}
      */
     public RuntimePropertyInfo getInfo();
-    
+
     public boolean isHiddenByOverride();
-    
+
     public void setHiddenByOverride(boolean hidden);
-    
-    public String getFieldName();    
+
+    public String getFieldName();
 }

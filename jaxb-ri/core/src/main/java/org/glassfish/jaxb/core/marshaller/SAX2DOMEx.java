@@ -8,17 +8,17 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.marshaller;
+package cn.glassfish.jaxb.core.marshaller;
 
 import java.util.Stack;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.glassfish.jaxb.core.util.Which;
+import cn.glassfish.jaxb.core.util.Which;
 import com.sun.istack.FinalArrayList;
 
-import org.glassfish.jaxb.core.v2.util.XmlFactory;
+import cn.glassfish.jaxb.core.v2.util.XmlFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;

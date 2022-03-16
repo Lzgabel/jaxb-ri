@@ -8,10 +8,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.schemagen;
+package cn.glassfish.jaxb.runtime.v2.schemagen;
 
-import org.glassfish.jaxb.runtime.v2.schemagen.xmlschema.ContentModelContainer;
-import org.glassfish.jaxb.runtime.v2.schemagen.xmlschema.Particle;
+import cn.glassfish.jaxb.runtime.v2.schemagen.xmlschema.ContentModelContainer;
+import cn.glassfish.jaxb.runtime.v2.schemagen.xmlschema.Particle;
 
 /**
  * Enum for model group type.

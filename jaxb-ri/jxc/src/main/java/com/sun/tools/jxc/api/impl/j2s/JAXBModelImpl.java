@@ -31,17 +31,17 @@ import javax.lang.model.type.TypeMirror;
 import com.sun.tools.xjc.api.ErrorListener;
 import com.sun.tools.xjc.api.J2SJAXBModel;
 import com.sun.tools.xjc.api.Reference;
-import org.glassfish.jaxb.core.v2.model.annotation.AnnotationReader;
-import org.glassfish.jaxb.core.v2.model.core.ArrayInfo;
-import org.glassfish.jaxb.core.v2.model.core.ClassInfo;
-import org.glassfish.jaxb.core.v2.model.core.Element;
-import org.glassfish.jaxb.core.v2.model.core.ElementInfo;
-import org.glassfish.jaxb.core.v2.model.core.EnumLeafInfo;
-import org.glassfish.jaxb.core.v2.model.core.NonElement;
-import org.glassfish.jaxb.core.v2.model.core.Ref;
-import org.glassfish.jaxb.core.v2.model.core.TypeInfoSet;
-import org.glassfish.jaxb.core.v2.model.nav.Navigator;
-import org.glassfish.jaxb.runtime.v2.schemagen.XmlSchemaGenerator;
+import cn.glassfish.jaxb.core.v2.model.annotation.AnnotationReader;
+import cn.glassfish.jaxb.core.v2.model.core.ArrayInfo;
+import cn.glassfish.jaxb.core.v2.model.core.ClassInfo;
+import cn.glassfish.jaxb.core.v2.model.core.Element;
+import cn.glassfish.jaxb.core.v2.model.core.ElementInfo;
+import cn.glassfish.jaxb.core.v2.model.core.EnumLeafInfo;
+import cn.glassfish.jaxb.core.v2.model.core.NonElement;
+import cn.glassfish.jaxb.core.v2.model.core.Ref;
+import cn.glassfish.jaxb.core.v2.model.core.TypeInfoSet;
+import cn.glassfish.jaxb.core.v2.model.nav.Navigator;
+import cn.glassfish.jaxb.runtime.v2.schemagen.XmlSchemaGenerator;
 import com.sun.xml.txw2.output.ResultFactory;
 
 /**

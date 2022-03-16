@@ -8,19 +8,19 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.property;
+package cn.glassfish.jaxb.runtime.v2.runtime.property;
 
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.core.v2.ClassFactory;
-import org.glassfish.jaxb.core.v2.model.core.PropertyKind;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeMapPropertyInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.JaxBeanInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.Name;
-import org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
-import org.glassfish.jaxb.runtime.v2.util.QNameMap;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.*;
+import cn.glassfish.jaxb.runtime.api.AccessorException;
+import cn.glassfish.jaxb.core.v2.ClassFactory;
+import cn.glassfish.jaxb.core.v2.model.core.PropertyKind;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimeMapPropertyInfo;
+import cn.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
+import cn.glassfish.jaxb.runtime.v2.runtime.JaxBeanInfo;
+import cn.glassfish.jaxb.runtime.v2.runtime.Name;
+import cn.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
+import cn.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
+import cn.glassfish.jaxb.runtime.v2.util.QNameMap;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.*;
 import org.xml.sax.SAXException;
 
 import javax.xml.namespace.QName;

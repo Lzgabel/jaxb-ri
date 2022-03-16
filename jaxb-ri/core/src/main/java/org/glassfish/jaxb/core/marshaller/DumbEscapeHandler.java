@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.marshaller;
+package cn.glassfish.jaxb.core.marshaller;
 
 import java.io.IOException;
 import java.io.Writer;
@@ -16,19 +16,19 @@ import java.io.Writer;
 /**
  * Escape everything above the US-ASCII code range.
  * A fallback position.
- * 
+ *
  * Works with any JDK, any encoding.
- * 
+ *
  * @since 1.0.1
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
 public class DumbEscapeHandler implements CharacterEscapeHandler {
-    
+
     private DumbEscapeHandler() {}  // no instanciation please
-    
-    public static final CharacterEscapeHandler theInstance = new DumbEscapeHandler(); 
-    
+
+    public static final CharacterEscapeHandler theInstance = new DumbEscapeHandler();
+
     @Override
     public void escape(char[] ch, int start, int length, boolean isAttVal, Writer out) throws IOException {
         int limit = start+length;

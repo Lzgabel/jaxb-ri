@@ -35,7 +35,7 @@ import com.sun.tools.xjc.reader.Ring;
 import com.sun.tools.xjc.reader.xmlschema.bindinfo.BIProperty;
 import com.sun.tools.xjc.reader.xmlschema.bindinfo.BISchemaBinding;
 import com.sun.tools.xjc.reader.xmlschema.bindinfo.LocalScoping;
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
+import cn.glassfish.jaxb.core.v2.WellKnownNamespace;
 import com.sun.xml.xsom.XSComplexType;
 import com.sun.xml.xsom.XSComponent;
 import com.sun.xml.xsom.XSDeclaration;

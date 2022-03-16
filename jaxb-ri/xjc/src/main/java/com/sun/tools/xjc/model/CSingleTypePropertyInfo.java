@@ -16,7 +16,7 @@ import java.util.List;
 import jakarta.activation.MimeType;
 import javax.xml.namespace.QName;
 
-import org.glassfish.jaxb.core.v2.model.core.ID;
+import cn.glassfish.jaxb.core.v2.model.core.ID;
 import com.sun.xml.xsom.XSComponent;
 
 import org.xml.sax.Locator;

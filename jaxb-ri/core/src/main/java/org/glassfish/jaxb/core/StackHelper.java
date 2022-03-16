@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core;
+package cn.glassfish.jaxb.core;
 
 import java.lang.StackWalker.StackFrame;
 

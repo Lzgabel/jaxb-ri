@@ -8,31 +8,31 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.glassfish.jaxb.runtime.v2.model.impl;
 
 import com.sun.istack.NotNull;
-import org.glassfish.jaxb.core.annotation.XmlLocation;
-import org.glassfish.jaxb.runtime.AccessorFactory;
-import org.glassfish.jaxb.runtime.AccessorFactoryImpl;
-import org.glassfish.jaxb.runtime.InternalAccessorFactory;
-import org.glassfish.jaxb.runtime.XmlAccessorFactory;
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.Name;
-import org.glassfish.jaxb.runtime.v2.runtime.Transducer;
-import org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
-import org.glassfish.jaxb.core.v2.ClassFactory;
-import org.glassfish.jaxb.core.v2.model.annotation.Locatable;
-import org.glassfish.jaxb.core.v2.model.core.PropertyKind;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeClassInfo;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeElement;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeValuePropertyInfo;
-import org.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
-import org.glassfish.jaxb.core.v2.runtime.Location;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.TransducedAccessor;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
+import cn.glassfish.jaxb.core.annotation.XmlLocation;
+import cn.glassfish.jaxb.runtime.AccessorFactory;
+import cn.glassfish.jaxb.runtime.AccessorFactoryImpl;
+import cn.glassfish.jaxb.runtime.InternalAccessorFactory;
+import cn.glassfish.jaxb.runtime.XmlAccessorFactory;
+import cn.glassfish.jaxb.runtime.api.AccessorException;
+import cn.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
+import cn.glassfish.jaxb.runtime.v2.runtime.Name;
+import cn.glassfish.jaxb.runtime.v2.runtime.Transducer;
+import cn.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
+import cn.glassfish.jaxb.core.v2.ClassFactory;
+import cn.glassfish.jaxb.core.v2.model.annotation.Locatable;
+import cn.glassfish.jaxb.core.v2.model.core.PropertyKind;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimeClassInfo;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimeElement;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimeValuePropertyInfo;
+import cn.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
+import cn.glassfish.jaxb.core.v2.runtime.Location;
+import cn.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
+import cn.glassfish.jaxb.runtime.v2.runtime.reflect.TransducedAccessor;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
 import jakarta.xml.bind.JAXBException;
 import org.xml.sax.Locator;
 import org.xml.sax.SAXException;
@@ -116,7 +116,7 @@ class RuntimeClassInfoImpl extends ClassInfoImpl<Type,Class,Field,Method>
     public Method getFactoryMethod(){
         return super.getFactoryMethod();
     }
-    
+
     @Override
     public final RuntimeClassInfoImpl getBaseClass() {
         return (RuntimeClassInfoImpl)super.getBaseClass();
@@ -211,7 +211,7 @@ class RuntimeClassInfoImpl extends ClassInfoImpl<Type,Class,Field,Method>
             return null;
         if( !valuep.getTarget().isSimpleType() )
             return null;    // if there's an error, recover from it by returning null.
-        
+
         return new TransducerImpl(getClazz(), TransducedAccessor.get(
                 ((RuntimeModelBuilder)builder).context,valuep));
     }
@@ -229,7 +229,7 @@ class RuntimeClassInfoImpl extends ClassInfoImpl<Type,Class,Field,Method>
        final boolean readOnly = Modifier.isStatic(field.getModifiers());
         Accessor acc;
         try {
-            if (supressAccessorWarnings) { 
+            if (supressAccessorWarnings) {
                 acc = ((InternalAccessorFactory)accessorFactory).createFieldAccessor(clazz, field, readOnly, supressAccessorWarnings);
             } else {
                 acc = accessorFactory.createFieldAccessor(clazz, field, readOnly);
@@ -320,7 +320,7 @@ class RuntimeClassInfoImpl extends ClassInfoImpl<Type,Class,Field,Method>
     }
 
 
-    
+
     /**
      * {@link Transducer} implementation used when this class maps to PCDATA in XML.
      *

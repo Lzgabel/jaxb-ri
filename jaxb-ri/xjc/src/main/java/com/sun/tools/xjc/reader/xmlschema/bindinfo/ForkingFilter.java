@@ -10,7 +10,7 @@
 
 package com.sun.tools.xjc.reader.xmlschema.bindinfo;
 
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
+import cn.glassfish.jaxb.core.v2.WellKnownNamespace;
 import java.util.ArrayList;
 
 import org.xml.sax.Attributes;

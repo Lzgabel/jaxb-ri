@@ -8,16 +8,16 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
 
-import org.glassfish.jaxb.core.v2.runtime.unmarshaller.LocatorEx;
+import cn.glassfish.jaxb.core.v2.runtime.unmarshaller.LocatorEx;
 import jakarta.xml.bind.ValidationEventLocator;
 import jakarta.xml.bind.helpers.ValidationEventLocatorImpl;
 import org.xml.sax.Locator;
 
 /**
  * {@link LocatorEx} implemented by {@link Locator}.
- * 
+ *
  * @author Kohsuke Kawaguchi
  */
 class LocatorExWrapper implements LocatorEx {

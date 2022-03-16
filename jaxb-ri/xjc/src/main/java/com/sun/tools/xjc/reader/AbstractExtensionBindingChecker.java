@@ -16,7 +16,7 @@ import java.util.HashSet;
 import com.sun.tools.xjc.util.SubtreeCutter;
 import com.sun.tools.xjc.Options;
 import com.sun.tools.xjc.Plugin;
-import org.glassfish.jaxb.core.v2.util.EditDistance;
+import cn.glassfish.jaxb.core.v2.util.EditDistance;
 
 import org.xml.sax.helpers.NamespaceSupport;
 import org.xml.sax.Locator;
@@ -24,7 +24,7 @@ import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.SAXException;
 
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
+import cn.glassfish.jaxb.core.v2.WellKnownNamespace;
 
 import javax.xml.XMLConstants;
 

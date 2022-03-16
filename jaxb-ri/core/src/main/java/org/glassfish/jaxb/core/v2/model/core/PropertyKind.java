@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.model.core;
+package cn.glassfish.jaxb.core.v2.model.core;
 
 import jakarta.xml.bind.annotation.XmlMimeType;
 import jakarta.xml.bind.annotation.XmlType;
@@ -42,7 +42,7 @@ public enum PropertyKind {
     public final boolean isOrdered;
 
     /**
-     * {@code org.glassfish.jaxb.core.v2.runtime.property.PropertyFactory} benefits from having index numbers assigned to
+     * {@code cn.glassfish.jaxb.core.v2.runtime.property.PropertyFactory} benefits from having index numbers assigned to
      * {@link #ELEMENT}, {@link #REFERENCE}, and {@link #MAP} in this order.
      */
     public final int propertyIndex;

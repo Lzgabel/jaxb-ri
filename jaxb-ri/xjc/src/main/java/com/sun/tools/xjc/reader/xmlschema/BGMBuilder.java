@@ -41,8 +41,8 @@ import com.sun.tools.xjc.reader.xmlschema.bindinfo.BISerializable;
 import com.sun.tools.xjc.reader.xmlschema.bindinfo.BindInfo;
 import com.sun.tools.xjc.util.CodeModelClassFactory;
 import com.sun.tools.xjc.util.ErrorReceiverFilter;
-import org.glassfish.jaxb.core.api.impl.NameConverter;
-import org.glassfish.jaxb.core.v2.util.XmlFactory;
+import cn.glassfish.jaxb.core.api.impl.NameConverter;
+import cn.glassfish.jaxb.core.v2.util.XmlFactory;
 import com.sun.xml.xsom.XSAnnotation;
 import com.sun.xml.xsom.XSAttributeUse;
 import com.sun.xml.xsom.XSComponent;
@@ -60,9 +60,9 @@ import org.xml.sax.Locator;
 
 /**
  * Root of the XML Schema binder.
- * 
+ *
  * <div><img src="doc-files/binding_chart.png" alt=""></div>
- * 
+ *
  * @author Kohsuke Kawaguchi
  */
 public class BGMBuilder extends BindingComponent {
@@ -236,7 +236,7 @@ public class BGMBuilder extends BindingComponent {
      */
     public @NotNull BIGlobalBinding getGlobalBinding() { return globalBinding; }
 
-    
+
     private ParticleBinder particleBinder;
 
     /**

@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.model.core;
+package cn.glassfish.jaxb.core.v2.model.core;
 
 import java.util.Map;
 
@@ -18,7 +18,7 @@ import jakarta.xml.bind.annotation.XmlNsForm;
 import javax.xml.namespace.QName;
 import javax.xml.transform.Result;
 
-import org.glassfish.jaxb.core.v2.model.nav.Navigator;
+import cn.glassfish.jaxb.core.v2.model.nav.Navigator;
 
 /**
  * Root of models.&nbsp;Set of {@link TypeInfo}s.
@@ -121,7 +121,7 @@ public interface TypeInfoSet<T,C,F,M> {
      *
      * <p>
      * This operation is expected to be only used in schema generator, so it can be slow.
-     *  
+     *
      * @return
      *      A map from prefixes to namespace URIs, which should be declared when generating a schema.
      *      Could be empty but never null.

@@ -8,23 +8,23 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime;
+package cn.glassfish.jaxb.runtime.v2.runtime;
 
 import com.sun.istack.FinalArrayList;
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.core.v2.ClassFactory;
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
-import org.glassfish.jaxb.core.v2.model.core.ID;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeClassInfo;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.property.AttributeProperty;
-import org.glassfish.jaxb.runtime.v2.runtime.property.Property;
-import org.glassfish.jaxb.runtime.v2.runtime.property.PropertyFactory;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Loader;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.StructureLoader;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.XsiTypeLoader;
+import cn.glassfish.jaxb.runtime.api.AccessorException;
+import cn.glassfish.jaxb.core.v2.ClassFactory;
+import cn.glassfish.jaxb.core.v2.WellKnownNamespace;
+import cn.glassfish.jaxb.core.v2.model.core.ID;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimeClassInfo;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
+import cn.glassfish.jaxb.runtime.v2.runtime.property.AttributeProperty;
+import cn.glassfish.jaxb.runtime.v2.runtime.property.Property;
+import cn.glassfish.jaxb.runtime.v2.runtime.property.PropertyFactory;
+import cn.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Loader;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.StructureLoader;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.XsiTypeLoader;
 import jakarta.xml.bind.ValidationEvent;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.helpers.ValidationEventImpl;
@@ -90,7 +90,7 @@ public final class ClassBeanInfoImpl<BeanT> extends JaxBeanInfo<BeanT> implement
     private final Name tagName;
 
     private boolean retainPropertyInfo = false;
-            
+
     /**
      * The {@link AttributeProperty}s for this type and all its ancestors.
      * If {@link JAXBContextImpl#c14nSupport} is true, this is sorted alphabetically.
@@ -103,7 +103,7 @@ public final class ClassBeanInfoImpl<BeanT> extends JaxBeanInfo<BeanT> implement
     private /*final*/ Property<BeanT>[] uriProperties;
 
     private final Method factoryMethod;
-    
+
     /*package*/ ClassBeanInfoImpl(JAXBContextImpl owner, RuntimeClassInfo ci) {
         super(owner,ci,ci.getClazz(),ci.getTypeName(),ci.isElement(),false,true);
 
@@ -112,7 +112,7 @@ public final class ClassBeanInfoImpl<BeanT> extends JaxBeanInfo<BeanT> implement
         this.xducer = ci.getTransducer();
         this.factoryMethod = ci.getFactoryMethod();
         this.retainPropertyInfo = owner.retainPropertyInfo;
-        
+
         // make the factory accessible
         if(factoryMethod!=null) {
             int classMod = factoryMethod.getDeclaringClass().getModifiers();
@@ -129,7 +129,7 @@ public final class ClassBeanInfoImpl<BeanT> extends JaxBeanInfo<BeanT> implement
             }
         }
 
-        
+
         if(ci.getBaseClass()==null)
             this.superClazz = null;
         else
@@ -182,7 +182,7 @@ public final class ClassBeanInfoImpl<BeanT> extends JaxBeanInfo<BeanT> implement
             }
         }
     }
-    
+
     @Override
     protected void link(JAXBContextImpl grammar) {
         if(uriProperties!=null)
@@ -250,8 +250,8 @@ public final class ClassBeanInfoImpl<BeanT> extends JaxBeanInfo<BeanT> implement
 
     @Override
     public BeanT createInstance(UnmarshallingContext context) throws IllegalAccessException, InvocationTargetException, InstantiationException, SAXException {
-        
-        BeanT bean = null;        
+
+        BeanT bean = null;
         if (factoryMethod == null){
            bean = ClassFactory.create0(jaxbType);
         }else {
@@ -262,7 +262,7 @@ public final class ClassBeanInfoImpl<BeanT> extends JaxBeanInfo<BeanT> implement
                 throw new InstantiationException("The factory method didn't return a correct object");
             }
         }
-        
+
         if(xmlLocatorField!=null)
             // need to copy because Locator is mutable
             try {
@@ -333,8 +333,8 @@ public final class ClassBeanInfoImpl<BeanT> extends JaxBeanInfo<BeanT> implement
                 boolean isThereAnOverridingProperty = p.isHiddenByOverride();
                 if (!isThereAnOverridingProperty || bean.getClass().equals(jaxbType)) {
                     p.serializeBody(bean, target, null);
-                } else if (isThereAnOverridingProperty) { 
-                    // need to double check the override - it should be safe to do after the model has been created because it's targeted to override properties only 
+                } else if (isThereAnOverridingProperty) {
+                    // need to double check the override - it should be safe to do after the model has been created because it's targeted to override properties only
                     Class beanSuperClass = bean.getClass().getSuperclass();
                     if (Utils.REFLECTION_NAVIGATOR.getDeclaredField(beanSuperClass, p.getFieldName()) == null) {
                         p.serializeBody(bean, target, null);
@@ -428,7 +428,7 @@ public final class ClassBeanInfoImpl<BeanT> extends JaxBeanInfo<BeanT> implement
 
     private static final AttributeProperty[] EMPTY_PROPERTIES = new AttributeProperty[0];
 
-    private static final Logger logger = org.glassfish.jaxb.core.Utils.getClassLogger();
+    private static final Logger logger = cn.glassfish.jaxb.core.Utils.getClassLogger();
 
 }
 

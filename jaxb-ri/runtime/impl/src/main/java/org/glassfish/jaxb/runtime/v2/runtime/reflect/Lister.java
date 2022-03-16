@@ -8,18 +8,18 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.reflect;
+package cn.glassfish.jaxb.runtime.v2.runtime.reflect;
 
 import com.sun.istack.SAXException2;
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.core.v2.ClassFactory;
-import org.glassfish.jaxb.core.v2.TODO;
-import org.glassfish.jaxb.core.v2.model.core.Adapter;
-import org.glassfish.jaxb.core.v2.model.core.ID;
-import org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
-import org.glassfish.jaxb.core.v2.runtime.unmarshaller.LocatorEx;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Patcher;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
+import cn.glassfish.jaxb.runtime.api.AccessorException;
+import cn.glassfish.jaxb.core.v2.ClassFactory;
+import cn.glassfish.jaxb.core.v2.TODO;
+import cn.glassfish.jaxb.core.v2.model.core.Adapter;
+import cn.glassfish.jaxb.core.v2.model.core.ID;
+import cn.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
+import cn.glassfish.jaxb.core.v2.runtime.unmarshaller.LocatorEx;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Patcher;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
 import jakarta.xml.bind.JAXBException;
 import org.xml.sax.SAXException;
 
@@ -46,7 +46,7 @@ public abstract class Lister<BeanT,PropT,ItemT,PackT> {
      * @param context
      *      This parameter is used to support ID/IDREF handling.
      */
-    public abstract org.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator<ItemT> iterator(PropT multiValueProp, XMLSerializer context);
+    public abstract cn.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator<ItemT> iterator(PropT multiValueProp, XMLSerializer context);
 
     /**
      * Setting values to a multi-value property starts by creating
@@ -160,8 +160,8 @@ public abstract class Lister<BeanT,PropT,ItemT,PackT> {
         }
 
         @Override
-        public org.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator<ItemT> iterator(final ItemT[] objects, XMLSerializer context) {
-            return new org.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator<ItemT>() {
+        public cn.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator<ItemT> iterator(final ItemT[] objects, XMLSerializer context) {
+            return new cn.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator<ItemT>() {
                 int idx=0;
                 @Override
                 public boolean hasNext() {
@@ -242,9 +242,9 @@ public abstract class Lister<BeanT,PropT,ItemT,PackT> {
         }
 
         @Override
-        public org.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator iterator(T collection, XMLSerializer context) {
+        public cn.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator iterator(T collection, XMLSerializer context) {
             final Iterator itr = collection.iterator();
-            return new org.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator() {
+            return new cn.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator() {
                 @Override
                 public boolean hasNext() {
                     return itr.hasNext();
@@ -318,8 +318,8 @@ public abstract class Lister<BeanT,PropT,ItemT,PackT> {
         }
 
         @Override
-        public org.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator<String> iterator(PropT prop, XMLSerializer context) {
-            final org.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator i = core.iterator(prop,context);
+        public cn.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator<String> iterator(PropT prop, XMLSerializer context) {
+            final cn.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator i = core.iterator(prop,context);
 
             return new IDREFSIterator(i, context);
         }
@@ -408,12 +408,12 @@ public abstract class Lister<BeanT,PropT,ItemT,PackT> {
      * Only in ArrayElementProperty we need to get the actual
      * referenced object. This is a kind of ugly way to make that work.
      */
-    public static final class IDREFSIterator implements org.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator<String> {
-        private final org.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator i;
+    public static final class IDREFSIterator implements cn.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator<String> {
+        private final cn.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator i;
         private final XMLSerializer context;
         private Object last;
 
-        private IDREFSIterator(org.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator i, XMLSerializer context) {
+        private IDREFSIterator(cn.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator i, XMLSerializer context) {
             this.i = i;
             this.context = context;
         }
@@ -451,7 +451,7 @@ public abstract class Lister<BeanT,PropT,ItemT,PackT> {
 
     public static final Lister ERROR = new Lister() {
         @Override
-        public org.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator iterator(Object o, XMLSerializer context) {
+        public cn.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator iterator(Object o, XMLSerializer context) {
             return EMPTY_ITERATOR;
         }
 
@@ -473,7 +473,7 @@ public abstract class Lister<BeanT,PropT,ItemT,PackT> {
         }
     };
 
-    private static final org.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator EMPTY_ITERATOR = new ListIterator() {
+    private static final cn.glassfish.jaxb.runtime.v2.runtime.reflect.ListIterator EMPTY_ITERATOR = new ListIterator() {
         @Override
         public boolean hasNext() {
             return false;

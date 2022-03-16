@@ -41,10 +41,10 @@ public final class SchemaGeneratorTest {
     public void alwaysPass() {
         // TODO: once the IllegalAccessError is resolved, remove this test and re-instate filterClassTest
     }
-    // java.lang.IllegalAccessError: Class com/sun/tools/xjc/api/Reference(module org.glassfish.jaxb.xjc) can not access
+    // java.lang.IllegalAccessError: Class com/sun/tools/xjc/api/Reference(module cn.glassfish.jaxb.xjc) can not access
     // class mockit/internal/expectations/RecordAndReplayExecution(unnamed module 0x000000070004A930) because module
-    // module org.glassfish.jaxb.xjc does not read module unnamed module 0x000000070004A930 
-	// at org.glassfish.jaxb.jxc/com.sun.tools.jxc.ap.SchemaGeneratorTest.filterClassTest(SchemaGeneratorTest.java:66)
+    // module cn.glassfish.jaxb.xjc does not read module unnamed module 0x000000070004A930
+	// at cn.glassfish.jaxb.jxc/com.sun.tools.jxc.ap.SchemaGeneratorTest.filterClassTest(SchemaGeneratorTest.java:66)
     //@Test
     public void filterClassTest(
             @Mocked Reference ref, // needed for filing of the result's list

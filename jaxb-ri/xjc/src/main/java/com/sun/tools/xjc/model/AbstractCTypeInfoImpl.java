@@ -14,9 +14,9 @@ import jakarta.activation.MimeType;
 
 import com.sun.codemodel.JExpression;
 import com.sun.tools.xjc.outline.Outline;
-import org.glassfish.jaxb.core.v2.model.annotation.Locatable;
-import org.glassfish.jaxb.core.v2.model.core.ID;
-import org.glassfish.jaxb.core.v2.runtime.Location;
+import cn.glassfish.jaxb.core.v2.model.annotation.Locatable;
+import cn.glassfish.jaxb.core.v2.model.core.ID;
+import cn.glassfish.jaxb.core.v2.runtime.Location;
 import com.sun.xml.xsom.XSComponent;
 import com.sun.xml.xsom.XmlString;
 

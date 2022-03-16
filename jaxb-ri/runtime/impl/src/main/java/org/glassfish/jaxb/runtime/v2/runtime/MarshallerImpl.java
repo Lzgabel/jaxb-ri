@@ -8,14 +8,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime;
+package cn.glassfish.jaxb.runtime.v2.runtime;
 
-import org.glassfish.jaxb.core.marshaller.*;
-import org.glassfish.jaxb.runtime.api.JAXBRIContext;
-import org.glassfish.jaxb.runtime.marshaller.NamespacePrefixMapper;
-import org.glassfish.jaxb.runtime.marshaller.NioEscapeHandler;
-import org.glassfish.jaxb.runtime.v2.runtime.output.*;
-import org.glassfish.jaxb.runtime.v2.util.FatalAdapter;
+import cn.glassfish.jaxb.core.marshaller.*;
+import cn.glassfish.jaxb.runtime.api.JAXBRIContext;
+import cn.glassfish.jaxb.runtime.marshaller.NamespacePrefixMapper;
+import cn.glassfish.jaxb.runtime.marshaller.NioEscapeHandler;
+import cn.glassfish.jaxb.runtime.v2.runtime.output.*;
+import cn.glassfish.jaxb.runtime.v2.util.FatalAdapter;
 import jakarta.xml.bind.*;
 import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 import jakarta.xml.bind.attachment.AttachmentMarshaller;
@@ -441,7 +441,7 @@ public /*to make unit tests happy*/ final class MarshallerImpl extends AbstractM
             return header;
         if( C14N.equals(name) )
             return c14nSupport;
-        if ( OBJECT_IDENTITY_CYCLE_DETECTION.equals(name)) 
+        if ( OBJECT_IDENTITY_CYCLE_DETECTION.equals(name))
         	return serializer.getObjectIdentityCycleDetection();
 
         return super.getProperty(name);
@@ -476,7 +476,7 @@ public /*to make unit tests happy*/ final class MarshallerImpl extends AbstractM
         }
         if( XMLDECLARATION.equals(name) ) {
             checkBoolean(name, value);
-            // org.glassfish.jaxb.xmlDeclaration is an alias for JAXB_FRAGMENT
+            // cn.glassfish.jaxb.xmlDeclaration is an alias for JAXB_FRAGMENT
             // setting it to false is treated the same as setting fragment to true.
             super.setProperty(JAXB_FRAGMENT, !(Boolean)value);
             return;
@@ -582,12 +582,12 @@ public /*to make unit tests happy*/ final class MarshallerImpl extends AbstractM
     }
 
     // features supported
-    protected static final String INDENT_STRING = "org.glassfish.jaxb.indentString";
-    protected static final String PREFIX_MAPPER = "org.glassfish.jaxb.namespacePrefixMapper";
-    protected static final String ENCODING_HANDLER = "org.glassfish.jaxb.characterEscapeHandler";
-    protected static final String ENCODING_HANDLER2 = "org.glassfish.jaxb.marshaller.CharacterEscapeHandler";
-    protected static final String XMLDECLARATION = "org.glassfish.jaxb.xmlDeclaration";
-    protected static final String XML_HEADERS = "org.glassfish.jaxb.xmlHeaders";
+    protected static final String INDENT_STRING = "cn.glassfish.jaxb.indentString";
+    protected static final String PREFIX_MAPPER = "cn.glassfish.jaxb.namespacePrefixMapper";
+    protected static final String ENCODING_HANDLER = "cn.glassfish.jaxb.characterEscapeHandler";
+    protected static final String ENCODING_HANDLER2 = "cn.glassfish.jaxb.marshaller.CharacterEscapeHandler";
+    protected static final String XMLDECLARATION = "cn.glassfish.jaxb.xmlDeclaration";
+    protected static final String XML_HEADERS = "cn.glassfish.jaxb.xmlHeaders";
     protected static final String C14N = JAXBRIContext.CANONICALIZATION_SUPPORT;
-    protected static final String OBJECT_IDENTITY_CYCLE_DETECTION = "org.glassfish.jaxb.objectIdentitityCycleDetection";
+    protected static final String OBJECT_IDENTITY_CYCLE_DETECTION = "cn.glassfish.jaxb.objectIdentitityCycleDetection";
 }

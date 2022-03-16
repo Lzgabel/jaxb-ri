@@ -37,7 +37,7 @@ import com.sun.tools.xjc.util.CodeModelClassFactory;
 import com.sun.tools.xjc.util.ErrorReceiverFilter;
 import com.sun.tools.xjc.util.ForkContentHandler;
 
-import org.glassfish.jaxb.core.v2.util.XmlFactory;
+import cn.glassfish.jaxb.core.v2.util.XmlFactory;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -61,11 +61,11 @@ public class BindInfo
      * precedence over the value specified in the binding file.
      */
     private final String defaultPackage;
-    
+
     public BindInfo(Model model, InputSource source, ErrorReceiver _errorReceiver) throws AbortException {
         this( model, parse(model,source,_errorReceiver), _errorReceiver);
     }
-    
+
     public BindInfo(Model model, Document _dom, ErrorReceiver _errorReceiver) {
         this.model = model;
         this.dom = _dom.getDocumentElement();
@@ -87,7 +87,7 @@ public class BindInfo
 
         // add built-in conversions
         BIUserConversion.addBuiltinConversions(this,conversions);
-        
+
         // process conversion declarations
         for( Element cnv : DOMUtil.getChildElements(dom,"conversion")) {
             BIConversion c = new BIUserConversion(this,cnv);
@@ -98,19 +98,19 @@ public class BindInfo
             conversions.put(c.name(),c);
         }
         // TODO: check the uniquness of conversion name
-        
-        
+
+
         // process interface definitions
         for( Element itf : DOMUtil.getChildElements(dom,"interface")) {
             BIInterface c = new BIInterface(itf);
             interfaces.put(c.name(),c);
         }
     }
-    
-    
+
+
     /** CodeModel object that is used by this binding file. */
     final JCodeModel codeModel;
-    
+
     /** Wrap the codeModel object and automate error reporting. */
     final CodeModelClassFactory classFactory;
 
@@ -122,14 +122,14 @@ public class BindInfo
 
     /** Element declarations keyed by names. */
     private final Map<String,BIElement> elements = new HashMap<>();
-    
+
     /** interface declarations keyed by names. */
     private final Map<String,BIInterface> interfaces = new HashMap<>();
-  
-    
+
+
     /** XJC extension namespace. */
     private static final String XJC_NS = Const.XJC_EXTENSION_URI;
-    
+
 //
 //
 //    Exposed public methods
@@ -144,7 +144,7 @@ public class BindInfo
         if(v==null) v="1";
         return Long.valueOf(v);
     }
-    
+
     /** Gets the xjc:superClass customization if it's turned on. */
     public JClass getSuperClass() {
         Element sc = DOMUtil.getElement(dom,XJC_NS,"superClass");
@@ -202,7 +202,7 @@ public class BindInfo
 
     /**
      * Gets the conversion declaration from the binding info.
-     * 
+     *
      * @return
      *        A non-null valid BIConversion object.
      */
@@ -212,10 +212,10 @@ public class BindInfo
             throw new AssertionError("undefined conversion name: this should be checked by the validator before we read it");
         return r;
     }
-    
+
     /**
      * Gets the element declaration from the binding info.
-     * 
+     *
      * @return
      *        If there is no declaration with a given name,
      *        this method returns null.
@@ -227,7 +227,7 @@ public class BindInfo
     public Collection<BIElement> elements() {
         return elements.values();
     }
-    
+
     /** Returns all {@link BIInterface}s in a read-only set. */
     public Collection<BIInterface> interfaces() {
         return interfaces.values();
@@ -249,17 +249,17 @@ public class BindInfo
         if(r==null)     r = CCustomizations.EMPTY;
         return new CCustomizations(r);
     }
-    
-    
-    
-    
+
+
+
+
 //
 //
 //    Internal utility methods
 //
 //
-    
-    
+
+
     /** Gets the value from the option element. */
     private String getOption(String attName, String defaultValue) {
         Element opt = DOMUtil.getElement(dom,"options");
@@ -303,7 +303,7 @@ public class BindInfo
             reader.setContentHandler(new ForkContentHandler(checker,builder));
 
             reader.parse(is);
-            
+
             if(controller.hadError())   throw new AbortException();
             return (Document)builder.getDOM();
         } catch( IOException e ) {
@@ -313,7 +313,7 @@ public class BindInfo
         } catch( ParserConfigurationException e ) {
             receiver.error( new SAXParseException2(e.getMessage(),null,e) );
         }
-        
+
         throw new AbortException();
     }
 }

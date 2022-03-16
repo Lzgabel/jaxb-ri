@@ -8,10 +8,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
 
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
-import org.glassfish.jaxb.core.v2.runtime.unmarshaller.LocatorEx;
+import cn.glassfish.jaxb.core.v2.WellKnownNamespace;
+import cn.glassfish.jaxb.core.v2.runtime.unmarshaller.LocatorEx;
 import jakarta.activation.DataHandler;
 import jakarta.xml.bind.attachment.AttachmentUnmarshaller;
 import org.xml.sax.SAXException;

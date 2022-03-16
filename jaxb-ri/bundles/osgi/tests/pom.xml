@@ -52,13 +52,13 @@
                     <scope>test</scope>
                 </dependency>
                 <dependency>
-                    <groupId>org.glassfish.jaxb</groupId>
+                    <groupId>cn.glassfish.jaxb</groupId>
                     <artifactId>osgi-test-osgi</artifactId>
                     <version>${project.version}</version>
                     <scope>test</scope>
                 </dependency>
                 <dependency>
-                    <groupId>org.glassfish.jaxb</groupId>
+                    <groupId>cn.glassfish.jaxb</groupId>
                     <artifactId>osgi-test-parent</artifactId>
                     <version>${project.version}</version>
                     <scope>test</scope>

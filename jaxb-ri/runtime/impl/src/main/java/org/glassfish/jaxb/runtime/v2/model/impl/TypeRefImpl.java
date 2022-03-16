@@ -8,11 +8,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.glassfish.jaxb.runtime.v2.model.impl;
 
-import org.glassfish.jaxb.core.v2.model.core.NonElement;
-import org.glassfish.jaxb.core.v2.model.core.PropertyInfo;
-import org.glassfish.jaxb.core.v2.model.core.TypeRef;
+import cn.glassfish.jaxb.core.v2.model.core.NonElement;
+import cn.glassfish.jaxb.core.v2.model.core.PropertyInfo;
+import cn.glassfish.jaxb.core.v2.model.core.TypeRef;
 
 import javax.xml.namespace.QName;
 

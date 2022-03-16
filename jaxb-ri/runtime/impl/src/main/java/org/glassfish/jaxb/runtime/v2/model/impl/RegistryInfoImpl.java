@@ -8,16 +8,16 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.glassfish.jaxb.runtime.v2.model.impl;
 
-import org.glassfish.jaxb.runtime.v2.ContextFactory;
-import org.glassfish.jaxb.core.v2.model.annotation.Locatable;
-import org.glassfish.jaxb.runtime.v2.model.annotation.MethodLocatable;
-import org.glassfish.jaxb.core.v2.model.core.RegistryInfo;
-import org.glassfish.jaxb.core.v2.model.core.TypeInfo;
-import org.glassfish.jaxb.core.v2.model.nav.Navigator;
-import org.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
-import org.glassfish.jaxb.core.v2.runtime.Location;
+import cn.glassfish.jaxb.runtime.v2.ContextFactory;
+import cn.glassfish.jaxb.core.v2.model.annotation.Locatable;
+import cn.glassfish.jaxb.runtime.v2.model.annotation.MethodLocatable;
+import cn.glassfish.jaxb.core.v2.model.core.RegistryInfo;
+import cn.glassfish.jaxb.core.v2.model.core.TypeInfo;
+import cn.glassfish.jaxb.core.v2.model.nav.Navigator;
+import cn.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
+import cn.glassfish.jaxb.core.v2.runtime.Location;
 import jakarta.xml.bind.annotation.XmlElementDecl;
 
 import java.util.LinkedHashSet;

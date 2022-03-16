@@ -20,29 +20,29 @@ module com.sun.xml.bind.core {
     exports com.sun.istack.localization;
     exports com.sun.istack.logging;
 
-    exports org.glassfish.jaxb.core;
-    exports org.glassfish.jaxb.core.annotation;
-    exports org.glassfish.jaxb.core.api;
-    exports org.glassfish.jaxb.core.api.impl;
-    exports org.glassfish.jaxb.core.marshaller;
-    exports org.glassfish.jaxb.core.unmarshaller;
-    exports org.glassfish.jaxb.core.util;
-    exports org.glassfish.jaxb.core.v2;
-    exports org.glassfish.jaxb.core.v2.model.annotation;
-    exports org.glassfish.jaxb.core.v2.model.core;
-    exports org.glassfish.jaxb.core.v2.model.impl;
-    exports org.glassfish.jaxb.core.v2.model.nav;
-    exports org.glassfish.jaxb.core.v2.model.util;
-    exports org.glassfish.jaxb.core.v2.runtime;
-    exports org.glassfish.jaxb.core.v2.runtime.unmarshaller;
-    exports org.glassfish.jaxb.core.v2.schemagen.episode;
-    exports org.glassfish.jaxb.core.v2.util;
+    exports cn.glassfish.jaxb.core;
+    exports cn.glassfish.jaxb.core.annotation;
+    exports cn.glassfish.jaxb.core.api;
+    exports cn.glassfish.jaxb.core.api.impl;
+    exports cn.glassfish.jaxb.core.marshaller;
+    exports cn.glassfish.jaxb.core.unmarshaller;
+    exports cn.glassfish.jaxb.core.util;
+    exports cn.glassfish.jaxb.core.v2;
+    exports cn.glassfish.jaxb.core.v2.model.annotation;
+    exports cn.glassfish.jaxb.core.v2.model.core;
+    exports cn.glassfish.jaxb.core.v2.model.impl;
+    exports cn.glassfish.jaxb.core.v2.model.nav;
+    exports cn.glassfish.jaxb.core.v2.model.util;
+    exports cn.glassfish.jaxb.core.v2.runtime;
+    exports cn.glassfish.jaxb.core.v2.runtime.unmarshaller;
+    exports cn.glassfish.jaxb.core.v2.schemagen.episode;
+    exports cn.glassfish.jaxb.core.v2.util;
 
     exports com.sun.xml.txw2;
     exports com.sun.xml.txw2.annotation;
     exports com.sun.xml.txw2.output;
 
-    opens org.glassfish.jaxb.core.v2.model.nav to
+    opens cn.glassfish.jaxb.core.v2.model.nav to
             com.sun.xml.bind,
             com.sun.tools.xjc,
             com.sun.xml.ws,

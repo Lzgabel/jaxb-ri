@@ -10,7 +10,7 @@
 
 package com.sun.tools.xjc.model.nav;
 
-import org.glassfish.jaxb.core.v2.model.nav.Navigator;
+import cn.glassfish.jaxb.core.v2.model.nav.Navigator;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -39,7 +39,7 @@ final class Utils {
 
     static { // we statically initializing REFLECTION_NAVIGATOR property
         try {
-            final Class<?> refNav = Class.forName("org.glassfish.jaxb.core.v2.model.nav.ReflectionNavigator");
+            final Class<?> refNav = Class.forName("cn.glassfish.jaxb.core.v2.model.nav.ReflectionNavigator");
 
             // requires accessClassInPackage privilege
             final Method getInstance = AccessController.doPrivileged(

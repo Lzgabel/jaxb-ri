@@ -8,12 +8,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.api;
+package cn.glassfish.jaxb.runtime.api;
 
 import com.sun.istack.NotNull;
 import com.sun.istack.Nullable;
-import org.glassfish.jaxb.runtime.v2.runtime.BridgeContextImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
+import cn.glassfish.jaxb.runtime.v2.runtime.BridgeContextImpl;
+import cn.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
 import jakarta.xml.bind.Unmarshaller;

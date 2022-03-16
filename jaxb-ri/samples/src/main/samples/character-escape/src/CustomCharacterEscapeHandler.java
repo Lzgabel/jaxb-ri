@@ -10,30 +10,30 @@
 
 import java.io.IOException;
 import java.io.Writer;
-import org.glassfish.jaxb.core.marshaller.CharacterEscapeHandler;
+import cn.glassfish.jaxb.core.marshaller.CharacterEscapeHandler;
 
 public class CustomCharacterEscapeHandler implements CharacterEscapeHandler {
-    
+
     /**
      * Escape characters inside the buffer and send the output to the writer.
-     * 
+     *
      * @exception IOException
      *    if something goes wrong, IOException can be thrown to stop the
      *    marshalling process.
      */
     public void escape( char[] buf, int start, int len, boolean isAttValue, Writer out ) throws IOException {
-        
+
         for( int i=start; i<start+len; i++ ) {
             char ch = buf[i];
-            
+
             // you are supposed to do the standard XML character escapes
             // like & ... &amp;   < ... &lt;  etc
-            
+
             if( ch=='&' ) {
                 out.write("&amp;");
                 continue;
             }
-            
+
             if( ch=='"' && isAttValue ) {
                 // isAttValue is set to true when the marshaller is processing
                 // attribute values. Inside attribute values, there are more
@@ -45,10 +45,10 @@ public class CustomCharacterEscapeHandler implements CharacterEscapeHandler {
                 out.write("&apos;");
                 continue;
             }
-            
+
             // you should handle other characters like < or >
-            
-            
+
+
             if( ch>0x7F ) {
                 // escape everything above ASCII to &#xXXXX;
                 out.write("&#x");
@@ -56,7 +56,7 @@ public class CustomCharacterEscapeHandler implements CharacterEscapeHandler {
                 out.write(";");
                 continue;
             }
-            
+
             // otherwise print normally
             out.write(ch);
         }

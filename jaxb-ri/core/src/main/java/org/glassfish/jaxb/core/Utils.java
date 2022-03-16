@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core;
+package cn.glassfish.jaxb.core;
 
 import java.util.logging.Logger;
 
@@ -27,7 +27,7 @@ public final class Utils {
         try {
             return Logger.getLogger(StackHelper.getCallerClassName());
         } catch( SecurityException e) {
-            return Logger.getLogger("org.glassfish.jaxb.core"); // use the default
+            return Logger.getLogger("cn.glassfish.jaxb.core"); // use the default
         }
     }
 

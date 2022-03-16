@@ -21,7 +21,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>org.glassfish.jaxb</groupId>
+    <groupId>cn.glassfish.jaxb</groupId>
     <artifactId>txwc2</artifactId>
     <packaging>jar</packaging>
     <name>TXW2 Compiler</name>
@@ -41,15 +41,15 @@
             <artifactId>rngom</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.glassfish.jaxb</groupId>
             <artifactId>txw2</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.glassfish.jaxb</groupId>
             <artifactId>codemodel</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.glassfish.jaxb</groupId>
             <artifactId>xsom</artifactId>
         </dependency>
         <dependency>

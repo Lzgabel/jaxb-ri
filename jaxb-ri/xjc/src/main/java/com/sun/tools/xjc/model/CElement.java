@@ -12,7 +12,7 @@ package com.sun.tools.xjc.model;
 
 import com.sun.tools.xjc.model.nav.NClass;
 import com.sun.tools.xjc.model.nav.NType;
-import org.glassfish.jaxb.core.v2.model.core.Element;
+import cn.glassfish.jaxb.core.v2.model.core.Element;
 
 /**
  * Either {@link CElementInfo}, {@link CClassInfo}, or {@link CClassRef}.

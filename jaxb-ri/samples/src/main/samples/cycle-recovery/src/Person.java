@@ -10,7 +10,7 @@
 
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-import org.glassfish.jaxb.runtime.CycleRecoverable;
+import cn.glassfish.jaxb.runtime.CycleRecoverable;
 
 @XmlRootElement
 public class Person implements CycleRecoverable {

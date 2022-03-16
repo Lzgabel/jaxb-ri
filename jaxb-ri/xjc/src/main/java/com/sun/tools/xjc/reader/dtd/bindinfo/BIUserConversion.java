@@ -35,7 +35,7 @@ import com.sun.tools.xjc.model.CBuiltinLeafInfo;
 import com.sun.tools.xjc.model.TypeUse;
 import com.sun.tools.xjc.model.TypeUseFactory;
 
-import org.glassfish.jaxb.core.v2.util.XmlFactory;
+import cn.glassfish.jaxb.core.v2.util.XmlFactory;
 import org.w3c.dom.Element;
 import org.xml.sax.InputSource;
 import org.xml.sax.Locator;
@@ -54,11 +54,11 @@ public class BIUserConversion implements BIConversion
         this.owner = bi;
         this.e = _e;
     }
-    
+
     private static void add( Map<String,BIConversion> m, BIConversion c ) {
         m.put( c.name(), c );
     }
-    
+
     /** Adds all built-in conversions into the given map. */
     static void addBuiltinConversions( BindInfo bi, Map<String,BIConversion> m ) {
         add( m, new BIUserConversion( bi, parse("<conversion name='boolean' type='java.lang.Boolean' parse='getBoolean' />")));
@@ -88,7 +88,7 @@ public class BIUserConversion implements BIConversion
 
     /** The owner {@link BindInfo} object to which this object belongs. */
     private final BindInfo owner;
-    
+
     /** {@code <conversion>} element which this object is wrapping. */
     private final Element e;
 
@@ -98,15 +98,15 @@ public class BIUserConversion implements BIConversion
     public Locator getSourceLocation() {
         return DOMLocator.getLocationInfo(e);
     }
-    
+
     /** Gets the conversion name. */
     @Override
     public String name() { return DOMUtil.getAttribute(e,"name"); }
-    
+
     /** Gets a transducer for this conversion. */
     @Override
     public TypeUse getTransducer() {
-        
+
         String ws = DOMUtil.getAttribute(e,"whitespace");
         if(ws==null)    ws = "collapse";
 

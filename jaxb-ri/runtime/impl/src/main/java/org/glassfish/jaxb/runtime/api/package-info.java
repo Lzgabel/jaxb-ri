@@ -22,4 +22,4 @@
  * <p>
  * So the compatibility of this API has to be managed carefully.
  */
-package org.glassfish.jaxb.runtime.api;
+package cn.glassfish.jaxb.runtime.api;

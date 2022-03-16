@@ -8,10 +8,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
 
-import org.glassfish.jaxb.runtime.v2.util.FatalAdapter;
-import org.glassfish.jaxb.core.v2.runtime.unmarshaller.LocatorEx;
+import cn.glassfish.jaxb.runtime.v2.util.FatalAdapter;
+import cn.glassfish.jaxb.core.v2.runtime.unmarshaller.LocatorEx;
 import org.xml.sax.SAXException;
 
 import javax.xml.namespace.NamespaceContext;
@@ -24,7 +24,7 @@ import javax.xml.validation.ValidatorHandler;
  * @author Kohsuke Kawaguchi
  */
 final class ValidatingUnmarshaller implements XmlVisitor, XmlVisitor.TextPredictor {
-    
+
     private final XmlVisitor next;
     private final ValidatorHandler validator;
     private NamespaceContext nsContext = null;

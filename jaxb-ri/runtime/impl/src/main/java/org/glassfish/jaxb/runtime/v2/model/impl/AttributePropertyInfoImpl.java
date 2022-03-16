@@ -8,11 +8,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.glassfish.jaxb.runtime.v2.model.impl;
 
-import org.glassfish.jaxb.core.api.impl.NameConverter;
-import org.glassfish.jaxb.core.v2.model.core.AttributePropertyInfo;
-import org.glassfish.jaxb.core.v2.model.core.PropertyKind;
+import cn.glassfish.jaxb.core.api.impl.NameConverter;
+import cn.glassfish.jaxb.core.v2.model.core.AttributePropertyInfo;
+import cn.glassfish.jaxb.core.v2.model.core.PropertyKind;
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlSchema;
 

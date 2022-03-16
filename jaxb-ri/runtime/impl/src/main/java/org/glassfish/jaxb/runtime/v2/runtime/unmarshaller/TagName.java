@@ -8,9 +8,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
 
-import org.glassfish.jaxb.runtime.v2.runtime.Name;
+import cn.glassfish.jaxb.runtime.v2.runtime.Name;
 import org.xml.sax.Attributes;
 
 import javax.xml.namespace.QName;

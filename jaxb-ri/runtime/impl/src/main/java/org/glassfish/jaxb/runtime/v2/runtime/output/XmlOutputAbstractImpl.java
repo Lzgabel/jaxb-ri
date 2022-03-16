@@ -8,10 +8,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.output;
+package cn.glassfish.jaxb.runtime.v2.runtime.output;
 
-import org.glassfish.jaxb.runtime.v2.runtime.Name;
-import org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
+import cn.glassfish.jaxb.runtime.v2.runtime.Name;
+import cn.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
 import org.xml.sax.SAXException;
 
 import javax.xml.stream.XMLStreamException;
@@ -20,7 +20,7 @@ import java.io.IOException;
 /**
  * Abstract implementation of {@link XmlOutput}
  *
- * Implements the optimal methods, where defer to 
+ * Implements the optimal methods, where defer to
  * the non-optimal methods.
  *
  * @author Kohsuke Kawaguchi

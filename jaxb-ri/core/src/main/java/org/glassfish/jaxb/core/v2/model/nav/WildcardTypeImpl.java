@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.model.nav;
+package cn.glassfish.jaxb.core.v2.model.nav;
 
 import java.lang.reflect.Type;
 import java.lang.reflect.WildcardType;

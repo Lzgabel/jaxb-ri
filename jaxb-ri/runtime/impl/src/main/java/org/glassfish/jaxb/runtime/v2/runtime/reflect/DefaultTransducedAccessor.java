@@ -8,11 +8,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.reflect;
+package cn.glassfish.jaxb.runtime.v2.runtime.reflect;
 
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.runtime.v2.runtime.Name;
-import org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
+import cn.glassfish.jaxb.runtime.api.AccessorException;
+import cn.glassfish.jaxb.runtime.v2.runtime.Name;
+import cn.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
 import org.xml.sax.SAXException;
 
 import javax.xml.stream.XMLStreamException;
@@ -25,7 +25,7 @@ import java.io.IOException;
  * The print method that works for {@link String} determines the dispatching
  * of the {@link #writeText(XMLSerializer,Object,String)} and
  * {@link #writeLeafElement(XMLSerializer, Name, Object, String)} methods,
- * so those are implemented here. 
+ * so those are implemented here.
  *
  * @author Kohsuke Kawaguchi
  */

@@ -8,24 +8,24 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.property;
+package cn.glassfish.jaxb.runtime.v2.runtime.property;
 
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.core.v2.model.core.PropertyKind;
-import org.glassfish.jaxb.core.v2.model.core.TypeRef;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeElementPropertyInfo;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeTypeInfo;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeTypeRef;
-import org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.JaxBeanInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.Name;
-import org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.ChildLoader;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.DefaultValueLoaderDecorator;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Loader;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.XsiNilLoader;
-import org.glassfish.jaxb.runtime.v2.util.QNameMap;
+import cn.glassfish.jaxb.runtime.api.AccessorException;
+import cn.glassfish.jaxb.core.v2.model.core.PropertyKind;
+import cn.glassfish.jaxb.core.v2.model.core.TypeRef;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimeElementPropertyInfo;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimeTypeInfo;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimeTypeRef;
+import cn.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
+import cn.glassfish.jaxb.runtime.v2.runtime.JaxBeanInfo;
+import cn.glassfish.jaxb.runtime.v2.runtime.Name;
+import cn.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
+import cn.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.ChildLoader;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.DefaultValueLoaderDecorator;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Loader;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.XsiNilLoader;
+import cn.glassfish.jaxb.runtime.v2.util.QNameMap;
 import jakarta.xml.bind.JAXBElement;
 import org.xml.sax.SAXException;
 
@@ -51,7 +51,7 @@ final class SingleElementNodeProperty<BeanT,ValueT> extends PropertyImpl<BeanT> 
     private final Map<Class,TagAndType> typeNames = new HashMap<>();
 
     private RuntimeElementPropertyInfo prop;
-    
+
     /**
      * The tag name used to produce xsi:nil. The first one in the list.
      */
@@ -76,7 +76,7 @@ final class SingleElementNodeProperty<BeanT,ValueT> extends PropertyImpl<BeanT> 
                 context.nameBuilder.createElementName(e.getTagName()),beanInfo) );
             nil |= e.isNillable();
         }
-        
+
         nullTagName = context.nameBuilder.createElementName(nt);
 
         nillable = nil;

@@ -8,20 +8,20 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime;
+package cn.glassfish.jaxb.runtime.v2.runtime;
 
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.core.v2.model.core.PropertyKind;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeElementInfo;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.property.Property;
-import org.glassfish.jaxb.runtime.v2.runtime.property.PropertyFactory;
-import org.glassfish.jaxb.runtime.v2.runtime.property.UnmarshallerChain;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
-import org.glassfish.jaxb.runtime.v2.util.QNameMap;
+import cn.glassfish.jaxb.runtime.api.AccessorException;
+import cn.glassfish.jaxb.core.v2.model.core.PropertyKind;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimeElementInfo;
+import cn.glassfish.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
+import cn.glassfish.jaxb.runtime.v2.runtime.property.Property;
+import cn.glassfish.jaxb.runtime.v2.runtime.property.PropertyFactory;
+import cn.glassfish.jaxb.runtime.v2.runtime.property.UnmarshallerChain;
+import cn.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
+import cn.glassfish.jaxb.runtime.v2.util.QNameMap;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.JAXBException;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.*;
+import cn.glassfish.jaxb.runtime.v2.runtime.unmarshaller.*;
 import org.xml.sax.SAXException;
 
 import javax.xml.namespace.QName;
@@ -170,7 +170,7 @@ public final class ElementBeanInfoImpl extends JaxBeanInfo<JAXBElement> {
             public boolean isHiddenByOverride() {
                 return false;
             }
-            
+
             @Override
             public void setHiddenByOverride(boolean hidden) {
                 throw new UnsupportedOperationException("Not supported on jaxbelements.");

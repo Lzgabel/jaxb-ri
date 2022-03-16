@@ -8,9 +8,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime;
+package cn.glassfish.jaxb.runtime.v2.runtime;
 
-import org.glassfish.jaxb.runtime.api.AccessorException;
+import cn.glassfish.jaxb.runtime.api.AccessorException;
 import jakarta.activation.MimeType;
 import org.xml.sax.SAXException;
 

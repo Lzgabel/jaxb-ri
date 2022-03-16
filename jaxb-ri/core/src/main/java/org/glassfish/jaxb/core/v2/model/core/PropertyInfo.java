@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.model.core;
+package cn.glassfish.jaxb.core.v2.model.core;
 
 import java.util.Collection;
 
@@ -20,7 +20,7 @@ import jakarta.xml.bind.annotation.XmlSchemaType;
 import javax.xml.namespace.QName;
 
 import com.sun.istack.Nullable;
-import org.glassfish.jaxb.core.v2.model.annotation.AnnotationSource;
+import cn.glassfish.jaxb.core.v2.model.annotation.AnnotationSource;
 
 /**
  * Information about a JAXB-bound property.

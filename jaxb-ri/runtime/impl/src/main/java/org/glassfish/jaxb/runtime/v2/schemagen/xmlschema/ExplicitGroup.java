@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.schemagen.xmlschema;
+package cn.glassfish.jaxb.runtime.v2.schemagen.xmlschema;
 
 import com.sun.xml.txw2.TypedXmlWriter;
 

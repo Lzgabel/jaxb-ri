@@ -8,11 +8,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.glassfish.jaxb.runtime.v2.model.impl;
 
-import org.glassfish.jaxb.core.v2.model.annotation.Locatable;
-import org.glassfish.jaxb.core.v2.model.core.*;
-import org.glassfish.jaxb.core.v2.runtime.Location;
+import cn.glassfish.jaxb.core.v2.model.annotation.Locatable;
+import cn.glassfish.jaxb.core.v2.model.core.*;
+import cn.glassfish.jaxb.core.v2.runtime.Location;
 import jakarta.xml.bind.annotation.XmlEnum;
 import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlRootElement;
@@ -45,7 +45,7 @@ class EnumLeafInfoImpl<T,C,F,M> extends TypeInfoImpl<T,C,F,M>
     private final QName typeName;
 
     /**
-     * All the {@link EnumConstantImpl}s are linked in this list.   
+     * All the {@link EnumConstantImpl}s are linked in this list.
      */
     private EnumConstantImpl<T,C,F,M> firstConstant;
 
@@ -59,7 +59,7 @@ class EnumLeafInfoImpl<T,C,F,M> extends TypeInfoImpl<T,C,F,M>
      * Used to recognize token vs string.
      */
     protected boolean tokenStringType;
-            
+
     /**
      * @param clazz
      * @param type
@@ -95,7 +95,7 @@ class EnumLeafInfoImpl<T,C,F,M> extends TypeInfoImpl<T,C,F,M>
      */
     protected void calcConstants() {
         EnumConstantImpl<T,C,F,M> last = null;
-        
+
         // first check if we represent xs:token derived type
         Collection<? extends F> fields = nav().getDeclaredFields(clazz);
         for (F f : fields) {
@@ -141,7 +141,7 @@ class EnumLeafInfoImpl<T,C,F,M> extends TypeInfoImpl<T,C,F,M>
     public boolean isToken() {
         return tokenStringType;
     }
-    
+
     /**
      * Leaf-type cannot be referenced from IDREF.
      *
