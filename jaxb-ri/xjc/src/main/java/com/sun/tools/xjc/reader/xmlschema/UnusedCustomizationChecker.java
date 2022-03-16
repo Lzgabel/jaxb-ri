@@ -18,7 +18,7 @@ import java.util.Set;
 import com.sun.tools.xjc.reader.Const;
 import com.sun.tools.xjc.reader.Ring;
 import com.sun.tools.xjc.reader.xmlschema.bindinfo.BIDeclaration;
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
+import cn.lzgabel.jaxb.core.v2.WellKnownNamespace;
 import com.sun.xml.xsom.XSAnnotation;
 import com.sun.xml.xsom.XSAttContainer;
 import com.sun.xml.xsom.XSAttGroupDecl;
@@ -78,7 +78,7 @@ class UnusedCustomizationChecker extends BindingComponent implements XSVisitor, 
             run( s.getSimpleTypes() );
         }
     }
-    
+
     private void run( Map<String,? extends XSComponent> col ) {
         for( XSComponent c : col.values() )
             c.visit(this);
@@ -136,7 +136,7 @@ class UnusedCustomizationChecker extends BindingComponent implements XSVisitor, 
 
     @Override
     public void annotation(XSAnnotation ann) {}
-    
+
     @Override
     public void attGroupDecl(XSAttGroupDecl decl) {
         if(check(decl))
@@ -164,14 +164,14 @@ class UnusedCustomizationChecker extends BindingComponent implements XSVisitor, 
             attContainer(type);
         }
     }
-    
+
     private void attContainer( XSAttContainer cont ) {
         for( Iterator itr = cont.iterateAttGroups(); itr.hasNext(); )
             ((XSAttGroupDecl)itr.next()).visit(this);
-            
+
         for( Iterator itr = cont.iterateDeclaredAttributeUses(); itr.hasNext(); )
             ((XSAttributeUse)itr.next()).visit(this);
-        
+
         XSWildcard wc = cont.getAttributeWildcard();
         if(wc!=null)        wc.visit(this);
     }

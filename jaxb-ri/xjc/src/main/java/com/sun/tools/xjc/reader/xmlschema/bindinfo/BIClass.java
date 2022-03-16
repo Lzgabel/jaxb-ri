@@ -16,18 +16,18 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 import javax.xml.namespace.QName;
 
 import com.sun.tools.xjc.reader.Const;
-import org.glassfish.jaxb.core.api.impl.NameConverter;
+import cn.lzgabel.jaxb.core.api.impl.NameConverter;
 import com.sun.istack.Nullable;
 
 /**
  * Class declaration.
- * 
+ *
  * This customization turns arbitrary schema component into a Java
  * content interface.
- * 
+ *
  * <p>
  * This customization is acknowledged by the ClassSelector.
- * 
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */

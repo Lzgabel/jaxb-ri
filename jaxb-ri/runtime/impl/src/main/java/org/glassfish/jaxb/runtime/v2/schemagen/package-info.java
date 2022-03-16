@@ -12,7 +12,7 @@
  * Schema generator.
  *
  * This package hosts the code that generates schemas from
- * {@link org.glassfish.jaxb.core.v2.model.core.TypeInfoSet} (without the user interface.)
+ * {@link cn.lzgabel.jaxb.core.v2.model.core.TypeInfoSet} (without the user interface.)
  */
-package org.glassfish.jaxb.runtime.v2.schemagen;
+package cn.lzgabel.jaxb.runtime.v2.schemagen;
 

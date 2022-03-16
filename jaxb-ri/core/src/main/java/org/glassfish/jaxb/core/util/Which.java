@@ -8,13 +8,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.util;
+package cn.lzgabel.jaxb.core.util;
 
 import java.net.URL;
 
 /**
  * Finds out where a class file is loaded from.
- * 
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
@@ -40,7 +40,7 @@ public class Which {
         if(loader == null) {
             loader = SecureLoader.getSystemClassLoader();
         }
-        
+
         URL it = loader.getResource(classnameAsResource);
         if (it != null) {
             return it.toString();

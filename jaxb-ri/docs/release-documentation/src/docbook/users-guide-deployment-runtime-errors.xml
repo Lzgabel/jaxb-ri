@@ -50,10 +50,10 @@ at java.lang.Class.forName0(Native Method)
 at java.lang.Class.forName(Class.java:242)
 at java.lang.Package.getPackageInfo(Package.java:350)
 at java.lang.Package.getAnnotation(Package.java:361)
-at com.sun.xml.bind.v2.model.annotation.RuntimeInlineAnnotationReader.getPackageAnnotation(RuntimeInlineAnnotationReader.java:125)
-at com.sun.xml.bind.v2.model.annotation.RuntimeInlineAnnotationReader.getPackageAnnotation(RuntimeInlineAnnotationReader.java:53)
-at com.sun.xml.bind.v2.model.impl.TypeInfoImpl.parseElementName(TypeInfoImpl.java:122)
-at com.sun.xml.bind.v2.model.impl.ClassInfoImpl.<init>(ClassInfoImpl.java:166)]]></programlisting>
+at cn.lzgabel.jaxb.xml.bind.v2.model.annotation.RuntimeInlineAnnotationReader.getPackageAnnotation(RuntimeInlineAnnotationReader.java:125)
+at cn.lzgabel.jaxb.xml.bind.v2.model.annotation.RuntimeInlineAnnotationReader.getPackageAnnotation(RuntimeInlineAnnotationReader.java:53)
+at cn.lzgabel.jaxb.xml.bind.v2.model.impl.TypeInfoImpl.parseElementName(TypeInfoImpl.java:122)
+at cn.lzgabel.jaxb.xml.bind.v2.model.impl.ClassInfoImpl.<init>(ClassInfoImpl.java:166)]]></programlisting>
         </informalexample>
 
         <para>This is due to a bug, and so far the only way to fix this is to

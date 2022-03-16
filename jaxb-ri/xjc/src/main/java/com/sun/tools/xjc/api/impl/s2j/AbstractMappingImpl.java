@@ -25,8 +25,8 @@ import com.sun.tools.xjc.model.CElementPropertyInfo;
 import com.sun.tools.xjc.model.CPropertyInfo;
 import com.sun.tools.xjc.model.CReferencePropertyInfo;
 import com.sun.tools.xjc.model.CTypeRef;
-import org.glassfish.jaxb.core.v2.model.core.ClassInfo;
-import org.glassfish.jaxb.core.v2.model.core.ReferencePropertyInfo;
+import cn.lzgabel.jaxb.core.v2.model.core.ClassInfo;
+import cn.lzgabel.jaxb.core.v2.model.core.ReferencePropertyInfo;
 
 import com.sun.xml.xsom.XSComplexType;
 import com.sun.xml.xsom.XSComponent;

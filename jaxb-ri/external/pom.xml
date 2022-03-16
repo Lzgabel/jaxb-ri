@@ -22,10 +22,10 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.sun.xml.bind.mvn</groupId>
+    <groupId>cn.lzgabel.jaxb.xml.bind.mvn</groupId>
     <artifactId>jaxb-external-parent</artifactId>
     <packaging>pom</packaging>
-    <version>4.0.0-SNAPSHOT</version>
+    <version>4.0.0</version>
     <name>JAXB External parent</name>
     <description>JAXB External parent module. Contains sources for external components.</description>
     <url>https://eclipse-ee4j.github.io/jaxb-ri/</url>
@@ -78,7 +78,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.sun.xml.bind.external</groupId>
+                <groupId>cn.lzgabel.jaxb.xml.bind.external</groupId>
                 <artifactId>relaxng-datatype</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -254,7 +254,7 @@
                         <configuration>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>com.sun.xml.bind.mvn</groupId>
+                                    <groupId>cn.lzgabel.jaxb.xml.bind.mvn</groupId>
                                     <artifactId>jaxb-external-parent</artifactId>
                                     <version>${project.version}</version>
                                     <classifier>resources</classifier>
@@ -388,5 +388,19 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>maven_nexus_repo</id>
+            <name>maven_nexus_repo</name>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+
+        <repository>
+            <id>maven_nexus_repo</id>
+            <name>maven_nexus_repo</name>
+            <url>https://s01.oss.sonatype.org/content/repositories/releases/</url>
+        </repository>
+    </distributionManagement>
 
 </project>

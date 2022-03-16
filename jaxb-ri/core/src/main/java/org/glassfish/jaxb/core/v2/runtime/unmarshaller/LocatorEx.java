@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.runtime.unmarshaller;
+package cn.lzgabel.jaxb.core.v2.runtime.unmarshaller;
 
 import java.net.URL;
 
@@ -18,7 +18,7 @@ import org.xml.sax.Locator;
 import org.w3c.dom.Node;
 
 /**
- * Object that returns the current location that the {@code org.glassfish.jaxb.core.v2.runtime.unmarshaller.XmlVisitor}
+ * Object that returns the current location that the {@code cn.lzgabel.jaxb.core.v2.runtime.unmarshaller.XmlVisitor}
  * is parsing.
  *
  * @author Kohsuke Kawaguchi
@@ -26,7 +26,7 @@ import org.w3c.dom.Node;
 public interface LocatorEx extends Locator {
     /**
      * Gets the current location in a {@link ValidationEventLocator} object.
-     * @return 
+     * @return
      */
     ValidationEventLocator getLocation();
 

@@ -22,7 +22,7 @@ module com.sun.tools.xjc {
     requires transitive jakarta.activation;
 
     requires transitive jakarta.xml.bind;
-    requires transitive com.sun.xml.bind.core;
+    requires transitive cn.lzgabel.jaxb.xml.bind.core;
 
     opens com.sun.tools.xjc.reader.xmlschema.bindinfo to jakarta.xml.bind;
 

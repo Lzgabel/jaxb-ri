@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.api;
+package cn.lzgabel.jaxb.runtime.api;
 
 import java.text.MessageFormat;
 import java.util.ResourceBundle;

@@ -19,7 +19,7 @@ import org.osgi.framework.Bundle;
  * @author yaroska
  */
 public class JaxbJxcOsgiTest extends JaxbOsgiTest {
-    private static final String BUNDLE = "com.sun.xml.bind.jaxb-jxc";
+    private static final String BUNDLE = "cn.lzgabel.jaxb.xml.bind.jaxb-jxc";
 
     private Bundle bundle;
 

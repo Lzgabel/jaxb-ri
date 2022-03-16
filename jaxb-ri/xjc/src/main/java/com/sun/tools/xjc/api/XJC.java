@@ -11,7 +11,7 @@
 package com.sun.tools.xjc.api;
 
 import com.sun.tools.xjc.api.impl.s2j.SchemaCompilerImpl;
-import org.glassfish.jaxb.core.api.impl.NameConverter;
+import cn.lzgabel.jaxb.core.api.impl.NameConverter;
 
 /**
  * Entry point to the programatic API to access
@@ -24,7 +24,7 @@ public final class XJC {
 
     /**
      * Gets a fresh {@link SchemaCompiler}.
-     * 
+     *
      * @return
      *      always return non-null object.
      */

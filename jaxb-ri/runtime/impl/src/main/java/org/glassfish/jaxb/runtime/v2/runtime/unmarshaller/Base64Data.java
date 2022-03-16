@@ -8,14 +8,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller;
 
 import com.sun.istack.Nullable;
-import org.glassfish.jaxb.runtime.DatatypeConverterImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
-import org.glassfish.jaxb.runtime.v2.runtime.output.Pcdata;
-import org.glassfish.jaxb.runtime.v2.runtime.output.UTF8XmlOutput;
-import org.glassfish.jaxb.runtime.v2.util.ByteArrayOutputStreamEx;
+import cn.lzgabel.jaxb.runtime.DatatypeConverterImpl;
+import cn.lzgabel.jaxb.runtime.v2.runtime.XMLSerializer;
+import cn.lzgabel.jaxb.runtime.v2.runtime.output.Pcdata;
+import cn.lzgabel.jaxb.runtime.v2.runtime.output.UTF8XmlOutput;
+import cn.lzgabel.jaxb.runtime.v2.util.ByteArrayOutputStreamEx;
 import jakarta.activation.DataHandler;
 import jakarta.activation.DataSource;
 
@@ -295,5 +295,5 @@ public final class Base64Data extends Pcdata {
         get();
         DatatypeConverterImpl._printBase64Binary(data, 0, dataLen, output);
     }
-    
+
 }

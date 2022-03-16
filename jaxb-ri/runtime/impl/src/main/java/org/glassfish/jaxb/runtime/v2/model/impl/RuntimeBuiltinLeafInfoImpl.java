@@ -8,24 +8,24 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.lzgabel.jaxb.runtime.v2.model.impl;
 
 import com.sun.istack.ByteArrayDataSource;
-import org.glassfish.jaxb.core.Utils;
-import org.glassfish.jaxb.core.WhiteSpaceProcessor;
-import org.glassfish.jaxb.runtime.DatatypeConverterImpl;
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.core.v2.TODO;
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeBuiltinLeafInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.Name;
-import org.glassfish.jaxb.runtime.v2.runtime.Transducer;
-import org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
-import org.glassfish.jaxb.runtime.v2.runtime.output.Pcdata;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Base64Data;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
-import org.glassfish.jaxb.runtime.v2.util.ByteArrayOutputStreamEx;
-import org.glassfish.jaxb.runtime.v2.util.DataSourceSource;
+import cn.lzgabel.jaxb.core.Utils;
+import cn.lzgabel.jaxb.core.WhiteSpaceProcessor;
+import cn.lzgabel.jaxb.runtime.DatatypeConverterImpl;
+import cn.lzgabel.jaxb.runtime.api.AccessorException;
+import cn.lzgabel.jaxb.core.v2.TODO;
+import cn.lzgabel.jaxb.core.v2.WellKnownNamespace;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.RuntimeBuiltinLeafInfo;
+import cn.lzgabel.jaxb.runtime.v2.runtime.Name;
+import cn.lzgabel.jaxb.runtime.v2.runtime.Transducer;
+import cn.lzgabel.jaxb.runtime.v2.runtime.XMLSerializer;
+import cn.lzgabel.jaxb.runtime.v2.runtime.output.Pcdata;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.Base64Data;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
+import cn.lzgabel.jaxb.runtime.v2.util.ByteArrayOutputStreamEx;
+import cn.lzgabel.jaxb.runtime.v2.util.DataSourceSource;
 import jakarta.activation.DataHandler;
 import jakarta.activation.DataSource;
 import jakarta.activation.MimeType;
@@ -77,7 +77,7 @@ public abstract class RuntimeBuiltinLeafInfoImpl<T> extends BuiltinLeafInfoImpl<
     implements RuntimeBuiltinLeafInfo, Transducer<T> {
 
     private static final Logger logger = Utils.getClassLogger();
-    
+
     private RuntimeBuiltinLeafInfoImpl(Class type, QName... typeNames) {
         super(type, typeNames);
         LEAVES.put(type,this);
@@ -165,7 +165,7 @@ public abstract class RuntimeBuiltinLeafInfoImpl<T> extends BuiltinLeafInfoImpl<
     public static final RuntimeBuiltinLeafInfoImpl<String> STRING;
 
     private static final String DATE = "date";
-    
+
     /**
      * List of all {@link RuntimeBuiltinLeafInfoImpl}s.
      *
@@ -177,7 +177,7 @@ public abstract class RuntimeBuiltinLeafInfoImpl<T> extends BuiltinLeafInfoImpl<
 
     public static final String MAP_ANYURI_TO_URI = "mapAnyUriToUri";
     public static final String USE_OLD_GMONTH_MAPPING = "jaxb.ri.useOldGmonthMapping";
-    
+
     static {
 
         String MAP_ANYURI_TO_URI_VALUE = AccessController.doPrivileged(
@@ -527,7 +527,7 @@ public abstract class RuntimeBuiltinLeafInfoImpl<T> extends BuiltinLeafInfoImpl<
                         ByteArrayOutputStreamEx baos = new ByteArrayOutputStreamEx();
                         Transformer tr = xs.getIdentityTransformer();
                         String defaultEncoding = tr.getOutputProperty(OutputKeys.ENCODING);
-                        tr.setOutputProperty(OutputKeys.ENCODING, charset);                        
+                        tr.setOutputProperty(OutputKeys.ENCODING, charset);
                         tr.transform(v, new StreamResult(new OutputStreamWriter(baos,charset)));
                         tr.setOutputProperty(OutputKeys.ENCODING, defaultEncoding);
                         baos.set(bd,"application/xml; charset="+charset);
@@ -923,7 +923,7 @@ public abstract class RuntimeBuiltinLeafInfoImpl<T> extends BuiltinLeafInfoImpl<
         }
     }
 
-	private static void checkXmlGregorianCalendarFieldRef(QName type, 
+	private static void checkXmlGregorianCalendarFieldRef(QName type,
 		XMLGregorianCalendar cal)throws jakarta.xml.bind.MarshalException{
 		StringBuilder buf = new StringBuilder();
 		int bitField = xmlGregorianCalendarFieldRef.get(type);
@@ -933,7 +933,7 @@ public abstract class RuntimeBuiltinLeafInfoImpl<T> extends BuiltinLeafInfoImpl<
 			int bit = bitField & l;
 			bitField >>>= 4;
 			pos++;
-			
+
 			if (bit == 1) {
 				switch(pos){
 					case 1:
@@ -973,11 +973,11 @@ public abstract class RuntimeBuiltinLeafInfoImpl<T> extends BuiltinLeafInfoImpl<
 		}
 		if (buf.length() > 0){
 			throw new jakarta.xml.bind.MarshalException(
-			 Messages.XMLGREGORIANCALENDAR_INVALID.format(type.getLocalPart()) 
+			 Messages.XMLGREGORIANCALENDAR_INVALID.format(type.getLocalPart())
 			 + buf.toString());
 		}
 	}
-	
+
     /**
      * Format string for the {@link XMLGregorianCalendar}.
      */
@@ -1001,7 +1001,7 @@ public abstract class RuntimeBuiltinLeafInfoImpl<T> extends BuiltinLeafInfoImpl<
             if (logger.isLoggable(Level.FINE)) {
                 logger.log(Level.FINE, "Old GMonth mapping used.");
             }
-            m.put(DatatypeConstants.GMONTH, "--%M--%z");    
+            m.put(DatatypeConstants.GMONTH, "--%M--%z");
         }
         m.put(DatatypeConstants.GDAY,       "---%D" + "%z");
         m.put(DatatypeConstants.GYEAR,      "%Y" + "%z");
@@ -1032,7 +1032,7 @@ public abstract class RuntimeBuiltinLeafInfoImpl<T> extends BuiltinLeafInfoImpl<
 		f.put(DatatypeConstants.GYEARMONTH, 0x1110000);
 		f.put(DatatypeConstants.GMONTHDAY,  0x1011000);
 	}
-	
+
     /**
      * {@link RuntimeBuiltinLeafInfoImpl} for {@link UUID}.
      *

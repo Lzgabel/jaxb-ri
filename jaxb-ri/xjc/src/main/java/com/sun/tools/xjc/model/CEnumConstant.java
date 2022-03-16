@@ -12,7 +12,7 @@ package com.sun.tools.xjc.model;
 
 import com.sun.tools.xjc.model.nav.NClass;
 import com.sun.tools.xjc.model.nav.NType;
-import org.glassfish.jaxb.core.v2.model.core.EnumConstant;
+import cn.lzgabel.jaxb.core.v2.model.core.EnumConstant;
 
 import com.sun.xml.xsom.XSComponent;
 import org.xml.sax.Locator;

@@ -8,9 +8,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller;
 
-import org.glassfish.jaxb.core.v2.runtime.unmarshaller.LocatorEx;
+import cn.lzgabel.jaxb.core.v2.runtime.unmarshaller.LocatorEx;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 
@@ -75,7 +75,7 @@ public final class InterningXmlVisitor implements XmlVisitor {
     public UnmarshallingContext getContext() {
         return next.getContext();
     }
-    
+
     @Override
     public TextPredictor getPredictor() {
         return next.getPredictor();

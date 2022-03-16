@@ -8,20 +8,20 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime;
+package cn.lzgabel.jaxb.runtime.v2.runtime;
 
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Loader;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.Loader;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
 
 import java.lang.reflect.Method;
 
 /**
  * This class is a simple container for caching lifecycle methods that are
  * discovered during construction of (@link JAXBContext}.
- * 
+ *
  * @see JaxBeanInfo#lcm
  * @see Loader#fireBeforeUnmarshal(JaxBeanInfo, Object, UnmarshallingContext.State)
- * @see Loader#fireAfterUnmarshal(JaxBeanInfo, Object, UnmarshallingContext.State) 
+ * @see Loader#fireAfterUnmarshal(JaxBeanInfo, Object, UnmarshallingContext.State)
  * @see XMLSerializer#fireMarshalEvent(Object, Method)
  */
 final class LifecycleMethods {

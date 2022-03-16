@@ -13,7 +13,7 @@
 
 <project basedir="." default="run">
   <description>This example shows how you can use the new JAXB RI Marshaller
-        property "org.glassfish.jaxb.characterEscapeHandler" to change
+        property "cn.lzgabel.jaxb.characterEscapeHandler" to change
         the default character escaping behavior.</description>
   <property name="jaxb.home" value="../.." />
   <path id="classpath">

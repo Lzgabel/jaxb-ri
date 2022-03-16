@@ -8,9 +8,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.util;
+package cn.lzgabel.jaxb.core.v2.util;
 
-import org.glassfish.jaxb.core.v2.Messages;
+import cn.lzgabel.jaxb.core.v2.Messages;
 
 import java.security.AccessController;
 import java.security.PrivilegedAction;
@@ -31,8 +31,8 @@ import org.xml.sax.SAXNotRecognizedException;
 import org.xml.sax.SAXNotSupportedException;
 
 /**
- * Provides helper methods for creating properly configured XML parser 
- * factory instances with namespace support turned on and configured for 
+ * Provides helper methods for creating properly configured XML parser
+ * factory instances with namespace support turned on and configured for
  * security.
  * @author snajper
  */
@@ -51,7 +51,7 @@ public class XmlFactory {
      * Boolean
      * @since 2.2.6
      */
-    private static final String DISABLE_XML_SECURITY  = "org.glassfish.jaxb.disableXmlSecurity";
+    private static final String DISABLE_XML_SECURITY  = "cn.lzgabel.jaxb.disableXmlSecurity";
 
     private static final boolean XML_SECURITY_DISABLED = AccessController.doPrivileged(
             new PrivilegedAction<Boolean>() {
@@ -69,7 +69,7 @@ public class XmlFactory {
     }
 
     /**
-     * Returns properly configured (e.g. security features) schema factory 
+     * Returns properly configured (e.g. security features) schema factory
      * - namespaceAware == true
      * - securityProcessing == is set based on security processing property, default is true
      */
@@ -94,7 +94,7 @@ public class XmlFactory {
     }
 
     /**
-     * Returns properly configured (e.g. security features) parser factory 
+     * Returns properly configured (e.g. security features) parser factory
      * - namespaceAware == true
      * - securityProcessing == is set based on security processing property, default is true
      */
@@ -123,7 +123,7 @@ public class XmlFactory {
     }
 
     /**
-     * Returns properly configured (e.g. security features) factory 
+     * Returns properly configured (e.g. security features) factory
      * - securityProcessing == is set based on security processing property, default is true
      */
     public static XPathFactory createXPathFactory(boolean disableSecureProcessing) throws IllegalStateException {
@@ -144,7 +144,7 @@ public class XmlFactory {
     }
 
     /**
-     * Returns properly configured (e.g. security features) factory 
+     * Returns properly configured (e.g. security features) factory
      * - securityProcessing == is set based on security processing property, default is true
      */
     public static TransformerFactory createTransformerFactory(boolean disableSecureProcessing) throws IllegalStateException {
@@ -165,7 +165,7 @@ public class XmlFactory {
     }
 
     /**
-     * Returns properly configured (e.g. security features) factory 
+     * Returns properly configured (e.g. security features) factory
      * - namespaceAware == true
      * - securityProcessing == is set based on security processing property, default is true
      */

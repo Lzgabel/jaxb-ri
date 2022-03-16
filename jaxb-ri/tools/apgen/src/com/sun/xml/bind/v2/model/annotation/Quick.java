@@ -8,11 +8,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package com.sun.xml.bind.v2.model.annotation;
+package cn.lzgabel.jaxb.xml.bind.v2.model.annotation;
 
 /**
  * Dummy class to make CodeModel happy.
- * 
+ *
  * @author Kohsuke Kawaguchi
  */
 public class Quick {

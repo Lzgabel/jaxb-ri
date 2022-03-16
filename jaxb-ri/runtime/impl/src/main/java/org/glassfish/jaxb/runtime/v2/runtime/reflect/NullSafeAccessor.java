@@ -8,9 +8,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.reflect;
+package cn.lzgabel.jaxb.runtime.v2.runtime.reflect;
 
-import org.glassfish.jaxb.runtime.api.AccessorException;
+import cn.lzgabel.jaxb.runtime.api.AccessorException;
 
 /**
  * {@link Accessor} wrapper that replaces a null with an empty collection.

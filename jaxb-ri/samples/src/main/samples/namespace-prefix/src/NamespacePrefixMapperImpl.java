@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import org.glassfish.jaxb.runtime.marshaller.NamespacePrefixMapper;
+import cn.lzgabel.jaxb.runtime.marshaller.NamespacePrefixMapper;
 
 class NamespacePrefixMapperImpl extends NamespacePrefixMapper {
 

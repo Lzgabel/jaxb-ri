@@ -21,7 +21,7 @@ import com.sun.tools.xjc.reader.Const;
 import com.sun.xml.xsom.parser.AnnotationContext;
 import com.sun.xml.xsom.parser.AnnotationParser;
 import com.sun.xml.xsom.parser.AnnotationParserFactory;
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
+import cn.lzgabel.jaxb.core.v2.WellKnownNamespace;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.ContentHandler;
@@ -34,7 +34,7 @@ import org.xml.sax.helpers.XMLFilterImpl;
 /**
  * Implementation of XSOM {@link AnnotationParserFactory} that
  * parses JAXB customization declarations.
- * 
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */

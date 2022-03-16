@@ -10,29 +10,29 @@
 
 package com.sun.tools.xjc.reader;
 
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
+import cn.lzgabel.jaxb.core.v2.WellKnownNamespace;
 
 
 /**
  * Useful constant values.
- * 
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
 public class Const {
-    
+
     /** XML namespace URI. */
     public final static String XMLNS_URI =
         "http://www.w3.org/2000/xmlns/";
-    
+
     /** JAXB customization URI. */
     public final static String JAXB_NSURI =
         "https://jakarta.ee/xml/ns/jaxb";
-    
+
     /** XJC vendor extension namespace URI. */
     public final static String XJC_EXTENSION_URI =
         "http://java.sun.com/xml/ns/jaxb/xjc";
-    
+
     /** RELAX NG namespace URI. */
     public static final String RELAXNG_URI =
         "http://relaxng.org/ns/structure/1.0";

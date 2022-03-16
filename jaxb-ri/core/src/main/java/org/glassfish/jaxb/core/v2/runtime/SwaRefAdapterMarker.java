@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.runtime;
+package cn.lzgabel.jaxb.core.v2.runtime;
 
 
 import jakarta.activation.DataHandler;

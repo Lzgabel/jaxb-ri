@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.output;
+package cn.lzgabel.jaxb.runtime.v2.runtime.output;
 
 import java.io.IOException;
 

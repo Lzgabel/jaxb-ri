@@ -8,10 +8,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.output;
+package cn.lzgabel.jaxb.runtime.v2.runtime.output;
 
-import org.glassfish.jaxb.core.marshaller.NoEscapeHandler;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Base64Data;
+import cn.lzgabel.jaxb.core.marshaller.NoEscapeHandler;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.Base64Data;
 import org.jvnet.staxex.XMLStreamWriterEx;
 
 import javax.xml.stream.XMLStreamException;

@@ -19,7 +19,7 @@ import org.osgi.framework.Bundle;
  * @author yaroska
  */
 public class JaxbRuntimeOsgiTest extends JaxbOsgiTest {
-    private static final String BUNDLE = "com.sun.xml.bind.jaxb-impl";
+    private static final String BUNDLE = "cn.lzgabel.jaxb.xml.bind.jaxb-impl";
 
     private Bundle bundle;
 
@@ -34,26 +34,26 @@ public class JaxbRuntimeOsgiTest extends JaxbOsgiTest {
     }
 
     public void testAccessorFactory() {
-        checkClassInBundle("org.glassfish.jaxb.runtime.AccessorFactory", bundle);
+        checkClassInBundle("cn.lzgabel.jaxb.runtime.AccessorFactory", bundle);
     }
 
     public void testJaxbRiContext() {
-        checkClassInBundle("org.glassfish.jaxb.runtime.api.JAXBRIContext", bundle);
+        checkClassInBundle("cn.lzgabel.jaxb.runtime.api.JAXBRIContext", bundle);
     }
 
     public void testNamespacePrefixMapper() {
-        checkClassInBundle("org.glassfish.jaxb.runtime.marshaller.NamespacePrefixMapper", bundle);
+        checkClassInBundle("cn.lzgabel.jaxb.runtime.marshaller.NamespacePrefixMapper", bundle);
     }
 
     public void testPatcher() {
-        checkClassInBundle("org.glassfish.jaxb.runtime.unmarshaller.Patcher", bundle);
+        checkClassInBundle("cn.lzgabel.jaxb.runtime.unmarshaller.Patcher", bundle);
     }
 
     public void testAttributesImpl() {
-        checkClassInBundle("org.glassfish.jaxb.runtime.util.AttributesImpl", bundle);
+        checkClassInBundle("cn.lzgabel.jaxb.runtime.util.AttributesImpl", bundle);
     }
 
     public void testContextFactory() {
-        checkClassInBundle("org.glassfish.jaxb.runtime.v2.ContextFactory", bundle);
+        checkClassInBundle("cn.lzgabel.jaxb.runtime.v2.ContextFactory", bundle);
     }
 }

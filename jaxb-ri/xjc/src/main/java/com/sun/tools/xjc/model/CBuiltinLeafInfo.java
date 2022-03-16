@@ -37,18 +37,18 @@ import com.sun.codemodel.JExpression;
 import com.sun.codemodel.JType;
 import com.sun.tools.xjc.model.nav.NClass;
 import com.sun.tools.xjc.outline.Aspect;
-import org.glassfish.jaxb.core.v2.model.annotation.Locatable;
-import org.glassfish.jaxb.core.v2.model.core.BuiltinLeafInfo;
-import org.glassfish.jaxb.core.v2.model.core.Element;
-import org.glassfish.jaxb.core.v2.model.core.LeafInfo;
-import org.glassfish.jaxb.core.v2.runtime.Location;
+import cn.lzgabel.jaxb.core.v2.model.annotation.Locatable;
+import cn.lzgabel.jaxb.core.v2.model.core.BuiltinLeafInfo;
+import cn.lzgabel.jaxb.core.v2.model.core.Element;
+import cn.lzgabel.jaxb.core.v2.model.core.LeafInfo;
+import cn.lzgabel.jaxb.core.v2.runtime.Location;
 import com.sun.tools.xjc.model.nav.NType;
 import com.sun.tools.xjc.model.nav.NavigatorImpl;
 import com.sun.tools.xjc.outline.Outline;
 import com.sun.tools.xjc.runtime.ZeroOneBooleanAdapter;
 import com.sun.tools.xjc.util.NamespaceContextAdapter;
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
-import org.glassfish.jaxb.core.v2.model.core.ID;
+import cn.lzgabel.jaxb.core.v2.WellKnownNamespace;
+import cn.lzgabel.jaxb.core.v2.model.core.ID;
 import com.sun.xml.xsom.XSComponent;
 import com.sun.xml.xsom.XmlString;
 
@@ -265,7 +265,7 @@ public abstract class CBuiltinLeafInfo implements CNonElement, BuiltinLeafInfo<N
      */
     private static abstract class Builtin extends CBuiltinLeafInfo {
         protected Builtin(Class<?> c, String typeName) {
-            this(c,typeName,org.glassfish.jaxb.core.v2.model.core.ID.NONE);
+            this(c,typeName,cn.lzgabel.jaxb.core.v2.model.core.ID.NONE);
         }
         protected Builtin(Class<?> c, String typeName, ID id) {
             super(NavigatorImpl.theInstance.ref(c), id, new QName(XMLConstants.W3C_XML_SCHEMA_NS_URI,typeName));
@@ -361,7 +361,7 @@ public abstract class CBuiltinLeafInfo implements CNonElement, BuiltinLeafInfo<N
         }
     };
     // XMLGregorianCalendar is mutable, so we can't support default values anyhow.
-	// For CALENAR we are uses a most unlikely name so as to avoid potential name 
+	// For CALENAR we are uses a most unlikely name so as to avoid potential name
 	// conflicts in the furture.
 	public static final CBuiltinLeafInfo CALENDAR = new NoConstantBuiltin(XMLGregorianCalendar.class,"\u0000");
     public static final CBuiltinLeafInfo DURATION = new NoConstantBuiltin(Duration.class,"duration");
@@ -403,21 +403,21 @@ public abstract class CBuiltinLeafInfo implements CNonElement, BuiltinLeafInfo<N
     public static final TypeUse NORMALIZED_STRING =
             STRING.makeAdapted(NormalizedStringAdapter.class,false);
 
-    public static final TypeUse ID = TypeUseFactory.makeID(TOKEN,org.glassfish.jaxb.core.v2.model.core.ID.ID);
+    public static final TypeUse ID = TypeUseFactory.makeID(TOKEN,cn.lzgabel.jaxb.core.v2.model.core.ID.ID);
 
     /**
      * boolean restricted to 0 or 1.
-     */ 
+     */
     public static final TypeUse BOOLEAN_ZERO_OR_ONE =
             STRING.makeAdapted(ZeroOneBooleanAdapter.class,true);
-    
+
     /**
      * IDREF.
      *
      * IDREF is has a whitespace normalization semantics of token, but
      * we don't want {@link XmlJavaTypeAdapter} and {@link XmlIDREF} to interact.
      */
-    public static final TypeUse IDREF = TypeUseFactory.makeID(ANYTYPE,org.glassfish.jaxb.core.v2.model.core.ID.IDREF);
+    public static final TypeUse IDREF = TypeUseFactory.makeID(ANYTYPE,cn.lzgabel.jaxb.core.v2.model.core.ID.IDREF);
 
     /**
      * For all list of strings, such as NMTOKENS, ENTITIES.

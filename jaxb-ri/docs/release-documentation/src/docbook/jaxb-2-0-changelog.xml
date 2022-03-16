@@ -51,10 +51,10 @@
         <itemizedlist>
             <listitem><para>Removed legacy technology dependencies:
                 <itemizedlist>
-                    <listitem><para>com.sun.xml.bind:jaxb1-impl</para></listitem>
+                    <listitem><para>cn.lzgabel.jaxb.xml.bind:jaxb1-impl</para></listitem>
                     <listitem><para>net.java.dev.msv:msv-core</para></listitem>
                     <listitem><para>net.java.dev.msv:xsdlib</para></listitem>
-                    <listitem><para>com.sun.xml.bind.jaxb:isorelax</para></listitem>
+                    <listitem><para>cn.lzgabel.jaxb.xml.bind.jaxb:isorelax</para></listitem>
                 </itemizedlist>
             </para></listitem>
         </itemizedlist>
@@ -141,11 +141,11 @@
                 This release is integrated into JDK 8. (Build <literal>2.2.8-b130911.1802</literal>)
             </para></listitem>
             <listitem><para>
-                JAXB RI project is now mavenized. New maven groupId introduced: org.glassfish.jaxb
+                JAXB RI project is now mavenized. New maven groupId introduced: cn.lzgabel.jaxb
                 So if you are use maven you can simply add dependency block:
                 <programlisting>
                     &lt;dependency&gt;
-                        &lt;groupId&gt;org.glassfish.jaxb&lt;/groupId&gt;
+                        &lt;groupId&gt;cn.lzgabel.jaxb&lt;/groupId&gt;
                         &lt;artifactId&gt;jaxb-bom&lt;/artifactId&gt;
                         &lt;version&gt;2.2.8&lt;/version&gt;
                         &lt;type&gt;pom&lt;/type&gt;
@@ -386,7 +386,7 @@
             <listitem>
                 <para>
                     <link xlink:href="https://github.com/eclipse-ee4j/jaxb-ri/issues/831">JAXB-831</link>
-                    - Memory leak in <literal>com.sun.xml.bind.v2.ClassFactory</literal>
+                    - Memory leak in <literal>cn.lzgabel.jaxb.xml.bind.v2.ClassFactory</literal>
                 </para>
             </listitem>
             <listitem>
@@ -416,7 +416,7 @@
             <listitem>
                 <para>
                     <link xlink:href="https://github.com/eclipse-ee4j/jaxb-ri/issues/844">JAXB-844</link>
-                    - Memory Leak in com.sun.xml.bind.v2.runtime.Coordinator
+                    - Memory Leak in cn.lzgabel.jaxb.xml.bind.v2.runtime.Coordinator
                 </para>
             </listitem>
             <listitem>
@@ -452,7 +452,7 @@
             <listitem>
                 <para>
                     <link xlink:href="https://github.com/eclipse-ee4j/jaxb-ri/issues/860">JAXB-860</link>
-                    - <literal>NullPointerException com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.checkOverrideProperties(ClassBeanInfoImpl.java</literal>:205)
+                    - <literal>NullPointerException cn.lzgabel.jaxb.xml.bind.v2.runtime.ClassBeanInfoImpl.checkOverrideProperties(ClassBeanInfoImpl.java</literal>:205)
                 </para>
             </listitem>
             <listitem>

@@ -22,10 +22,10 @@ import javax.xml.namespace.QName;
 import com.sun.tools.xjc.model.nav.NClass;
 import com.sun.tools.xjc.model.nav.NType;
 import com.sun.tools.xjc.model.nav.NavigatorImpl;
-import org.glassfish.jaxb.core.v2.model.core.ID;
-import org.glassfish.jaxb.core.v2.model.core.PropertyKind;
-import org.glassfish.jaxb.core.v2.model.core.ReferencePropertyInfo;
-import org.glassfish.jaxb.core.v2.model.core.WildcardMode;
+import cn.lzgabel.jaxb.core.v2.model.core.ID;
+import cn.lzgabel.jaxb.core.v2.model.core.PropertyKind;
+import cn.lzgabel.jaxb.core.v2.model.core.ReferencePropertyInfo;
+import cn.lzgabel.jaxb.core.v2.model.core.WildcardMode;
 import com.sun.xml.xsom.XSComponent;
 
 import org.xml.sax.Locator;
@@ -207,7 +207,7 @@ public final class CReferencePropertyInfo extends CPropertyInfo implements Refer
     public MimeType getExpectedMimeType() {
         return null;
     }
-    
+
     @Override
     public boolean isCollectionNillable() {
         // in XJC, we never recognize a nillable collection pattern, so this is always false.

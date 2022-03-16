@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.util;
+package cn.lzgabel.jaxb.runtime.v2.util;
 
 import java.util.Map;
 

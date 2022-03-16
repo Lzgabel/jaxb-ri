@@ -13,7 +13,7 @@ module com.sun.tools.jxc {
     requires java.compiler;
     requires jdk.compiler;
     requires java.logging;
-    requires transitive com.sun.xml.bind;
+    requires transitive cn.lzgabel.jaxb.xml.bind;
     requires transitive com.sun.tools.xjc;
 
     exports com.sun.tools.jxc;

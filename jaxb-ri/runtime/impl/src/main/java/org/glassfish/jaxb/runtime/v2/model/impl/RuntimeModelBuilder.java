@@ -8,22 +8,22 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.lzgabel.jaxb.runtime.v2.model.impl;
 
 import com.sun.istack.Nullable;
-import org.glassfish.jaxb.core.WhiteSpaceProcessor;
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
-import org.glassfish.jaxb.core.v2.model.annotation.Locatable;
-import org.glassfish.jaxb.runtime.v2.model.annotation.RuntimeAnnotationReader;
-import org.glassfish.jaxb.core.v2.model.core.ID;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeNonElement;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeNonElementRef;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeTypeInfoSet;
-import org.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
-import org.glassfish.jaxb.runtime.v2.runtime.*;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
+import cn.lzgabel.jaxb.core.WhiteSpaceProcessor;
+import cn.lzgabel.jaxb.runtime.api.AccessorException;
+import cn.lzgabel.jaxb.core.v2.WellKnownNamespace;
+import cn.lzgabel.jaxb.core.v2.model.annotation.Locatable;
+import cn.lzgabel.jaxb.runtime.v2.model.annotation.RuntimeAnnotationReader;
+import cn.lzgabel.jaxb.core.v2.model.core.ID;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.RuntimeNonElement;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.RuntimeNonElementRef;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.RuntimeTypeInfoSet;
+import cn.lzgabel.jaxb.core.v2.runtime.IllegalAnnotationException;
+import cn.lzgabel.jaxb.runtime.v2.runtime.*;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
 import jakarta.activation.MimeType;
 import org.xml.sax.SAXException;
 
@@ -129,7 +129,7 @@ public class RuntimeModelBuilder extends ModelBuilder<Type,Class,Field,Method> {
             }
             t = new SchemaTypeTransducer(t,src.getSchemaType());
         }
-        
+
         return t;
     }
 

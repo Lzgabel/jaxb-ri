@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2;
+package cn.lzgabel.jaxb.runtime.v2;
 
 import java.util.Arrays;
 import java.io.StringWriter;
@@ -18,10 +18,10 @@ import jakarta.xml.bind.annotation.adapters.HexBinaryAdapter;
 import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.namespace.QName;
 
-import org.glassfish.jaxb.runtime.api.Bridge;
-import org.glassfish.jaxb.runtime.api.CompositeStructure;
-import org.glassfish.jaxb.runtime.api.JAXBRIContext;
-import org.glassfish.jaxb.runtime.api.TypeReference;
+import cn.lzgabel.jaxb.runtime.api.Bridge;
+import cn.lzgabel.jaxb.runtime.api.CompositeStructure;
+import cn.lzgabel.jaxb.runtime.api.JAXBRIContext;
+import cn.lzgabel.jaxb.runtime.api.TypeReference;
 
 import junit.framework.TestCase;
 

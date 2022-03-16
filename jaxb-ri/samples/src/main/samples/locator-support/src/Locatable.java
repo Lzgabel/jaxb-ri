@@ -11,7 +11,7 @@
 /*
  * @(#)$Id: Locatable.java,v 1.1 2007-12-05 00:49:32 kohsuke Exp $
  */
-package com.sun.xml.bind.extra;
+package cn.lzgabel.jaxb.xml.bind.extra;
 
 import org.xml.sax.Locator;
 

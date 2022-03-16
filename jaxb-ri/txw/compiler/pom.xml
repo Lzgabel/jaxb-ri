@@ -15,13 +15,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.sun.xml.bind.mvn</groupId>
+        <groupId>cn.lzgabel.jaxb.xml.bind.mvn</groupId>
         <artifactId>jaxb-txw-parent</artifactId>
-        <version>4.0.0-SNAPSHOT</version>
+        <version>4.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>org.glassfish.jaxb</groupId>
+    <groupId>cn.lzgabel.jaxb</groupId>
     <artifactId>txwc2</artifactId>
     <packaging>jar</packaging>
     <name>TXW2 Compiler</name>
@@ -37,19 +37,19 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.sun.xml.bind.external</groupId>
+            <groupId>cn.lzgabel.jaxb.xml.bind.external</groupId>
             <artifactId>rngom</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.lzgabel.jaxb</groupId>
             <artifactId>txw2</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.lzgabel.jaxb</groupId>
             <artifactId>codemodel</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.lzgabel.jaxb</groupId>
             <artifactId>xsom</artifactId>
         </dependency>
         <dependency>

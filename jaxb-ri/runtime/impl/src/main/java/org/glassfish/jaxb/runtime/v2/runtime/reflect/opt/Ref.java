@@ -8,9 +8,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.reflect.opt;
+package cn.lzgabel.jaxb.runtime.v2.runtime.reflect.opt;
 
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.TransducedAccessor;
+import cn.lzgabel.jaxb.runtime.v2.runtime.reflect.TransducedAccessor;
 
 /**
  * Used by {@link TransducedAccessor} templates.

@@ -8,12 +8,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.lzgabel.jaxb.runtime.v2.model.impl;
 
-import org.glassfish.jaxb.core.v2.model.annotation.AnnotationReader;
-import org.glassfish.jaxb.core.v2.model.core.TypeInfoSet;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeNonElement;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeTypeInfoSet;
+import cn.lzgabel.jaxb.core.v2.model.annotation.AnnotationReader;
+import cn.lzgabel.jaxb.core.v2.model.core.TypeInfoSet;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.RuntimeNonElement;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.RuntimeTypeInfoSet;
 
 import javax.xml.namespace.QName;
 import java.lang.reflect.Field;

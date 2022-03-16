@@ -20,7 +20,7 @@ import com.sun.tools.xjc.reader.gbind.Element;
 import com.sun.tools.xjc.reader.gbind.Expression;
 import com.sun.tools.xjc.reader.gbind.Graph;
 import com.sun.tools.xjc.reader.xmlschema.bindinfo.BIProperty;
-import org.glassfish.jaxb.core.v2.model.core.WildcardMode;
+import cn.lzgabel.jaxb.core.v2.model.core.WildcardMode;
 import com.sun.xml.xsom.XSParticle;
 
 /**

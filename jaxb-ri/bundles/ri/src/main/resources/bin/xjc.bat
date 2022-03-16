@@ -70,7 +70,7 @@ GOTO END
 
 :JDK11_OR_GREATER
 rem module path
-%JAVA% --module-path %JAXB_PATH% --add-modules com.sun.xml.bind %XJC_OPTS% -m com.sun.tools.xjc %*
+%JAVA% --module-path %JAXB_PATH% --add-modules cn.lzgabel.jaxb.xml.bind %XJC_OPTS% -m com.sun.tools.xjc %*
 GOTO END
 
 :END

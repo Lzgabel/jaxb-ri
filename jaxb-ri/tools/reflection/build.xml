@@ -37,8 +37,8 @@
         <prename srcdir="@{srcdir}"
           destdir="${reflection.root}/build/src" excludes="com/sun/xml/bind/v2/package-info.java">
 
-          <pattern from="com.sun.xml.bind.v2" to="org.jvnet.jaxb.reflection" />
-          <pattern from="com.sun.xml.bind" to="org.jvnet.jaxb.reflection.impl" />
+          <pattern from="cn.lzgabel.jaxb.xml.bind.v2" to="org.jvnet.jaxb.reflection" />
+          <pattern from="cn.lzgabel.jaxb.xml.bind" to="org.jvnet.jaxb.reflection.impl" />
         </prename>
       </sequential>
     </macrodef>

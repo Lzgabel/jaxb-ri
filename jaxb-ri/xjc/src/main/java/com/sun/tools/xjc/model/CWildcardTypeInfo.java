@@ -16,7 +16,7 @@ import com.sun.tools.xjc.model.nav.NType;
 import com.sun.tools.xjc.model.nav.NavigatorImpl;
 import com.sun.tools.xjc.outline.Aspect;
 import com.sun.tools.xjc.outline.Outline;
-import org.glassfish.jaxb.core.v2.model.core.WildcardTypeInfo;
+import cn.lzgabel.jaxb.core.v2.model.core.WildcardTypeInfo;
 
 import org.w3c.dom.Element;
 import org.xml.sax.Locator;

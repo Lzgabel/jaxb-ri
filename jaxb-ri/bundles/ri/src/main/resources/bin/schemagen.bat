@@ -87,7 +87,7 @@ goto END
 
 :JDK11_OR_GREATER
 rem module path only
-%JAVA% %SCHEMAGEN_OPTS% --module-path %LOCALCLASSPATH% --add-modules com.sun.xml.bind -m com.sun.tools.jxc %*
+%JAVA% %SCHEMAGEN_OPTS% --module-path %LOCALCLASSPATH% --add-modules cn.lzgabel.jaxb.xml.bind -m com.sun.tools.jxc %*
 goto END
 
 :END

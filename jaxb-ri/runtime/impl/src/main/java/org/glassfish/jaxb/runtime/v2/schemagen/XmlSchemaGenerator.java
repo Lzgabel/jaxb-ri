@@ -8,23 +8,23 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.schemagen;
+package cn.lzgabel.jaxb.runtime.v2.schemagen;
 
 import com.sun.istack.NotNull;
 import com.sun.istack.Nullable;
-import org.glassfish.jaxb.core.Utils;
-import org.glassfish.jaxb.core.api.ErrorListener;
-import org.glassfish.jaxb.runtime.api.CompositeStructure;
-import org.glassfish.jaxb.core.v2.TODO;
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
-import org.glassfish.jaxb.core.v2.model.core.*;
-import org.glassfish.jaxb.runtime.v2.model.impl.ClassInfoImpl;
-import org.glassfish.jaxb.core.v2.model.core.Element;
-import org.glassfish.jaxb.core.v2.model.nav.Navigator;
-import org.glassfish.jaxb.runtime.v2.runtime.SwaRefAdapter;
-import org.glassfish.jaxb.core.v2.schemagen.episode.Bindings;
-import org.glassfish.jaxb.runtime.v2.util.CollisionCheckStack;
-import org.glassfish.jaxb.runtime.v2.util.StackRecorder;
+import cn.lzgabel.jaxb.core.Utils;
+import cn.lzgabel.jaxb.core.api.ErrorListener;
+import cn.lzgabel.jaxb.runtime.api.CompositeStructure;
+import cn.lzgabel.jaxb.core.v2.TODO;
+import cn.lzgabel.jaxb.core.v2.WellKnownNamespace;
+import cn.lzgabel.jaxb.core.v2.model.core.*;
+import cn.lzgabel.jaxb.runtime.v2.model.impl.ClassInfoImpl;
+import cn.lzgabel.jaxb.core.v2.model.core.Element;
+import cn.lzgabel.jaxb.core.v2.model.nav.Navigator;
+import cn.lzgabel.jaxb.runtime.v2.runtime.SwaRefAdapter;
+import cn.lzgabel.jaxb.core.v2.schemagen.episode.Bindings;
+import cn.lzgabel.jaxb.runtime.v2.util.CollisionCheckStack;
+import cn.lzgabel.jaxb.runtime.v2.util.StackRecorder;
 import com.sun.xml.txw2.TXW;
 import com.sun.xml.txw2.TxwException;
 import com.sun.xml.txw2.TypedXmlWriter;
@@ -33,7 +33,7 @@ import com.sun.xml.txw2.output.XmlSerializer;
 import jakarta.activation.MimeType;
 import jakarta.xml.bind.SchemaOutputResolver;
 import jakarta.xml.bind.annotation.XmlElement;
-import org.glassfish.jaxb.runtime.v2.schemagen.xmlschema.*;
+import cn.lzgabel.jaxb.runtime.v2.schemagen.xmlschema.*;
 import org.xml.sax.SAXParseException;
 
 import javax.xml.XMLConstants;
@@ -50,7 +50,7 @@ import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import static org.glassfish.jaxb.runtime.v2.schemagen.Util.*;
+import static cn.lzgabel.jaxb.runtime.v2.schemagen.Util.*;
 
 /**
  * Generates a set of W3C XML Schema documents from a set of Java classes.
@@ -998,7 +998,7 @@ public final class XmlSchemaGenerator<T,C,F,M> {
                         e.block(); // we will write occurs later
                         QName tn = t.getTagName();
                         e.name(tn.getLocalPart());
-                        org.glassfish.jaxb.runtime.v2.schemagen.xmlschema.List lst = e.simpleType().list();
+                        cn.lzgabel.jaxb.runtime.v2.schemagen.xmlschema.List lst = e.simpleType().list();
                         writeTypeRef(lst,t, "itemType");
                         elementFormDefault.writeForm(e,tn);
                         writeOccurs(e,isOptional||!ep.isRequired(),repeated);

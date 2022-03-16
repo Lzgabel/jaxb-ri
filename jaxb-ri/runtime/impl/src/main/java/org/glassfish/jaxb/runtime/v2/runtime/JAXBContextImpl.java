@@ -8,36 +8,36 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime;
+package cn.lzgabel.jaxb.runtime.v2.runtime;
 
 import com.sun.istack.NotNull;
 import com.sun.istack.Pool;
-import org.glassfish.jaxb.core.api.ErrorListener;
-import org.glassfish.jaxb.runtime.api.*;
-import org.glassfish.jaxb.core.unmarshaller.DOMScanner;
-import org.glassfish.jaxb.core.util.Which;
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
-import org.glassfish.jaxb.runtime.v2.model.annotation.RuntimeAnnotationReader;
-import org.glassfish.jaxb.runtime.v2.model.annotation.RuntimeInlineAnnotationReader;
-import org.glassfish.jaxb.core.v2.model.core.Adapter;
-import org.glassfish.jaxb.core.v2.model.core.NonElement;
-import org.glassfish.jaxb.core.v2.model.core.Ref;
-import org.glassfish.jaxb.runtime.v2.model.impl.RuntimeBuiltinLeafInfoImpl;
-import org.glassfish.jaxb.runtime.v2.model.impl.RuntimeModelBuilder;
-import org.glassfish.jaxb.core.v2.model.nav.Navigator;
-import org.glassfish.jaxb.core.v2.runtime.RuntimeUtil;
-import org.glassfish.jaxb.runtime.v2.runtime.output.Encoded;
-import org.glassfish.jaxb.runtime.v2.runtime.property.AttributeProperty;
-import org.glassfish.jaxb.runtime.v2.runtime.property.Property;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Loader;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.TagName;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallerImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
-import org.glassfish.jaxb.runtime.v2.schemagen.XmlSchemaGenerator;
-import org.glassfish.jaxb.core.v2.util.EditDistance;
-import org.glassfish.jaxb.runtime.v2.util.QNameMap;
-import org.glassfish.jaxb.core.v2.util.XmlFactory;
+import cn.lzgabel.jaxb.core.api.ErrorListener;
+import cn.lzgabel.jaxb.runtime.api.*;
+import cn.lzgabel.jaxb.core.unmarshaller.DOMScanner;
+import cn.lzgabel.jaxb.core.util.Which;
+import cn.lzgabel.jaxb.core.v2.WellKnownNamespace;
+import cn.lzgabel.jaxb.runtime.v2.model.annotation.RuntimeAnnotationReader;
+import cn.lzgabel.jaxb.runtime.v2.model.annotation.RuntimeInlineAnnotationReader;
+import cn.lzgabel.jaxb.core.v2.model.core.Adapter;
+import cn.lzgabel.jaxb.core.v2.model.core.NonElement;
+import cn.lzgabel.jaxb.core.v2.model.core.Ref;
+import cn.lzgabel.jaxb.runtime.v2.model.impl.RuntimeBuiltinLeafInfoImpl;
+import cn.lzgabel.jaxb.runtime.v2.model.impl.RuntimeModelBuilder;
+import cn.lzgabel.jaxb.core.v2.model.nav.Navigator;
+import cn.lzgabel.jaxb.core.v2.runtime.RuntimeUtil;
+import cn.lzgabel.jaxb.runtime.v2.runtime.output.Encoded;
+import cn.lzgabel.jaxb.runtime.v2.runtime.property.AttributeProperty;
+import cn.lzgabel.jaxb.runtime.v2.runtime.property.Property;
+import cn.lzgabel.jaxb.runtime.v2.runtime.reflect.Accessor;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.Loader;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.TagName;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallerImpl;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
+import cn.lzgabel.jaxb.runtime.v2.schemagen.XmlSchemaGenerator;
+import cn.lzgabel.jaxb.core.v2.util.EditDistance;
+import cn.lzgabel.jaxb.runtime.v2.util.QNameMap;
+import cn.lzgabel.jaxb.core.v2.util.XmlFactory;
 import com.sun.xml.txw2.output.ResultFactory;
 import jakarta.xml.bind.*;
 import jakarta.xml.bind.annotation.XmlAttachmentRef;
@@ -45,7 +45,7 @@ import jakarta.xml.bind.annotation.XmlList;
 import jakarta.xml.bind.annotation.XmlNs;
 import jakarta.xml.bind.annotation.XmlSchema;
 import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.glassfish.jaxb.runtime.v2.model.runtime.*;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -199,7 +199,7 @@ public final class JAXBContextImpl extends JAXBRIContext {
 
     /**
      * If true, despite the specification, unmarshall child element with parent namespace, if child namespace is not specified.
-     * The default value is null for System {@code org.glassfish.jaxb.backupWithParentNamespace} property to be used,
+     * The default value is null for System {@code cn.lzgabel.jaxb.backupWithParentNamespace} property to be used,
      * and false is assumed if it's not set either.
      *
      * Boolean

@@ -12,7 +12,7 @@ package com.sun.tools.xjc.reader.xmlschema;
 
 import com.sun.tools.xjc.reader.Ring;
 import com.sun.tools.xjc.reader.xmlschema.ct.ComplexTypeFieldBuilder;
-import org.glassfish.jaxb.core.v2.TODO;
+import cn.lzgabel.jaxb.core.v2.TODO;
 import com.sun.xml.xsom.XSAttGroupDecl;
 import com.sun.xml.xsom.XSAttributeDecl;
 import com.sun.xml.xsom.XSAttributeUse;

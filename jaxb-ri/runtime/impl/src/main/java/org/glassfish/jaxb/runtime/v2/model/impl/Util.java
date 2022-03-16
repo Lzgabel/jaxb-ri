@@ -8,12 +8,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.lzgabel.jaxb.runtime.v2.model.impl;
 
-import org.glassfish.jaxb.core.v2.model.annotation.AnnotationReader;
-import org.glassfish.jaxb.core.v2.model.annotation.AnnotationSource;
-import org.glassfish.jaxb.core.v2.model.annotation.Locatable;
-import org.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
+import cn.lzgabel.jaxb.core.v2.model.annotation.AnnotationReader;
+import cn.lzgabel.jaxb.core.v2.model.annotation.AnnotationSource;
+import cn.lzgabel.jaxb.core.v2.model.annotation.Locatable;
+import cn.lzgabel.jaxb.core.v2.runtime.IllegalAnnotationException;
 import jakarta.activation.MimeType;
 import jakarta.activation.MimeTypeParseException;
 import jakarta.xml.bind.annotation.XmlMimeType;
@@ -59,13 +59,13 @@ final class Util {
 
         return null;
     }
-    
+
     static MimeType calcExpectedMediaType(AnnotationSource primarySource,
                         ModelBuilder builder ) {
         XmlMimeType xmt = primarySource.readAnnotation(XmlMimeType.class);
         if(xmt==null)
             return null;
-        
+
         try {
             return new MimeType(xmt.value());
         } catch (MimeTypeParseException e) {

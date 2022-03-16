@@ -8,20 +8,20 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.property;
+package cn.lzgabel.jaxb.runtime.v2.runtime.property;
 
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.core.v2.model.core.AttributePropertyInfo;
-import org.glassfish.jaxb.core.v2.model.core.PropertyKind;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeAttributePropertyInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.JaxBeanInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.Name;
-import org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.TransducedAccessor;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.ChildLoader;
-import org.glassfish.jaxb.runtime.v2.util.QNameMap;
+import cn.lzgabel.jaxb.runtime.api.AccessorException;
+import cn.lzgabel.jaxb.core.v2.model.core.AttributePropertyInfo;
+import cn.lzgabel.jaxb.core.v2.model.core.PropertyKind;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.RuntimeAttributePropertyInfo;
+import cn.lzgabel.jaxb.runtime.v2.runtime.JAXBContextImpl;
+import cn.lzgabel.jaxb.runtime.v2.runtime.JaxBeanInfo;
+import cn.lzgabel.jaxb.runtime.v2.runtime.Name;
+import cn.lzgabel.jaxb.runtime.v2.runtime.XMLSerializer;
+import cn.lzgabel.jaxb.runtime.v2.runtime.reflect.Accessor;
+import cn.lzgabel.jaxb.runtime.v2.runtime.reflect.TransducedAccessor;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.ChildLoader;
+import cn.lzgabel.jaxb.runtime.v2.util.QNameMap;
 import org.xml.sax.SAXException;
 
 import javax.xml.stream.XMLStreamException;
@@ -86,7 +86,7 @@ public final class AttributeProperty<BeanT> extends PropertyImpl<BeanT>
         throw new IllegalStateException();
     }
 
-   
+
     @Override
     public PropertyKind getKind() {
         return PropertyKind.ATTRIBUTE;

@@ -16,11 +16,11 @@ import java.io.IOException;
 
 import javax.servlet.ServletException;
 
-import com.sun.xml.bind.webapp.HttpServletEx;
+import cn.lzgabel.jaxb.xml.bind.webapp.HttpServletEx;
 
 /**
  * Serves a static Java source file in the output directory.
- * 
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
@@ -35,7 +35,7 @@ public class FileServlet extends HttpServletEx {
         } else {
             if(fileName.endsWith(".html"))
                 response.setContentType("text/html");
-        
+
             Util.copyStream( response.getOutputStream(), new FileInputStream(doc) );
         }
     }

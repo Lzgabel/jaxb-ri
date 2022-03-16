@@ -14,9 +14,9 @@
 // Written by David Megginson, david@megginson.com
 // NO WARRANTY!  This class is in the public domain.
 
-// Id: XMLWriter.java,v 1.5 2000/09/17 01:08:16 david Exp 
+// Id: XMLWriter.java,v 1.5 2000/09/17 01:08:16 david Exp
 
-package org.glassfish.jaxb.core.marshaller;
+package cn.lzgabel.jaxb.core.marshaller;
 
 import java.io.IOException;
 import java.io.OutputStreamWriter;
@@ -42,7 +42,7 @@ import org.xml.sax.helpers.XMLFilterImpl;
  * state at any point in a filter chain), and it can be
  * used directly as a ContentHandler for a SAX2 XMLReader.</p>
  *
- * <p>The client creates a document by invoking the methods for 
+ * <p>The client creates a document by invoking the methods for
  * standard SAX2 events, always beginning with the
  * {@link #startDocument startDocument} method and ending with
  * the {@link #endDocument endDocument} method.  There are convenience
@@ -61,7 +61,7 @@ import org.xml.sax.helpers.XMLFilterImpl;
  * </pre>
  *
  * <p>Except that it is more efficient because it does not allocate
- * a new empty attribute list each time.  The following code will send 
+ * a new empty attribute list each time.  The following code will send
  * a simple XML document to standard output:</p>
  *
  * <pre>
@@ -118,8 +118,8 @@ import org.xml.sax.helpers.XMLFilterImpl;
  * explicitly to add newlines or indentation.  Alternatively, you
  * can use {@link DataWriter}, which
  * is derived from this class -- it is optimized for writing
- * purely data-oriented (or field-oriented) XML, and does automatic 
- * linebreaks and indentation (but does not support mixed content 
+ * purely data-oriented (or field-oriented) XML, and does automatic
+ * linebreaks and indentation (but does not support mixed content
  * properly).</p>
  *
  *
@@ -127,8 +127,8 @@ import org.xml.sax.helpers.XMLFilterImpl;
  *
  * <p>The writer contains extensive support for XML Namespaces, so that
  * a client application does not have to keep track of prefixes and
- * supply <var>xmlns</var> attributes.  By default, the XML writer will 
- * generate Namespace declarations in the form _NS1, _NS2, etc., wherever 
+ * supply <var>xmlns</var> attributes.  By default, the XML writer will
+ * generate Namespace declarations in the form _NS1, _NS2, etc., wherever
  * they are needed, as in the following example:</p>
  *
  * <pre>
@@ -229,7 +229,7 @@ import org.xml.sax.helpers.XMLFilterImpl;
  * }</pre>
  *
  * <p>This approach is also useful for declaring Namespace prefixes
- * that be used by qualified names appearing in attribute values or 
+ * that be used by qualified names appearing in attribute values or
  * character data.</p>
  *
  * @author David Megginson, david@megginson.com
@@ -246,7 +246,7 @@ public class XMLWriter extends XMLFilterImpl
     ////////////////////////////////////////////////////////////////////
 
 
-    
+
 
     /**
      * Create a new XML writer.
@@ -255,20 +255,20 @@ public class XMLWriter extends XMLFilterImpl
      *
      * @param writer
      *      The output destination, or null to use standard output.
-     * @param encoding 
+     * @param encoding
      *      If non-null string is specified, it is written as a part
      *      of the XML declaration.
      */
-    public XMLWriter (Writer writer, String encoding, CharacterEscapeHandler _escapeHandler ) 
+    public XMLWriter (Writer writer, String encoding, CharacterEscapeHandler _escapeHandler )
     {
         init(writer,encoding);
         this.escapeHandler = _escapeHandler;
     }
 
     public XMLWriter (Writer writer, String encoding ) {
-        this( writer, encoding, DumbEscapeHandler.theInstance ); 
+        this( writer, encoding, DumbEscapeHandler.theInstance );
     }
-    
+
 
 
     /**
@@ -315,7 +315,7 @@ public class XMLWriter extends XMLFilterImpl
         elementLevel = 0;
         startTagIsClosed = true;
     }
-    
+
 
     /**
      * Flush the output.
@@ -332,11 +332,11 @@ public class XMLWriter extends XMLFilterImpl
      * @see #reset()
      */
     public void flush ()
-        throws IOException 
+        throws IOException
     {
         output.flush();
     }
-    
+
 
     /**
      * Set a new output destination for the document.
@@ -354,38 +354,38 @@ public class XMLWriter extends XMLFilterImpl
         }
         encoding = _encoding;
     }
-    
+
     /**
      * Set whether the writer should print out the XML declaration
      * ({@code <?xml version='1.0' ... ?>}).
      * <p>
-     * This option is set to true by default. 
+     * This option is set to true by default.
      */
     public void setXmlDecl( boolean _writeXmlDecl ) {
         this.writeXmlDecl = _writeXmlDecl;
     }
-    
+
     /**
      * Sets the header string.
-     * 
+     *
      * This string will be written right after the xml declaration
      * without any escaping. Useful for generating a boiler-plate
      * DOCTYPE decl, PIs, and comments.
-     * 
+     *
      * @param _header
-     *      passing null will work as if the empty string is passed.   
+     *      passing null will work as if the empty string is passed.
      */
     public void setHeader( String _header ) {
         this.header = _header;
     }
-    
+
 
     private final HashMap<String,String> locallyDeclaredPrefix = new HashMap<>();
     @Override
     public void startPrefixMapping( String prefix, String uri ) throws SAXException {
         locallyDeclaredPrefix.put(prefix,uri);
     }
-    
+
 
     ////////////////////////////////////////////////////////////////////
     // Methods from org.xml.sax.ContentHandler.
@@ -407,7 +407,7 @@ public class XMLWriter extends XMLFilterImpl
     {
         try {
             reset();
-            
+
             if(writeXmlDecl) {
                 String e="";
                 if(encoding!=null)
@@ -415,10 +415,10 @@ public class XMLWriter extends XMLFilterImpl
 
                 writeXmlDecl("<?xml version=\"1.0\""+e +" standalone=\"yes\"?>");
             }
-            
+
             if(header!=null)
                 write(header);
-            
+
             super.startDocument();
         } catch( IOException e ) {
             throw new SAXException(e);
@@ -451,7 +451,7 @@ public class XMLWriter extends XMLFilterImpl
             throw new SAXException(e);
         }
     }
-    
+
 
     /**
      * Write a start tag.
@@ -487,7 +487,7 @@ public class XMLWriter extends XMLFilterImpl
             write('<');
             write(qName);
             writeAttributes(atts);
-            
+
             // declare namespaces specified by the startPrefixMapping methods
             if(!locallyDeclaredPrefix.isEmpty()) {
                 for (Map.Entry<String,String> e : locallyDeclaredPrefix.entrySet()) {
@@ -561,7 +561,7 @@ public class XMLWriter extends XMLFilterImpl
             throw new SAXException(e);
         }
     }
-    
+
 
     /**
      * Write character data.
@@ -591,7 +591,7 @@ public class XMLWriter extends XMLFilterImpl
             throw new SAXException(e);
         }
     }
-    
+
 
     /**
      * Write ignorable whitespace.
@@ -617,7 +617,7 @@ public class XMLWriter extends XMLFilterImpl
             throw new SAXException(e);
         }
     }
-    
+
 
 
     /**
@@ -654,21 +654,21 @@ public class XMLWriter extends XMLFilterImpl
             throw new SAXException(e);
         }
     }
-    
+
 
 
     ////////////////////////////////////////////////////////////////////
     // Convenience methods.
     ////////////////////////////////////////////////////////////////////
-    
+
 
 
     /**
      * Start a new element without a qname or attributes.
      *
      * <p>This method will provide a default empty attribute
-     * list and an empty string for the qualified name.  
-     * It invokes {@link 
+     * list and an empty string for the qualified name.
+     * It invokes {@link
      * #startElement(String, String, String, Attributes)}
      * directly.</p>
      *
@@ -879,9 +879,9 @@ public class XMLWriter extends XMLFilterImpl
     ////////////////////////////////////////////////////////////////////
     // Internal methods.
     ////////////////////////////////////////////////////////////////////
-    
 
-    
+
+
 
     /**
      * Write a raw character.
@@ -891,7 +891,7 @@ public class XMLWriter extends XMLFilterImpl
     protected final void write (char c) throws IOException {
         output.write(c);
     }
-    
+
 
     /**
      * Write a raw string.
@@ -960,7 +960,7 @@ public class XMLWriter extends XMLFilterImpl
      * , PIs, and comments.
      */
     private String header=null;
-    
+
     private final CharacterEscapeHandler escapeHandler;
 
     private boolean startTagIsClosed = true;

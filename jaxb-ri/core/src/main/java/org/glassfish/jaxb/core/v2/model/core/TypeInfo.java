@@ -8,11 +8,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.model.core;
+package cn.lzgabel.jaxb.core.v2.model.core;
 
 import jakarta.xml.bind.annotation.XmlIDREF;
 
-import org.glassfish.jaxb.core.v2.model.annotation.Locatable;
+import cn.lzgabel.jaxb.core.v2.model.annotation.Locatable;
 
 
 /**

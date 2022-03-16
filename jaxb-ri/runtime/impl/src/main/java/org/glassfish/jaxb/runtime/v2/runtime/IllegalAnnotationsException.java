@@ -8,10 +8,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime;
+package cn.lzgabel.jaxb.runtime.v2.runtime;
 
-import org.glassfish.jaxb.core.v2.model.core.ErrorHandler;
-import org.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
+import cn.lzgabel.jaxb.core.v2.model.core.ErrorHandler;
+import cn.lzgabel.jaxb.core.v2.runtime.IllegalAnnotationException;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 
@@ -44,7 +44,7 @@ public class IllegalAnnotationsException extends JAXBException {
     public String toString() {
         StringBuilder sb = new StringBuilder(super.toString());
         sb.append('\n');
-        
+
         for( IllegalAnnotationException error : errors )
             sb.append(error.toString()).append('\n');
 

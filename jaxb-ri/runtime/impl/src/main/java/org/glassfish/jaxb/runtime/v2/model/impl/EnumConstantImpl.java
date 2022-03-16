@@ -8,10 +8,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.lzgabel.jaxb.runtime.v2.model.impl;
 
-import org.glassfish.jaxb.core.v2.model.core.EnumConstant;
-import org.glassfish.jaxb.core.v2.model.core.EnumLeafInfo;
+import cn.lzgabel.jaxb.core.v2.model.core.EnumConstant;
+import cn.lzgabel.jaxb.core.v2.model.core.EnumLeafInfo;
 
 /**
  * @author Kohsuke Kawaguchi

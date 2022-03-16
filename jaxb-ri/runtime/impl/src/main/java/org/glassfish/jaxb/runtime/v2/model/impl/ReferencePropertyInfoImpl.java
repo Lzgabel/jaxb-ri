@@ -8,12 +8,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.lzgabel.jaxb.runtime.v2.model.impl;
 
-import org.glassfish.jaxb.core.v2.model.annotation.AnnotationReader;
-import org.glassfish.jaxb.core.v2.model.core.*;
-import org.glassfish.jaxb.core.v2.model.nav.Navigator;
-import org.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
+import cn.lzgabel.jaxb.core.v2.model.annotation.AnnotationReader;
+import cn.lzgabel.jaxb.core.v2.model.core.*;
+import cn.lzgabel.jaxb.core.v2.model.nav.Navigator;
+import cn.lzgabel.jaxb.core.v2.runtime.IllegalAnnotationException;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.annotation.*;
 
@@ -155,7 +155,7 @@ class ReferencePropertyInfoImpl<T,C,F,M>
                     // reporting one error would do.
                     // often the element ref field is using @XmlElementRefs
                     // to point to multiple JAXBElements.
-                    // reporting one error for each @XmlElemetnRef is thus often redundant. 
+                    // reporting one error for each @XmlElemetnRef is thus often redundant.
                     return;
                 }
             }

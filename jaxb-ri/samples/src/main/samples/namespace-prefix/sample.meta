@@ -15,7 +15,7 @@
     <title>namespace-prefix</title>
     <description><![CDATA[
         This sample application demonstrates how to use the new JAXB RI
-        Marshaller property "org.glassfish.jaxb.namespacePrefixMapper" to
+        Marshaller property "cn.lzgabel.jaxb.namespacePrefixMapper" to
         customize the namespace prefixes generated during marshalling.
     ]]></description>
 

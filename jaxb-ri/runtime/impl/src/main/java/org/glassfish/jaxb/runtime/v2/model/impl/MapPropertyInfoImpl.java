@@ -8,12 +8,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.lzgabel.jaxb.runtime.v2.model.impl;
 
-import org.glassfish.jaxb.core.v2.model.core.MapPropertyInfo;
-import org.glassfish.jaxb.core.v2.model.core.NonElement;
-import org.glassfish.jaxb.core.v2.model.core.PropertyKind;
-import org.glassfish.jaxb.core.v2.model.core.TypeInfo;
+import cn.lzgabel.jaxb.core.v2.model.core.MapPropertyInfo;
+import cn.lzgabel.jaxb.core.v2.model.core.NonElement;
+import cn.lzgabel.jaxb.core.v2.model.core.PropertyKind;
+import cn.lzgabel.jaxb.core.v2.model.core.TypeInfo;
 import jakarta.xml.bind.annotation.XmlElementWrapper;
 
 import javax.xml.namespace.QName;

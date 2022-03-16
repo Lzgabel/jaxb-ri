@@ -14,11 +14,11 @@ import javax.xml.namespace.QName;
 
 import com.sun.codemodel.JType;
 import com.sun.tools.xjc.outline.Aspect;
-import org.glassfish.jaxb.core.v2.model.util.ArrayInfoUtil;
+import cn.lzgabel.jaxb.core.v2.model.util.ArrayInfoUtil;
 import com.sun.tools.xjc.model.nav.NClass;
 import com.sun.tools.xjc.model.nav.NType;
 import com.sun.tools.xjc.outline.Outline;
-import org.glassfish.jaxb.core.v2.model.core.ArrayInfo;
+import cn.lzgabel.jaxb.core.v2.model.core.ArrayInfo;
 import com.sun.xml.xsom.XSComponent;
 
 import org.xml.sax.Locator;
@@ -28,7 +28,7 @@ import org.xml.sax.Locator;
  * never show up in the model constructed by XJC.
  *
  * <p>
- * This class is nevertheless defined to make the type checker happy. 
+ * This class is nevertheless defined to make the type checker happy.
  *
  * @author Kohsuke Kawaguchi
  */

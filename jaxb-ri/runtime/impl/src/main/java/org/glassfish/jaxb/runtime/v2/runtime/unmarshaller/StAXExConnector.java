@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller;
 
 import org.jvnet.staxex.XMLStreamReaderEx;
 import org.xml.sax.SAXException;

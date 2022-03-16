@@ -11,4 +11,4 @@
 /**
  * Abstraction around the reflection library, to support various reflection models (such as java.lang.reflect and Annotation Processing).
  */
-package org.glassfish.jaxb.core.v2.model.nav;
+package cn.lzgabel.jaxb.core.v2.model.nav;

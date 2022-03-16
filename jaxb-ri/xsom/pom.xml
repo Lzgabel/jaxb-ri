@@ -21,9 +21,9 @@
         <relativePath/>
     </parent>
 
-    <groupId>org.glassfish.jaxb</groupId>
+    <groupId>cn.lzgabel.jaxb</groupId>
     <artifactId>xsom</artifactId>
-    <version>4.0.0-SNAPSHOT</version>
+    <version>4.0.0</version>
 
     <name>XSOM</name>
     <description>XML Schema Object Model (XSOM) is a Java library that allows applications to easily parse XML Schema
@@ -74,7 +74,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.sun.xml.bind.external</groupId>
+            <groupId>cn.lzgabel.jaxb.xml.bind.external</groupId>
             <artifactId>relaxng-datatype</artifactId>
             <version>${relaxng.version}</version>
         </dependency>
@@ -448,4 +448,18 @@
         <!--</profile>-->
 
     </profiles>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>maven_nexus_repo</id>
+            <name>maven_nexus_repo</name>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+
+        <repository>
+            <id>maven_nexus_repo</id>
+            <name>maven_nexus_repo</name>
+            <url>https://s01.oss.sonatype.org/content/repositories/releases/</url>
+        </repository>
+    </distributionManagement>
 </project>

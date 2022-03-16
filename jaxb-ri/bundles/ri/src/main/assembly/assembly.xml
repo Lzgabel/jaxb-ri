@@ -66,10 +66,10 @@
             <fileMode>0644</fileMode>
             <includes>
                 <include>jakarta.xml.bind:jakarta.xml.bind-api</include>
-                <include>com.sun.xml.bind:jaxb-core</include>
-                <include>com.sun.xml.bind:jaxb-impl</include>
-                <include>com.sun.xml.bind:jaxb-xjc</include>
-                <include>com.sun.xml.bind:jaxb-jxc</include>
+                <include>cn.lzgabel.jaxb.xml.bind:jaxb-core</include>
+                <include>cn.lzgabel.jaxb.xml.bind:jaxb-impl</include>
+                <include>cn.lzgabel.jaxb.xml.bind:jaxb-xjc</include>
+                <include>cn.lzgabel.jaxb.xml.bind:jaxb-jxc</include>
             </includes>
         </dependencySet>
         <dependencySet>
@@ -81,7 +81,7 @@
             <directoryMode>0755</directoryMode>
             <fileMode>0644</fileMode>
             <includes>
-                <include>com.sun.xml.bind:jaxb-release-documentation</include>
+                <include>cn.lzgabel.jaxb.xml.bind:jaxb-release-documentation</include>
             </includes>
         </dependencySet>
         <dependencySet>
@@ -92,7 +92,7 @@
             <directoryMode>0755</directoryMode>
             <fileMode>0644</fileMode>
             <includes>
-                <include>com.sun.xml.bind:jaxb-samples</include>
+                <include>cn.lzgabel.jaxb.xml.bind:jaxb-samples</include>
             </includes>
         </dependencySet>
     </dependencySets>

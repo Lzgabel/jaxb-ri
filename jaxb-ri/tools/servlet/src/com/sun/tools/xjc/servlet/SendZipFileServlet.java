@@ -14,11 +14,11 @@ import java.io.IOException;
 
 import javax.servlet.ServletException;
 
-import com.sun.xml.bind.webapp.HttpServletEx;
+import cn.lzgabel.jaxb.xml.bind.webapp.HttpServletEx;
 
 /**
  * Sends a zip file to the client.
- * 
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */

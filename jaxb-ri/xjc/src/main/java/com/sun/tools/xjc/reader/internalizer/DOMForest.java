@@ -17,8 +17,8 @@ import com.sun.tools.xjc.Options;
 import com.sun.tools.xjc.reader.Const;
 import com.sun.tools.xjc.reader.xmlschema.parser.SchemaConstraintChecker;
 import com.sun.tools.xjc.util.ErrorReceiverFilter;
-import org.glassfish.jaxb.core.marshaller.DataWriter;
-import org.glassfish.jaxb.core.v2.util.XmlFactory;
+import cn.lzgabel.jaxb.core.marshaller.DataWriter;
+import cn.lzgabel.jaxb.core.v2.util.XmlFactory;
 import com.sun.xml.xsom.parser.JAXPParser;
 import com.sun.xml.xsom.parser.XMLParser;
 import org.w3c.dom.Document;
@@ -49,26 +49,26 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
-import static org.glassfish.jaxb.core.v2.util.XmlFactory.allowExternalAccess;
+import static cn.lzgabel.jaxb.core.v2.util.XmlFactory.allowExternalAccess;
 import static javax.xml.XMLConstants.W3C_XML_SCHEMA_NS_URI;
 
 
 /**
  * Builds a DOM forest and maintains association from
  * system IDs to DOM trees.
- * 
+ *
  * <p>
  * A forest is a transitive reflexive closure of referenced documents.
  * IOW, if a document is in a forest, all the documents referenced from
  * it is in a forest, too. To support this semantics, {@link DOMForest}
  * uses {@link InternalizationLogic} to find referenced documents.
- * 
+ *
  * <p>
  * Some documents are marked as "root"s, meaning those documents were
  * put into a forest explicitly, not because it is referenced from another
  * document. (However, a root document can be referenced from other
  * documents, too.)
- * 
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
@@ -81,36 +81,36 @@ public final class DOMForest {
      * which documents (of the forest) were given as the root
      * documents, and which of them are read as included/imported
      * documents.
-     * 
+     *
      * <p>
      * Set of system ids as strings.
      */
     private final Set<String> rootDocuments = new LinkedHashSet<>();
-    
+
     /** Stores location information for all the trees in this forest. */
     public final LocatorTable locatorTable = new LocatorTable();
-    
+
     /** Stores all the outer-most {@code <jaxb:bindings>} customizations. */
     public final Set<Element> outerMostBindings = new HashSet<>();
-    
+
     /** Used to resolve references to other schema documents. */
     private EntityResolver entityResolver = null;
-    
+
     /** Errors encountered during the parsing will be sent to this object. */
     private ErrorReceiver errorReceiver = null;
-    
+
     /** Schema language dependent part of the processing. */
     protected final InternalizationLogic logic;
-    
-    private final SAXParserFactory parserFactory;    
+
+    private final SAXParserFactory parserFactory;
     private final DocumentBuilder documentBuilder;
-    
+
     private final Options options;
-            
+
     public DOMForest(
         SAXParserFactory parserFactory, DocumentBuilder documentBuilder,
         InternalizationLogic logic ) {
-        
+
         this.parserFactory = parserFactory;
         this.documentBuilder = documentBuilder;
         this.logic = logic;
@@ -121,7 +121,7 @@ public final class DOMForest {
 
         if (opt == null) throw new AssertionError("Options object null");
         this.options = opt;
-        
+
         try {
             DocumentBuilderFactory dbf = XmlFactory.createDocumentBuilderFactory(opt.disableXmlSecurity);
             this.documentBuilder = dbf.newDocumentBuilder();
@@ -129,23 +129,23 @@ public final class DOMForest {
         } catch( ParserConfigurationException e ) {
             throw new AssertionError(e);
         }
-        
+
         this.logic = logic;
     }
-    
+
     /**
      * Gets the DOM tree associated with the specified system ID,
      * or null if none is found.
      */
     public Document get( String systemId ) {
         Document doc = core.get(systemId);
-        
+
         if( doc==null && systemId.startsWith("file:/") && !systemId.startsWith("file://") ) {
             // As of JDK1.4, java.net.URL.toExternal method returns URLs like
             // "file:/abc/def/ghi" which is an incorrect file protocol URL according to RFC1738.
             // Some other correctly functioning parts return the correct URLs ("file:///abc/def/ghi"),
             // and this descripancy breaks DOM look up by system ID.
-            
+
             // this extra check solves this problem.
             doc = core.get( "file://"+systemId.substring(5) );
         }
@@ -245,7 +245,7 @@ public final class DOMForest {
     public Document parse( InputSource source, boolean root ) throws SAXException {
         if( source.getSystemId()==null )
             throw new IllegalArgumentException();
-        
+
         return parse( source.getSystemId(), source, root );
     }
 
@@ -253,7 +253,7 @@ public final class DOMForest {
      * Parses an XML at the given location (
      * and XMLs referenced by it) into DOM trees
      * and stores them to this forest.
-     * 
+     *
      * @return the parsed DOM document object.
      */
     public Document parse( String systemId, boolean root ) throws SAXException, IOException {
@@ -263,9 +263,9 @@ public final class DOMForest {
         if( core.containsKey(systemId) )
             // this document has already been parsed. Just ignore.
             return core.get(systemId);
-        
+
         InputSource is=null;
-        
+
         // allow entity resolver to find the actual byte stream.
         if( entityResolver!=null ) {
             is = entityResolver.resolveEntity(null,systemId);
@@ -290,14 +290,14 @@ public final class DOMForest {
         // but we still use the original system Id as the key.
         return parse( systemId, is, root );
     }
-    
+
     /**
      * Returns a {@link ContentHandler} to feed SAX events into.
-     * 
+     *
      * <p>
      * The client of this class can feed SAX events into the handler
      * to parse a document into this DOM forest.
-     * 
+     *
      * This version requires that the DOM object to be created and registered
      * to the map beforehand.
      */
@@ -318,20 +318,20 @@ public final class DOMForest {
 
         return f;
     }
-    
+
     public interface Handler extends ContentHandler {
         /**
          * Gets the DOM that was built.
          */
         public Document getDocument();
     }
-    
+
     private static abstract class HandlerImpl extends XMLFilterImpl implements Handler {
     }
-    
+
     /**
      * Returns a {@link ContentHandler} to feed SAX events into.
-     * 
+     *
      * <p>
      * The client of this class can feed SAX events into the handler
      * to parse a document into this DOM forest.
@@ -341,9 +341,9 @@ public final class DOMForest {
         core.put( systemId, dom );
         if(root)
             rootDocuments.add(systemId);
-       
+
         ContentHandler handler = getParserHandler(dom);
-        
+
         // we will register the DOM to the map once the system ID becomes available.
         // but the SAX allows the event source to not to provide that information,
         // so be prepared for such case.
@@ -354,7 +354,7 @@ public final class DOMForest {
             }
         };
         x.setContentHandler(handler);
-        
+
         return x;
    }
 
@@ -374,7 +374,7 @@ public final class DOMForest {
         core.put( systemId, dom );
         if(root)
             rootDocuments.add(systemId);
-        
+
         try {
             XMLReader reader = parserFactory.newSAXParser().getXMLReader();
             reader.setContentHandler(getParserHandler(dom));
@@ -395,7 +395,7 @@ public final class DOMForest {
             rootDocuments.remove(systemId);
             return null;
         }
-        
+
         return dom;
     }
 
@@ -406,19 +406,19 @@ public final class DOMForest {
 
         if(root)
             rootDocuments.add(systemId);
-        
+
         if(systemId==null)
             throw new IllegalArgumentException("system id cannot be null");
         core.put( systemId, dom );
-        
+
         new XMLStreamReaderToContentHandler(parser,getParserHandler(dom),false,false).bridge();
-        
+
         return dom;
     }
-    
+
     /**
      * Performs internalization.
-     * 
+     *
      * This method should be called only once, only after all the
      * schemas are parsed.
      *
@@ -509,14 +509,14 @@ public final class DOMForest {
     /**
      * Creates {@link XMLParser} for XSOM which reads documents from
      * this DOMForest rather than doing a fresh parse.
-     * 
+     *
      * The net effect is that XSOM will read transformed XML Schemas
      * instead of the original documents.
      */
     public XMLParser createParser() {
         return new DOMForestParser(this, new JAXPParser(XmlFactory.createParserFactory(options.disableXmlSecurity)));
-    }    
-    
+    }
+
     public EntityResolver getEntityResolver() {
         return entityResolver;
     }
@@ -524,7 +524,7 @@ public final class DOMForest {
     public void setEntityResolver(EntityResolver entityResolver) {
         this.entityResolver = entityResolver;
     }
-    
+
     public ErrorReceiver getErrorHandler() {
         return errorReceiver;
     }
@@ -532,24 +532,24 @@ public final class DOMForest {
     public void setErrorHandler(ErrorReceiver errorHandler) {
         this.errorReceiver = errorHandler;
     }
-    
+
     /**
      * Gets all the parsed documents.
      */
     public Document[] listDocuments() {
         return core.values().toArray(new Document[core.size()]);
     }
-    
+
     /**
      * Gets all the system IDs of the documents.
      */
     public String[] listSystemIDs() {
         return core.keySet().toArray(new String[core.keySet().size()]);
     }
-    
+
     /**
      * Dumps the contents of the forest to the specified stream.
-     * 
+     *
      * This is a debug method. As such, error handling is sloppy.
      */
     public void dump( OutputStream out ) throws IOException {
@@ -569,7 +569,7 @@ public final class DOMForest {
                 dw.setIndentStep("  ");
                 it.transform( new DOMSource(e.getValue()),
                     new SAXResult(dw));
-                
+
                 out.write( "\n\n\n".getBytes() );
             }
         } catch( TransformerException e ) {

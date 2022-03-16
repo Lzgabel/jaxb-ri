@@ -14,17 +14,17 @@ import java.lang.reflect.Type;
 import java.util.Collection;
 import java.util.Collections;
 
-import com.sun.xml.bind.v2.model.annotation.AnnotationReader;
-import com.sun.xml.bind.v2.model.annotation.RuntimeAnnotationReader;
-import com.sun.xml.bind.v2.model.annotation.RuntimeInlineAnnotationReader;
-import com.sun.xml.bind.v2.model.core.ErrorHandler;
-import com.sun.xml.bind.v2.model.core.Ref;
-import com.sun.xml.bind.v2.model.core.TypeInfoSet;
-import com.sun.xml.bind.v2.model.impl.ModelBuilder;
-import com.sun.xml.bind.v2.model.impl.RuntimeModelBuilder;
-import com.sun.xml.bind.v2.model.nav.Navigator;
-import com.sun.xml.bind.v2.model.runtime.RuntimeTypeInfoSet;
-import com.sun.xml.bind.v2.runtime.IllegalAnnotationsException;
+import cn.lzgabel.jaxb.xml.bind.v2.model.annotation.AnnotationReader;
+import cn.lzgabel.jaxb.xml.bind.v2.model.annotation.RuntimeAnnotationReader;
+import cn.lzgabel.jaxb.xml.bind.v2.model.annotation.RuntimeInlineAnnotationReader;
+import cn.lzgabel.jaxb.xml.bind.v2.model.core.ErrorHandler;
+import cn.lzgabel.jaxb.xml.bind.v2.model.core.Ref;
+import cn.lzgabel.jaxb.xml.bind.v2.model.core.TypeInfoSet;
+import cn.lzgabel.jaxb.xml.bind.v2.model.impl.ModelBuilder;
+import cn.lzgabel.jaxb.xml.bind.v2.model.impl.RuntimeModelBuilder;
+import cn.lzgabel.jaxb.xml.bind.v2.model.nav.Navigator;
+import cn.lzgabel.jaxb.xml.bind.v2.model.runtime.RuntimeTypeInfoSet;
+import cn.lzgabel.jaxb.xml.bind.v2.runtime.IllegalAnnotationsException;
 
 /**
  * Factory methods to build JAXB models.

@@ -19,19 +19,19 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspTagException;
 import javax.servlet.jsp.tagext.IterationTag;
 
-import com.sun.xml.bind.webapp.*;
+import cn.lzgabel.jaxb.xml.bind.webapp.*;
 
 /**
  * Repeats the body for each zip entry in the file.
- * 
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
 public class ZipTag extends AbstractTagImpl implements IterationTag {
-    
+
     private ZipInputStream zip;
     private ZipEntry currentEntry;
-    
+
 
     public ZipEntry getCurrentEntry() {
         return currentEntry;
@@ -41,15 +41,15 @@ public class ZipTag extends AbstractTagImpl implements IterationTag {
         return zip;
     }
 
-    
+
     public int startTag() throws IOException {
         Compiler c = (Compiler)getRequest().getSession().getAttribute("compiler");
         if(c==null)     return SKIP_BODY;
-    
+
         zip = new ZipInputStream(new ByteArrayInputStream(c.getZipFile()));
         return next()?EVAL_BODY_INCLUDE:SKIP_BODY;
     }
-    
+
     /**
      * Moves to the next zip entry.
      */
@@ -60,11 +60,11 @@ public class ZipTag extends AbstractTagImpl implements IterationTag {
             zip = null;     // release
             return false;
         }
-        
+
         String name = currentEntry.getName();
         if( name.indexOf("/impl/")!=-1 || name.indexOf(".java")==-1 )
             return next();  // skip non-java file and impl file.
-        
+
         return true;
     }
 

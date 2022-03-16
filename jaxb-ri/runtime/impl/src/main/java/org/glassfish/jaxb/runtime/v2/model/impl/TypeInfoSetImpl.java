@@ -8,14 +8,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.lzgabel.jaxb.runtime.v2.model.impl;
 
-import org.glassfish.jaxb.core.v2.model.annotation.AnnotationReader;
-import org.glassfish.jaxb.core.v2.model.core.*;
-import org.glassfish.jaxb.core.v2.model.nav.Navigator;
-import org.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
-import org.glassfish.jaxb.core.v2.runtime.RuntimeUtil;
-import org.glassfish.jaxb.core.v2.util.FlattenIterator;
+import cn.lzgabel.jaxb.core.v2.model.annotation.AnnotationReader;
+import cn.lzgabel.jaxb.core.v2.model.core.*;
+import cn.lzgabel.jaxb.core.v2.model.nav.Navigator;
+import cn.lzgabel.jaxb.core.v2.runtime.IllegalAnnotationException;
+import cn.lzgabel.jaxb.core.v2.runtime.RuntimeUtil;
+import cn.lzgabel.jaxb.core.v2.util.FlattenIterator;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
@@ -80,7 +80,7 @@ class TypeInfoSetImpl<T,C,F,M> implements TypeInfoSet<T,C,F,M> {
      */
     private final Map<C,Map<QName,ElementInfoImpl<T,C,F,M>>> elementMappings =
         new LinkedHashMap<>();
-    
+
     private final Iterable<? extends ElementInfoImpl<T,C,F,M>> allElements =
         new Iterable<ElementInfoImpl<T,C,F,M>>() {
             @Override

@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.api.impl;
+package cn.lzgabel.jaxb.core.api.impl;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -56,12 +56,12 @@ class NameUtil {
     {
         return String.valueOf(c).toUpperCase(Locale.ENGLISH);
     }
-    
+
     private String toUpperCase(String s)
     {
         return s.toUpperCase(Locale.ENGLISH);
     }
-    
+
     /**
      * Capitalizes the first character of the specified string,
      * and de-capitalize the rest of characters.

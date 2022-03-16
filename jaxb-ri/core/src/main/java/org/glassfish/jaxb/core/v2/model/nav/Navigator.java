@@ -8,11 +8,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.model.nav;
+package cn.lzgabel.jaxb.core.v2.model.nav;
 
 import java.util.Collection;
 
-import org.glassfish.jaxb.core.v2.runtime.Location;
+import cn.lzgabel.jaxb.core.v2.runtime.Location;
 
 /**
  * Provides unified view of the underlying reflection library,
@@ -124,7 +124,7 @@ public interface Navigator<T,C,F,M> {
      * Note that this method does not list methods declared on base classes.
      *
      * @return
-     *      can be empty but always non-null. 
+     *      can be empty but always non-null.
      */
     Collection<? extends M> getDeclaredMethods(C clazz);
 
@@ -321,7 +321,7 @@ public interface Navigator<T,C,F,M> {
      *
      * @return
      *      can be empty but never null.
-     */ 
+     */
     F[] getEnumConstants(C clazz);
 
     /**

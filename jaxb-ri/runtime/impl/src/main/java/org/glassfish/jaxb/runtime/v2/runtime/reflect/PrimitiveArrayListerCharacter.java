@@ -8,10 +8,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.reflect;
+package cn.lzgabel.jaxb.runtime.v2.runtime.reflect;
 
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
+import cn.lzgabel.jaxb.runtime.api.AccessorException;
+import cn.lzgabel.jaxb.runtime.v2.runtime.XMLSerializer;
 
 /**
  * {@link Lister} for primitive type arrays.
@@ -24,7 +24,7 @@ import org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
  * </p>
  */
 final class PrimitiveArrayListerCharacter<BeanT> extends Lister<BeanT,char[],Character,PrimitiveArrayListerCharacter.CharacterArrayPack> {
-    
+
     private PrimitiveArrayListerCharacter() {
     }
 

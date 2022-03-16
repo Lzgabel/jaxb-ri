@@ -11,4 +11,4 @@
 /**
  * Code that implements JAXBContext, Unmarshaller, and Marshaller.
  */
-package org.glassfish.jaxb.runtime.v2.runtime;
+package cn.lzgabel.jaxb.runtime.v2.runtime;

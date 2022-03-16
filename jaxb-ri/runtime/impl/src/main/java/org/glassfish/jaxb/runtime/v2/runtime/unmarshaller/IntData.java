@@ -8,10 +8,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller;
 
-import org.glassfish.jaxb.runtime.v2.runtime.output.Pcdata;
-import org.glassfish.jaxb.runtime.v2.runtime.output.UTF8XmlOutput;
+import cn.lzgabel.jaxb.runtime.v2.runtime.output.Pcdata;
+import cn.lzgabel.jaxb.runtime.v2.runtime.output.UTF8XmlOutput;
 
 import java.io.IOException;
 

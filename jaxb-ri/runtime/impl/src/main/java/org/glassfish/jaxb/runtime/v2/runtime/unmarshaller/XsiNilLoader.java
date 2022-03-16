@@ -8,12 +8,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller;
 
-import org.glassfish.jaxb.runtime.DatatypeConverterImpl;
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
+import cn.lzgabel.jaxb.runtime.DatatypeConverterImpl;
+import cn.lzgabel.jaxb.runtime.api.AccessorException;
+import cn.lzgabel.jaxb.core.v2.WellKnownNamespace;
+import cn.lzgabel.jaxb.runtime.v2.runtime.reflect.Accessor;
 import jakarta.xml.bind.JAXBElement;
 import org.xml.sax.SAXException;
 

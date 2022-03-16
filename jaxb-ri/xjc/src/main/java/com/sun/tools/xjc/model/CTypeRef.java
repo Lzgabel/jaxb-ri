@@ -17,9 +17,9 @@ import javax.xml.namespace.QName;
 import com.sun.tools.xjc.model.nav.NClass;
 import com.sun.tools.xjc.model.nav.NType;
 import com.sun.tools.xjc.reader.xmlschema.BGMBuilder;
-import org.glassfish.jaxb.core.v2.model.core.PropertyInfo;
-import org.glassfish.jaxb.core.v2.model.core.TypeRef;
-import org.glassfish.jaxb.core.v2.runtime.RuntimeUtil;
+import cn.lzgabel.jaxb.core.v2.model.core.PropertyInfo;
+import cn.lzgabel.jaxb.core.v2.model.core.TypeRef;
+import cn.lzgabel.jaxb.core.v2.runtime.RuntimeUtil;
 import com.sun.xml.xsom.XSType;
 import com.sun.xml.xsom.XmlString;
 import com.sun.xml.xsom.XSElementDecl;
@@ -27,7 +27,7 @@ import com.sun.istack.Nullable;
 
 /**
  * {@link TypeRef} for XJC.
- * 
+ *
  * TODO: do we need the source schema component support here?
  *
  * @author Kohsuke Kawaguchi
@@ -36,7 +36,7 @@ public final class CTypeRef implements TypeRef<NType,NClass> {
     /**
      * In-memory type.
      *
-     * This is the type used when 
+     * This is the type used when
      */
     @XmlJavaTypeAdapter(RuntimeUtil.ToStringAdapter.class)
     private final CNonElement type;
@@ -58,7 +58,7 @@ public final class CTypeRef implements TypeRef<NType,NClass> {
     public QName getTypeName() {
         return typeName;
     }
-    
+
     public static QName getSimpleTypeName(XSElementDecl decl) {
         if(decl==null || !decl.getType().isSimpleType())
             return null; // null if not simple type
@@ -123,7 +123,7 @@ public final class CTypeRef implements TypeRef<NType,NClass> {
 
     /**
      * Inside XJC, use {@link #defaultValue} that has context information.
-     * This method is to override the one defined in the runtime model. 
+     * This method is to override the one defined in the runtime model.
      *
      * @see #defaultValue
      */

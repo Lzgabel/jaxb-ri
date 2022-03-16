@@ -8,16 +8,16 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.property;
+package cn.lzgabel.jaxb.runtime.v2.runtime.property;
 
-import org.glassfish.jaxb.runtime.v2.runtime.JaxBeanInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.Name;
+import cn.lzgabel.jaxb.runtime.v2.runtime.JaxBeanInfo;
+import cn.lzgabel.jaxb.runtime.v2.runtime.Name;
 
 import javax.xml.namespace.QName;
 
 /**
  * Pair of {@link QName} and {@link JaxBeanInfo}.
- * 
+ *
  * @author Kohsuke Kawaguchi
  */
 class TagAndType {

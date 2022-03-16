@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.schemagen.xmlschema;
+package cn.lzgabel.jaxb.runtime.v2.schemagen.xmlschema;
 
 import java.util.ArrayList;
 import java.util.Collections;

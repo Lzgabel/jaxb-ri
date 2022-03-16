@@ -8,15 +8,15 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.lzgabel.jaxb.runtime.v2.model.impl;
 
-import org.glassfish.jaxb.core.v2.model.core.Adapter;
-import org.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
-import org.glassfish.jaxb.runtime.v2.runtime.Transducer;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
+import cn.lzgabel.jaxb.core.v2.model.core.Adapter;
+import cn.lzgabel.jaxb.core.v2.runtime.IllegalAnnotationException;
+import cn.lzgabel.jaxb.runtime.v2.runtime.Transducer;
+import cn.lzgabel.jaxb.runtime.v2.runtime.reflect.Accessor;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.annotation.adapters.XmlAdapter;
-import org.glassfish.jaxb.runtime.v2.model.runtime.*;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.*;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -30,7 +30,7 @@ import java.util.List;
  */
 final class RuntimeElementInfoImpl extends ElementInfoImpl<Type,Class,Field,Method>
     implements RuntimeElementInfo {
-    
+
     public RuntimeElementInfoImpl(RuntimeModelBuilder modelBuilder, RegistryInfoImpl registry, Method method) throws IllegalAnnotationException {
         super(modelBuilder, registry, method);
 

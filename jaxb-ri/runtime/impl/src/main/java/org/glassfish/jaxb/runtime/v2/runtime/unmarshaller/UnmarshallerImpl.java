@@ -8,22 +8,22 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller;
 
-import org.glassfish.jaxb.runtime.IDResolver;
-import org.glassfish.jaxb.runtime.api.ClassResolver;
-import org.glassfish.jaxb.core.unmarshaller.DOMScanner;
-import org.glassfish.jaxb.core.unmarshaller.InfosetScanner;
-import org.glassfish.jaxb.core.v2.ClassFactory;
-import org.glassfish.jaxb.runtime.v2.runtime.AssociationMap;
-import org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.JaxBeanInfo;
-import org.glassfish.jaxb.core.v2.util.XmlFactory;
+import cn.lzgabel.jaxb.runtime.IDResolver;
+import cn.lzgabel.jaxb.runtime.api.ClassResolver;
+import cn.lzgabel.jaxb.core.unmarshaller.DOMScanner;
+import cn.lzgabel.jaxb.core.unmarshaller.InfosetScanner;
+import cn.lzgabel.jaxb.core.v2.ClassFactory;
+import cn.lzgabel.jaxb.runtime.v2.runtime.AssociationMap;
+import cn.lzgabel.jaxb.runtime.v2.runtime.JAXBContextImpl;
+import cn.lzgabel.jaxb.runtime.v2.runtime.JaxBeanInfo;
+import cn.lzgabel.jaxb.core.v2.util.XmlFactory;
 import jakarta.xml.bind.*;
 import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 import jakarta.xml.bind.attachment.AttachmentUnmarshaller;
 import jakarta.xml.bind.helpers.AbstractUnmarshallerImpl;
-import org.glassfish.jaxb.runtime.unmarshaller.Messages;
+import cn.lzgabel.jaxb.runtime.unmarshaller.Messages;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -99,13 +99,13 @@ import java.io.InputStream;
 
     /**
      * Obtains a configured XMLReader.
-     * 
+     *
      * This method is used when the client-specified
      * {@link SAXSource} object doesn't have XMLReader.
-     * 
+     *
      * {@link Unmarshaller} is not re-entrant, so we will
      * only use one instance of XMLReader.
-     * 
+     *
      * Overriden in order to fix potential security issue.
      */
      @Override
@@ -113,7 +113,7 @@ import java.io.InputStream;
          if (reader == null) {
              try {
                  SAXParserFactory parserFactory = XmlFactory.createParserFactory(context.disableSecurityProcessing);
-                 // there is no point in asking a validation because 
+                 // there is no point in asking a validation because
                  // there is no guarantee that the document will come with
                  // a proper schemaLocation.
                  parserFactory.setValidating(false);
@@ -126,7 +126,7 @@ import java.io.InputStream;
          }
          return reader;
      }
-    
+
     private SAXConnector getUnmarshallerHandler( boolean intern, JaxBeanInfo expectedType ) {
         XmlVisitor h = createUnmarshallerHandler(null, false, expectedType);
         if (intern) {
@@ -477,7 +477,7 @@ import java.io.InputStream;
         super.setProperty(name, value);
     }
 
-    public static final String FACTORY = "org.glassfish.jaxb.core.ObjectFactory";
+    public static final String FACTORY = "cn.lzgabel.jaxb.core.ObjectFactory";
 
     @Override
     public void setSchema(Schema schema) {
@@ -576,7 +576,7 @@ import java.io.InputStream;
     public UnmarshallingContext getContext() {
         return coordinator;
     }
-    
+
     @Override
     @SuppressWarnings("FinalizeDeclaration")
     protected void finalize() throws Throwable {
@@ -589,11 +589,11 @@ import java.io.InputStream;
 
     /**
      *  Must be called from same thread which created the UnmarshallerImpl instance.
-     * @throws IOException 
+     * @throws IOException
      */
     @Override
     public void close() throws IOException {
         ClassFactory.cleanCache();
     }
-    
+
 }

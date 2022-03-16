@@ -8,24 +8,24 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.reflect;
+package cn.lzgabel.jaxb.runtime.v2.runtime.reflect;
 
 import com.sun.istack.NotNull;
 import com.sun.istack.Nullable;
 import com.sun.istack.SAXException2;
-import org.glassfish.jaxb.core.WhiteSpaceProcessor;
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.core.v2.model.core.ID;
-import org.glassfish.jaxb.runtime.v2.model.impl.RuntimeModelBuilder;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeNonElementRef;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.Name;
-import org.glassfish.jaxb.runtime.v2.runtime.Transducer;
-import org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
-import org.glassfish.jaxb.core.v2.runtime.unmarshaller.LocatorEx;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Patcher;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
+import cn.lzgabel.jaxb.core.WhiteSpaceProcessor;
+import cn.lzgabel.jaxb.runtime.api.AccessorException;
+import cn.lzgabel.jaxb.core.v2.model.core.ID;
+import cn.lzgabel.jaxb.runtime.v2.model.impl.RuntimeModelBuilder;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.RuntimeNonElementRef;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
+import cn.lzgabel.jaxb.runtime.v2.runtime.JAXBContextImpl;
+import cn.lzgabel.jaxb.runtime.v2.runtime.Name;
+import cn.lzgabel.jaxb.runtime.v2.runtime.Transducer;
+import cn.lzgabel.jaxb.runtime.v2.runtime.XMLSerializer;
+import cn.lzgabel.jaxb.core.v2.runtime.unmarshaller.LocatorEx;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.Patcher;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.annotation.XmlValue;
 import org.xml.sax.SAXException;
@@ -248,7 +248,7 @@ public abstract class TransducedAccessor<BeanT> {
         public String print(BeanT bean) throws AccessorException, SAXException {
             TargetT target = acc.get(bean);
             if(target==null)    return null;
-            
+
             XMLSerializer w = XMLSerializer.getInstance();
             try {
                 String id = w.grammar.getBeanInfo(target,true).getId(target,w);

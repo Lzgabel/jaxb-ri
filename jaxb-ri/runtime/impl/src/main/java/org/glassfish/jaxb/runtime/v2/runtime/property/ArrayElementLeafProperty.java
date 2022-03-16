@@ -8,14 +8,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.property;
+package cn.lzgabel.jaxb.runtime.v2.runtime.property;
 
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeElementPropertyInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.JaxBeanInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.Transducer;
-import org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
+import cn.lzgabel.jaxb.runtime.api.AccessorException;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.RuntimeElementPropertyInfo;
+import cn.lzgabel.jaxb.runtime.v2.runtime.JAXBContextImpl;
+import cn.lzgabel.jaxb.runtime.v2.runtime.JaxBeanInfo;
+import cn.lzgabel.jaxb.runtime.v2.runtime.Transducer;
+import cn.lzgabel.jaxb.runtime.v2.runtime.XMLSerializer;
 import org.xml.sax.SAXException;
 
 import javax.xml.stream.XMLStreamException;

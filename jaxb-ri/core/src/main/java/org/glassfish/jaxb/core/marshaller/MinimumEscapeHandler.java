@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.marshaller;
+package cn.lzgabel.jaxb.core.marshaller;
 
 import java.io.IOException;
 import java.io.Writer;
@@ -16,16 +16,16 @@ import java.io.Writer;
 /**
  * Performs no character escaping. Usable only when the output encoding
  * is UTF, but this handler gives the maximum performance.
- * 
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
 public class MinimumEscapeHandler implements CharacterEscapeHandler {
-    
+
     private MinimumEscapeHandler() {}  // no instanciation please
-    
-    public static final CharacterEscapeHandler theInstance = new MinimumEscapeHandler(); 
-    
+
+    public static final CharacterEscapeHandler theInstance = new MinimumEscapeHandler();
+
     @Override
     public void escape(char[] ch, int start, int length, boolean isAttVal, Writer out) throws IOException {
         // avoid calling the Writerwrite method too much by assuming
@@ -62,7 +62,7 @@ public class MinimumEscapeHandler implements CharacterEscapeHandler {
                 }
             }
         }
-        
+
         if( start!=limit )
             out.write(ch,start,limit-start);
     }

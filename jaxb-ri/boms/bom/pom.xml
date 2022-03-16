@@ -22,9 +22,9 @@
         <relativePath/>
     </parent>
 
-    <groupId>org.glassfish.jaxb</groupId>
+    <groupId>cn.lzgabel.jaxb</groupId>
     <artifactId>jaxb-bom</artifactId>
-    <version>4.0.0-SNAPSHOT</version>
+    <version>4.0.0</version>
 
     <packaging>pom</packaging>
     <name>JAXB BOM</name>
@@ -34,10 +34,10 @@
     <properties>
         <xml.bind-api.version>4.0.0-RC2</xml.bind-api.version>
         <istack.version>4.1.0-M1</istack.version>
-        <fastinfoset.version>2.1.0-M1</fastinfoset.version>
-        <stax-ex.version>2.1.0-M2</stax-ex.version>
-        <activation-api.version>2.1.0-RC1</activation-api.version>
-        <angus-activation.version>1.0.0-M1</angus-activation.version>
+        <fastinfoset.version>2.0.0</fastinfoset.version>
+        <stax-ex.version>2.1.0-M1</stax-ex.version>
+        <activation-api.version>2.1.0</activation-api.version>
+        <angus-activation.version>1.0.0</angus-activation.version>
     </properties>
 
     <dependencyManagement>
@@ -45,43 +45,43 @@
             <!-- *** SOURCES *** -->
             <!-- new -->
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.lzgabel.jaxb</groupId>
                 <artifactId>jaxb-runtime</artifactId>
                 <version>${project.version}</version>
                 <classifier>sources</classifier>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.lzgabel.jaxb</groupId>
                 <artifactId>jaxb-core</artifactId>
                 <version>${project.version}</version>
                 <classifier>sources</classifier>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.lzgabel.jaxb</groupId>
                 <artifactId>jaxb-xjc</artifactId>
                 <version>${project.version}</version>
                 <classifier>sources</classifier>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.lzgabel.jaxb</groupId>
                 <artifactId>jaxb-jxc</artifactId>
                 <version>${project.version}</version>
                 <classifier>sources</classifier>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.lzgabel.jaxb</groupId>
                 <artifactId>codemodel</artifactId>
                 <version>${project.version}</version>
                 <classifier>sources</classifier>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.lzgabel.jaxb</groupId>
                 <artifactId>txw2</artifactId>
                 <version>${project.version}</version>
                 <classifier>sources</classifier>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.lzgabel.jaxb</groupId>
                 <artifactId>xsom</artifactId>
                 <version>${project.version}</version>
                 <classifier>sources</classifier>
@@ -89,25 +89,25 @@
 
             <!--OLD-->
             <dependency>
-                <groupId>com.sun.xml.bind</groupId>
+                <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
                 <artifactId>jaxb-impl</artifactId>
                 <version>${project.version}</version>
                 <classifier>sources</classifier>
             </dependency>
             <dependency>
-                <groupId>com.sun.xml.bind</groupId>
+                <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
                 <artifactId>jaxb-core</artifactId>
                 <version>${project.version}</version>
                 <classifier>sources</classifier>
             </dependency>
             <dependency>
-                <groupId>com.sun.xml.bind</groupId>
+                <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
                 <artifactId>jaxb-xjc</artifactId>
                 <version>${project.version}</version>
                 <classifier>sources</classifier>
             </dependency>
             <dependency>
-                <groupId>com.sun.xml.bind</groupId>
+                <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
                 <artifactId>jaxb-jxc</artifactId>
                 <version>${project.version}</version>
                 <classifier>sources</classifier>
@@ -142,37 +142,37 @@
             <!-- *** BINARIES *** -->
             <!-- new -->
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.lzgabel.jaxb</groupId>
                 <artifactId>jaxb-runtime</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.lzgabel.jaxb</groupId>
                 <artifactId>jaxb-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.lzgabel.jaxb</groupId>
                 <artifactId>jaxb-xjc</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.lzgabel.jaxb</groupId>
                 <artifactId>jaxb-jxc</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.lzgabel.jaxb</groupId>
                 <artifactId>codemodel</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.lzgabel.jaxb</groupId>
                 <artifactId>txw2</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.lzgabel.jaxb</groupId>
                 <artifactId>xsom</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -180,29 +180,29 @@
 
             <!--OLD-->
             <dependency>
-                <groupId>com.sun.xml.bind</groupId>
+                <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
                 <artifactId>jaxb-impl</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.sun.xml.bind</groupId>
+                <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
                 <artifactId>jaxb-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.sun.xml.bind</groupId>
+                <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
                 <artifactId>jaxb-xjc</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.sun.xml.bind</groupId>
+                <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
                 <artifactId>jaxb-jxc</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <!-- OSGI -->
             <dependency>
-                <groupId>com.sun.xml.bind</groupId>
+                <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
                 <artifactId>jaxb-osgi</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -268,4 +268,18 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>maven_nexus_repo</id>
+            <name>maven_nexus_repo</name>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+
+        <repository>
+            <id>maven_nexus_repo</id>
+            <name>maven_nexus_repo</name>
+            <url>https://s01.oss.sonatype.org/content/repositories/releases/</url>
+        </repository>
+    </distributionManagement>
 </project>

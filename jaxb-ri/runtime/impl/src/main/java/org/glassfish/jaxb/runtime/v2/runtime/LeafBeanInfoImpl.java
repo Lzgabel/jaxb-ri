@@ -8,14 +8,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime;
+package cn.lzgabel.jaxb.runtime.v2.runtime;
 
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeLeafInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Loader;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.TextLoader;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.XsiTypeLoader;
+import cn.lzgabel.jaxb.runtime.api.AccessorException;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.RuntimeLeafInfo;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.Loader;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.TextLoader;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.XsiTypeLoader;
 import jakarta.xml.bind.ValidationEvent;
 import jakarta.xml.bind.helpers.ValidationEventImpl;
 import org.xml.sax.SAXException;

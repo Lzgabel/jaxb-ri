@@ -8,17 +8,17 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.lzgabel.jaxb.runtime.v2.model.impl;
 
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.runtime.v2.model.annotation.FieldLocatable;
-import org.glassfish.jaxb.core.v2.model.annotation.Locatable;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeEnumLeafInfo;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeNonElement;
-import org.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
-import org.glassfish.jaxb.runtime.v2.runtime.Name;
-import org.glassfish.jaxb.runtime.v2.runtime.Transducer;
-import org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
+import cn.lzgabel.jaxb.runtime.api.AccessorException;
+import cn.lzgabel.jaxb.runtime.v2.model.annotation.FieldLocatable;
+import cn.lzgabel.jaxb.core.v2.model.annotation.Locatable;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.RuntimeEnumLeafInfo;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.RuntimeNonElement;
+import cn.lzgabel.jaxb.core.v2.runtime.IllegalAnnotationException;
+import cn.lzgabel.jaxb.runtime.v2.runtime.Name;
+import cn.lzgabel.jaxb.runtime.v2.runtime.Transducer;
+import cn.lzgabel.jaxb.runtime.v2.runtime.XMLSerializer;
 import org.xml.sax.SAXException;
 
 import javax.xml.namespace.QName;

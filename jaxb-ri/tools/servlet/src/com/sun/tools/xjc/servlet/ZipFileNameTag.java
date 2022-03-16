@@ -12,11 +12,11 @@ package com.sun.tools.xjc.servlet;
 
 import java.io.IOException;
 
-import com.sun.xml.bind.webapp.AbstractTagImpl;
+import cn.lzgabel.jaxb.xml.bind.webapp.AbstractTagImpl;
 
 /**
  * Evaluates to the name of the current file in the parent zip file.
- * 
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */

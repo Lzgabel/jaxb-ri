@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.schemagen;
+package cn.lzgabel.jaxb.runtime.v2.schemagen;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -31,7 +31,7 @@ public class XmlSchemaGeneratorTest extends TestCase {
     public static void main(String[] args) {
         TestRunner.run(XmlSchemaGeneratorTest.class);
     }
-    
+
     public void test2() throws Exception {
         try {
             JAXBContext context = JAXBContext.newInstance(NSParent.class);

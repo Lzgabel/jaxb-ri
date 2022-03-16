@@ -22,7 +22,7 @@
  *  <li>There's a set of classes that constitute the unmarshaller and marshaller.
  *      Each class represents a small portion, and they are composed to perform
  *      the operations.
- *  <li>{@link org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl} builds itself by reading the model and
+ *  <li>{@link cn.lzgabel.jaxb.runtime.v2.runtime.JAXBContextImpl} builds itself by reading the model and
  *      composing unmarshallers and marshallers.
  * </ol>
  *
@@ -31,17 +31,17 @@
  * The followings are the interesting pieces inside the runtime.
  *
  * <dl>
- *  <dt>{@code org.glassfish.jaxb.core.v2.model model}
+ *  <dt>{@code cn.lzgabel.jaxb.core.v2.model model}
  *  <dd>
  *    This set of classes and interfaces models JAXB-bound types.
  *
- *  <dt>{@link org.glassfish.jaxb.core.v2.runtime XML I/O}
+ *  <dt>{@link cn.lzgabel.jaxb.core.v2.runtime XML I/O}
  *  <dd>
  *    This set of classes implements the JAXB API and provides the XML I/O functionality.
  * </dl>
  *
  * <p>
- * The classes <b>NOT</b> in the {@link org.glassfish.jaxb.core.v2} package (and its subpackages)
+ * The classes <b>NOT</b> in the {@link cn.lzgabel.jaxb.core.v2} package (and its subpackages)
  * are also used by old JAXB 1.0 clients.
  *
  * <h2>Models</h2>
@@ -128,5 +128,5 @@
  * triggers activities.
  *
  */
-package org.glassfish.jaxb.runtime.v2;
+package cn.lzgabel.jaxb.runtime.v2;
 

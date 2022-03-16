@@ -13,12 +13,12 @@
 
 <project basedir="." default="run">
   <description>
-        This sample shows how to use the new non-standard locator support.  By 
-        following the instructions in the readme.txt file, you can cause all of 
-        the generated impl classes to implement a new interface that provides 
-        more information about error locations.  When a ValidationEvent happens 
-        on your content tree, simply retrieve the object and cast it down to 
-        &lt;tt&gt;com.sun.xml.bind.extra.Locatable&lt;/tt&gt;.
+        This sample shows how to use the new non-standard locator support.  By
+        following the instructions in the readme.txt file, you can cause all of
+        the generated impl classes to implement a new interface that provides
+        more information about error locations.  When a ValidationEvent happens
+        on your content tree, simply retrieve the object and cast it down to
+        &lt;tt&gt;cn.lzgabel.jaxb.xml.bind.extra.Locatable&lt;/tt&gt;.
     </description>
   <property name="jaxb.home" value="../.." />
   <path id="classpath">

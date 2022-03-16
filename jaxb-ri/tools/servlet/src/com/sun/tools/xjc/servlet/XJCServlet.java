@@ -14,42 +14,42 @@ import java.io.IOException;
 
 import javax.servlet.ServletException;
 
-import com.sun.xml.bind.webapp.LongProcessServlet;
+import cn.lzgabel.jaxb.xml.bind.webapp.LongProcessServlet;
 
 /**
  * Launches {@link Compiler} from the form input.
- * 
+ *
  * @author
  * 	Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
 public class XJCServlet extends LongProcessServlet {
-    
+
     protected void run() throws ServletException, IOException {
         // check if the browser supports session
         if( request.getSession(false)==null ) {
             response.sendRedirect("cookieDisabled.jsp");
             return;
         }
-        
+
         super.run();
     }
-    
+
     protected Thread createTask() throws ServletException, IOException {
         return Compiler.get(request);
     }
 
     protected void renderResult( Thread task ) throws ServletException, IOException {
         Compiler compiler = (Compiler)task;
-        
+
         // forward to the result
         if( compiler.getZipFile()==null )
             response.sendRedirect("compileError.jsp");
         else
             response.sendRedirect("compileSuccess.jsp");
     }
-    
-    
-    
+
+
+
 
     protected String getProgressTitle() {
         return "Compiling your schema";

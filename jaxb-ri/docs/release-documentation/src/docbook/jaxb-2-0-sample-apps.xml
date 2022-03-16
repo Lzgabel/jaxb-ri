@@ -171,7 +171,7 @@
                     <listitem>
                         <para>This example shows how you can use the new JAXB
                         RI <literal>Marshaller</literal> property
-                        <literal>org.glassfish.jaxb.characterEscapeHandler</literal>
+                        <literal>cn.lzgabel.jaxb.characterEscapeHandler</literal>
                         to change the default character escaping
                         behavior.</para>
                     </listitem>
@@ -379,7 +379,7 @@
                         locations. When a <literal>ValidationEvent</literal>
                         happens on your content tree, simply retrieve the
                         object and cast it down to
-                        <literal>com.sun.xml.bind.extra.Locatable</literal>.</para>
+                        <literal>cn.lzgabel.jaxb.xml.bind.extra.Locatable</literal>.</para>
                     </listitem>
                 </varlistentry>
 
@@ -399,7 +399,7 @@
                     <listitem>
                         <para>This sample application demonstrates how to use
                         the new &binding.impl.name; Marshaller property
-                        <literal>org.glassfish.jaxb.namespacePrefixMapper</literal>
+                        <literal>cn.lzgabel.jaxb.namespacePrefixMapper</literal>
                         to customize the namespace prefixes generated during
                         marshalling.</para>
                     </listitem>

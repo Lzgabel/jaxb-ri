@@ -8,9 +8,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime;
+package cn.lzgabel.jaxb.runtime;
 
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
+import cn.lzgabel.jaxb.runtime.v2.runtime.reflect.Accessor;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -23,9 +23,9 @@ public class AccessorFactoryImpl implements InternalAccessorFactory {
     public static AccessorFactoryImpl getInstance(){
         return instance;
     }
-    
+
     /**
-     * Access a field of the class. 
+     * Access a field of the class.
      *
      * @param bean the class to be processed.
      * @param field the field within the class to be accessed.
@@ -64,7 +64,7 @@ public class AccessorFactoryImpl implements InternalAccessorFactory {
      * @return Accessor the accessor for these methods
      */
     @Override
-    public Accessor createPropertyAccessor(Class bean, Method getter, Method setter) {    
+    public Accessor createPropertyAccessor(Class bean, Method getter, Method setter) {
         if (getter == null) {
             return new Accessor.SetterOnlyReflection(setter);
         }

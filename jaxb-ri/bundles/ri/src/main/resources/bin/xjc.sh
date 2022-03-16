@@ -82,5 +82,5 @@ then
   exec "${JAVA}" -cp "${JAXB_PATH}" ${XJC_OPTS} com.sun.tools.xjc.XJCFacade "$@"
 else
   #module path
-  exec "${JAVA}" --module-path "${JAXB_PATH}" --add-modules com.sun.xml.bind ${XJC_OPTS} -m com.sun.tools.xjc "$@"
+  exec "${JAVA}" --module-path "${JAXB_PATH}" --add-modules cn.lzgabel.jaxb.xml.bind ${XJC_OPTS} -m com.sun.tools.xjc "$@"
 fi

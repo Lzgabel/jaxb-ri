@@ -9,6 +9,6 @@
  */
 
 /**
- * Implementation of the org.glassfish.jaxb.j2s.model package.
+ * Implementation of the cn.lzgabel.jaxb.j2s.model package.
  */
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.lzgabel.jaxb.runtime.v2.model.impl;

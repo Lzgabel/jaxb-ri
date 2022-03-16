@@ -8,12 +8,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.reflect;
+package cn.lzgabel.jaxb.runtime.v2.runtime.reflect;
 
-import org.glassfish.jaxb.core.WhiteSpaceProcessor;
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.runtime.v2.runtime.Transducer;
-import org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
+import cn.lzgabel.jaxb.core.WhiteSpaceProcessor;
+import cn.lzgabel.jaxb.runtime.api.AccessorException;
+import cn.lzgabel.jaxb.runtime.v2.runtime.Transducer;
+import cn.lzgabel.jaxb.runtime.v2.runtime.XMLSerializer;
 import jakarta.xml.bind.JAXBException;
 import org.xml.sax.SAXException;
 
@@ -32,7 +32,7 @@ public final class ListTransducedAccessorImpl<BeanT,ListT,ItemT,PackT> extends D
      */
     private final Lister<BeanT,ListT,ItemT,PackT> lister;
     /**
-     * {@link Accessor} to get/set the list. 
+     * {@link Accessor} to get/set the list.
      */
     private final Accessor<BeanT,ListT> acc;
 

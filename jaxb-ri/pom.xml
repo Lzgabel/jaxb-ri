@@ -16,15 +16,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.sun.xml.bind</groupId>
+        <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
         <artifactId>jaxb-bom-ext</artifactId>
-        <version>4.0.0-SNAPSHOT</version>
+        <version>4.0.0</version>
         <relativePath>boms/bom-ext/pom.xml</relativePath>
     </parent>
 
-    <groupId>com.sun.xml.bind.mvn</groupId>
+    <groupId>cn.lzgabel.jaxb.xml.bind.mvn</groupId>
     <artifactId>jaxb-parent</artifactId>
-    <version>4.0.0-SNAPSHOT</version>
+    <version>4.0.0</version>
     <packaging>pom</packaging>
     <name>Jakarta XML Binding Implementation</name>
     <description>
@@ -255,7 +255,7 @@
                         <release>11</release>
                         <notimestamp>true</notimestamp>
                         <dependencySourceExcludes>
-                            <dependencySourceExclude>com.sun.xml.bind:*</dependencySourceExclude>
+                            <dependencySourceExclude>cn.lzgabel.jaxb.xml.bind:*</dependencySourceExclude>
                             <dependencySourceExclude>com.sun.tools.xjc:*</dependencySourceExclude>
                             <dependencySourceExclude>com.sun.tools.jxc:*</dependencySourceExclude>
                         </dependencySourceExcludes>
@@ -448,7 +448,7 @@
                         <configuration>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>com.sun.xml.bind.mvn</groupId>
+                                    <groupId>cn.lzgabel.jaxb.xml.bind.mvn</groupId>
                                     <artifactId>jaxb-parent</artifactId>
                                     <version>${project.version}</version>
                                     <classifier>resources</classifier>
@@ -669,4 +669,18 @@
             </build>
         </profile>
     </profiles>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>maven_nexus_repo</id>
+            <name>maven_nexus_repo</name>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+
+        <repository>
+            <id>maven_nexus_repo</id>
+            <name>maven_nexus_repo</name>
+            <url>https://s01.oss.sonatype.org/content/repositories/releases/</url>
+        </repository>
+    </distributionManagement>
 </project>

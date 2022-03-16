@@ -12,7 +12,7 @@
  * The XML Binding (JAXB) RI modularization implementation.
  *
  */
-module org.glassfish.jaxb.runtime {
+module cn.lzgabel.jaxb.runtime {
     requires transitive jakarta.xml.bind;
     requires java.compiler;
     requires java.desktop;
@@ -21,30 +21,30 @@ module org.glassfish.jaxb.runtime {
     requires transitive jakarta.activation;
     requires transitive java.xml;
 
-    requires transitive org.glassfish.jaxb.core;
+    requires transitive cn.lzgabel.jaxb.core;
     requires static com.sun.xml.fastinfoset;
     requires static org.jvnet.staxex;
 
-    exports org.glassfish.jaxb.runtime;
-    exports org.glassfish.jaxb.runtime.api;
-    exports org.glassfish.jaxb.runtime.marshaller;
-    exports org.glassfish.jaxb.runtime.unmarshaller;
-    exports org.glassfish.jaxb.runtime.util;
-    exports org.glassfish.jaxb.runtime.v2;
-    exports org.glassfish.jaxb.runtime.v2.model.annotation;
-    exports org.glassfish.jaxb.runtime.v2.model.impl;
-    exports org.glassfish.jaxb.runtime.v2.model.runtime;
-    exports org.glassfish.jaxb.runtime.v2.runtime;
-    exports org.glassfish.jaxb.runtime.v2.runtime.reflect;
-    exports org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
-    exports org.glassfish.jaxb.runtime.v2.schemagen;
-    exports org.glassfish.jaxb.runtime.v2.schemagen.xmlschema;
-    exports org.glassfish.jaxb.runtime.v2.util;
+    exports cn.lzgabel.jaxb.runtime;
+    exports cn.lzgabel.jaxb.runtime.api;
+    exports cn.lzgabel.jaxb.runtime.marshaller;
+    exports cn.lzgabel.jaxb.runtime.unmarshaller;
+    exports cn.lzgabel.jaxb.runtime.util;
+    exports cn.lzgabel.jaxb.runtime.v2;
+    exports cn.lzgabel.jaxb.runtime.v2.model.annotation;
+    exports cn.lzgabel.jaxb.runtime.v2.model.impl;
+    exports cn.lzgabel.jaxb.runtime.v2.model.runtime;
+    exports cn.lzgabel.jaxb.runtime.v2.runtime;
+    exports cn.lzgabel.jaxb.runtime.v2.runtime.reflect;
+    exports cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller;
+    exports cn.lzgabel.jaxb.runtime.v2.schemagen;
+    exports cn.lzgabel.jaxb.runtime.v2.schemagen.xmlschema;
+    exports cn.lzgabel.jaxb.runtime.v2.util;
 
-    opens org.glassfish.jaxb.runtime.v2.runtime.reflect.opt to jakarta.xml.bind;
-    opens org.glassfish.jaxb.runtime.v2.schemagen to jakarta.xml.bind;
-    opens org.glassfish.jaxb.runtime.v2.schemagen.xmlschema to jakarta.xml.bind;
+    opens cn.lzgabel.jaxb.runtime.v2.runtime.reflect.opt to jakarta.xml.bind;
+    opens cn.lzgabel.jaxb.runtime.v2.schemagen to jakarta.xml.bind;
+    opens cn.lzgabel.jaxb.runtime.v2.schemagen.xmlschema to jakarta.xml.bind;
 
-    provides jakarta.xml.bind.JAXBContextFactory with org.glassfish.jaxb.runtime.v2.JAXBContextFactory;
+    provides jakarta.xml.bind.JAXBContextFactory with cn.lzgabel.jaxb.runtime.v2.JAXBContextFactory;
 
 }

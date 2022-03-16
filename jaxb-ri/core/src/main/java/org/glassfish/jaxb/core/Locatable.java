@@ -8,9 +8,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core;
+package cn.lzgabel.jaxb.core;
 
-import org.glassfish.jaxb.core.annotation.XmlLocation;
+import cn.lzgabel.jaxb.core.annotation.XmlLocation;
 
 import org.xml.sax.Locator;
 

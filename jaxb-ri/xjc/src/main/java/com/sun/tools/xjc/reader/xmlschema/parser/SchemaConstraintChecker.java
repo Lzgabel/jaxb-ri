@@ -21,7 +21,7 @@ import com.sun.tools.xjc.ConsoleErrorReporter;
 import com.sun.tools.xjc.ErrorReceiver;
 import com.sun.tools.xjc.util.ErrorReceiverFilter;
 
-import org.glassfish.jaxb.core.v2.util.XmlFactory;
+import cn.lzgabel.jaxb.core.v2.util.XmlFactory;
 import org.w3c.dom.ls.LSInput;
 import org.w3c.dom.ls.LSResourceResolver;
 import org.xml.sax.EntityResolver;
@@ -46,7 +46,7 @@ public class SchemaConstraintChecker {
      * @return true if there was no error, false if there were errors.
      */
     public static boolean check(InputSource[] schemas,
-                                ErrorReceiver errorHandler, 
+                                ErrorReceiver errorHandler,
                                 final EntityResolver entityResolver,
                                 boolean disableXmlSecurity) {
 

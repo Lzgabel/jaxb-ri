@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-module com.sun.xml.bind.osgi {
+module cn.lzgabel.jaxb.xml.bind.osgi {
 
     requires transitive jakarta.xml.bind;
     requires transitive jakarta.activation;
@@ -22,38 +22,38 @@ module com.sun.xml.bind.osgi {
     exports com.sun.istack.localization;
     exports com.sun.istack.logging;
 
-    exports org.glassfish.jaxb.core;
-    exports org.glassfish.jaxb.core.annotation;
-    exports org.glassfish.jaxb.core.api;
-    exports org.glassfish.jaxb.core.api.impl;
-    exports org.glassfish.jaxb.core.marshaller;
-    exports org.glassfish.jaxb.core.unmarshaller;
-    exports org.glassfish.jaxb.core.util;
-    exports org.glassfish.jaxb.core.v2;
-    exports org.glassfish.jaxb.core.v2.model.annotation;
-    exports org.glassfish.jaxb.core.v2.model.core;
-    exports org.glassfish.jaxb.core.v2.model.impl;
-    exports org.glassfish.jaxb.core.v2.model.nav;
-    exports org.glassfish.jaxb.core.v2.model.util;
-    exports org.glassfish.jaxb.core.v2.runtime;
-    exports org.glassfish.jaxb.core.v2.runtime.unmarshaller;
-    exports org.glassfish.jaxb.core.v2.schemagen.episode;
-    exports org.glassfish.jaxb.core.v2.util;
+    exports cn.lzgabel.jaxb.core;
+    exports cn.lzgabel.jaxb.core.annotation;
+    exports cn.lzgabel.jaxb.core.api;
+    exports cn.lzgabel.jaxb.core.api.impl;
+    exports cn.lzgabel.jaxb.core.marshaller;
+    exports cn.lzgabel.jaxb.core.unmarshaller;
+    exports cn.lzgabel.jaxb.core.util;
+    exports cn.lzgabel.jaxb.core.v2;
+    exports cn.lzgabel.jaxb.core.v2.model.annotation;
+    exports cn.lzgabel.jaxb.core.v2.model.core;
+    exports cn.lzgabel.jaxb.core.v2.model.impl;
+    exports cn.lzgabel.jaxb.core.v2.model.nav;
+    exports cn.lzgabel.jaxb.core.v2.model.util;
+    exports cn.lzgabel.jaxb.core.v2.runtime;
+    exports cn.lzgabel.jaxb.core.v2.runtime.unmarshaller;
+    exports cn.lzgabel.jaxb.core.v2.schemagen.episode;
+    exports cn.lzgabel.jaxb.core.v2.util;
 
-    exports org.glassfish.jaxb.runtime;
-    exports org.glassfish.jaxb.runtime.api;
-    exports org.glassfish.jaxb.runtime.marshaller;
-    exports org.glassfish.jaxb.runtime.unmarshaller;
-    exports org.glassfish.jaxb.runtime.util;
-    exports org.glassfish.jaxb.runtime.v2;
-    exports org.glassfish.jaxb.runtime.v2.model.annotation;
-    exports org.glassfish.jaxb.runtime.v2.model.impl;
-    exports org.glassfish.jaxb.runtime.v2.model.runtime;
-    exports org.glassfish.jaxb.runtime.v2.runtime;
-    exports org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
-    exports org.glassfish.jaxb.runtime.v2.schemagen;
-    exports org.glassfish.jaxb.runtime.v2.schemagen.xmlschema;
-    exports org.glassfish.jaxb.runtime.v2.util;
+    exports cn.lzgabel.jaxb.runtime;
+    exports cn.lzgabel.jaxb.runtime.api;
+    exports cn.lzgabel.jaxb.runtime.marshaller;
+    exports cn.lzgabel.jaxb.runtime.unmarshaller;
+    exports cn.lzgabel.jaxb.runtime.util;
+    exports cn.lzgabel.jaxb.runtime.v2;
+    exports cn.lzgabel.jaxb.runtime.v2.model.annotation;
+    exports cn.lzgabel.jaxb.runtime.v2.model.impl;
+    exports cn.lzgabel.jaxb.runtime.v2.model.runtime;
+    exports cn.lzgabel.jaxb.runtime.v2.runtime;
+    exports cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller;
+    exports cn.lzgabel.jaxb.runtime.v2.schemagen;
+    exports cn.lzgabel.jaxb.runtime.v2.schemagen.xmlschema;
+    exports cn.lzgabel.jaxb.runtime.v2.util;
 
     exports com.sun.tools.xjc;
     exports com.sun.tools.xjc.reader;
@@ -123,10 +123,10 @@ module com.sun.xml.bind.osgi {
     exports com.sun.tools.rngdatatype;
     exports com.sun.tools.rngdatatype.helpers;
 
-    opens org.glassfish.jaxb.runtime.v2.runtime.reflect.opt to jakarta.xml.bind;
-    opens org.glassfish.jaxb.runtime.v2.schemagen to jakarta.xml.bind;
-    opens org.glassfish.jaxb.runtime.v2.schemagen.xmlschema to jakarta.xml.bind;
-    opens org.glassfish.jaxb.runtime.v2 to jakarta.xml.bind;
+    opens cn.lzgabel.jaxb.runtime.v2.runtime.reflect.opt to jakarta.xml.bind;
+    opens cn.lzgabel.jaxb.runtime.v2.schemagen to jakarta.xml.bind;
+    opens cn.lzgabel.jaxb.runtime.v2.schemagen.xmlschema to jakarta.xml.bind;
+    opens cn.lzgabel.jaxb.runtime.v2 to jakarta.xml.bind;
     opens com.sun.tools.xjc.reader.xmlschema.bindinfo to jakarta.xml.bind;
 
     uses com.sun.tools.xjc.Plugin;

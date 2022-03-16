@@ -8,32 +8,32 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.util;
+package cn.lzgabel.jaxb.runtime.util;
 
-import org.glassfish.jaxb.runtime.ValidationEventLocatorEx;
+import cn.lzgabel.jaxb.runtime.ValidationEventLocatorEx;
 import jakarta.xml.bind.helpers.ValidationEventLocatorImpl;
 
 /**
- * 
- * 
+ *
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
 public class ValidationEventLocatorExImpl
     extends ValidationEventLocatorImpl implements ValidationEventLocatorEx {
-    
+
     private final String fieldName;
-        
+
     public ValidationEventLocatorExImpl( Object target, String fieldName ) {
         super(target);
         this.fieldName = fieldName;
     }
-    
+
     @Override
     public String getFieldName() {
         return fieldName;
     }
-    
+
     /**
      * Returns a nice string representation for better debug experience.
      */
@@ -53,7 +53,7 @@ public class ValidationEventLocatorExImpl
         buf.append(",field=");
         buf.append(getFieldName());
         buf.append("]");
-        
+
         return buf.toString();
     }
 }

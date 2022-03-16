@@ -8,11 +8,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.schemagen;
+package cn.lzgabel.jaxb.runtime.v2.schemagen;
 
-import org.glassfish.jaxb.runtime.v2.schemagen.xmlschema.LocalAttribute;
-import org.glassfish.jaxb.runtime.v2.schemagen.xmlschema.LocalElement;
-import org.glassfish.jaxb.runtime.v2.schemagen.xmlschema.Schema;
+import cn.lzgabel.jaxb.runtime.v2.schemagen.xmlschema.LocalAttribute;
+import cn.lzgabel.jaxb.runtime.v2.schemagen.xmlschema.LocalElement;
+import cn.lzgabel.jaxb.runtime.v2.schemagen.xmlschema.Schema;
 import com.sun.xml.txw2.TypedXmlWriter;
 import jakarta.xml.bind.annotation.XmlNsForm;
 

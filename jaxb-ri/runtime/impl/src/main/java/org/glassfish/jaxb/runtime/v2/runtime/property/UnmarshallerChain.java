@@ -8,10 +8,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.property;
+package cn.lzgabel.jaxb.runtime.v2.runtime.property;
 
-import org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Scope;
+import cn.lzgabel.jaxb.runtime.v2.runtime.JAXBContextImpl;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.Scope;
 
 
 /**
@@ -23,7 +23,7 @@ import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Scope;
  * <p>
  * A ticket dispenser also maintains the offset for handlers
  * to access state slots. A handler records this value when it's created.
- * 
+ *
  *
  */
 public final class UnmarshallerChain {

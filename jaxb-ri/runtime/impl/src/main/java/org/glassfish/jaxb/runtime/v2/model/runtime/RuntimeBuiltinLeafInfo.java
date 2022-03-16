@@ -8,9 +8,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.runtime;
+package cn.lzgabel.jaxb.runtime.v2.model.runtime;
 
-import org.glassfish.jaxb.core.v2.model.core.BuiltinLeafInfo;
+import cn.lzgabel.jaxb.core.v2.model.core.BuiltinLeafInfo;
 
 import java.lang.reflect.Type;
 

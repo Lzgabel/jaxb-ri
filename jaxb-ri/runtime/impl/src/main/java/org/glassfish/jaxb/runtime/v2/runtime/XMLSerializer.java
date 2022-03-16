@@ -8,23 +8,23 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime;
+package cn.lzgabel.jaxb.runtime.v2.runtime;
 
 import com.sun.istack.SAXException2;
-import org.glassfish.jaxb.runtime.CycleRecoverable;
-import org.glassfish.jaxb.runtime.marshaller.NamespacePrefixMapper;
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.runtime.util.ValidationEventLocatorExImpl;
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeBuiltinLeafInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.output.MTOMXmlOutput;
-import org.glassfish.jaxb.runtime.v2.runtime.output.NamespaceContextImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.output.Pcdata;
-import org.glassfish.jaxb.runtime.v2.runtime.output.XmlOutput;
-import org.glassfish.jaxb.runtime.v2.runtime.property.Property;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Base64Data;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.IntData;
-import org.glassfish.jaxb.runtime.v2.util.CollisionCheckStack;
+import cn.lzgabel.jaxb.runtime.CycleRecoverable;
+import cn.lzgabel.jaxb.runtime.marshaller.NamespacePrefixMapper;
+import cn.lzgabel.jaxb.runtime.api.AccessorException;
+import cn.lzgabel.jaxb.runtime.util.ValidationEventLocatorExImpl;
+import cn.lzgabel.jaxb.core.v2.WellKnownNamespace;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.RuntimeBuiltinLeafInfo;
+import cn.lzgabel.jaxb.runtime.v2.runtime.output.MTOMXmlOutput;
+import cn.lzgabel.jaxb.runtime.v2.runtime.output.NamespaceContextImpl;
+import cn.lzgabel.jaxb.runtime.v2.runtime.output.Pcdata;
+import cn.lzgabel.jaxb.runtime.v2.runtime.output.XmlOutput;
+import cn.lzgabel.jaxb.runtime.v2.runtime.property.Property;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.Base64Data;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.IntData;
+import cn.lzgabel.jaxb.runtime.v2.util.CollisionCheckStack;
 import jakarta.activation.MimeType;
 import jakarta.xml.bind.*;
 import jakarta.xml.bind.annotation.DomHandler;
@@ -50,40 +50,40 @@ import java.util.Set;
 
 /**
  * Receives XML serialization event and writes to {@link XmlOutput}.
- * 
+ *
  * <p>
  * This object coordinates the overall marshalling efforts across different
  * content-tree objects and different target formats.
- * 
+ *
  * <p>
  * The following CFG gives the proper sequence of method invocation.
- * 
+ *
  * <pre>
  * MARSHALLING  :=  ELEMENT
  * ELEMENT      :=  "startElement" NSDECL* "endNamespaceDecls"
  *                        ATTRIBUTE* "endAttributes" BODY "endElement"
- * 
+ *
  * NSDECL       :=  "declareNamespace"
- * 
+ *
  * ATTRIBUTE    :=  "attribute"
  * ATTVALUES    :=  "text"*
- * 
- * 
+ *
+ *
  * BODY         :=  ( "text" | ELEMENT )*
  * </pre>
- * 
+ *
  * <p>
  * A marshalling of one element consists of two stages. The first stage is
  * for marshalling attributes and collecting namespace declarations.
  * The second stage is for marshalling characters/child elements of that element.
- * 
+ *
  * <p>
  * Observe that multiple invocation of "text" is allowed.
- * 
+ *
  * <p>
  * Also observe that the namespace declarations are allowed only between
  * "startElement" and "endAttributes".
- * 
+ *
  * <h2>Exceptions in marshaller</h2>
  * <p>
  * {@link IOException}, {@link SAXException}, and {@link XMLStreamException}
@@ -111,7 +111,7 @@ public final class XMLSerializer extends Coordinator {
 
     // Introduced based on Jersey requirements - to be able to retrieve marshalled name
     ThreadLocal<Property> currentProperty = new ThreadLocal<>();
-    
+
     /**
      * Set to true if a text is already written,
      * and we need to print ' ' for additional text methods.
@@ -181,7 +181,7 @@ public final class XMLSerializer extends Coordinator {
     public Base64Data getCachedBase64DataInstance() {
         return new Base64Data();
     }
-    
+
     /**
      * Gets the ID value from an identifiable object.
      */
@@ -271,7 +271,7 @@ public final class XMLSerializer extends Coordinator {
 
         out.endStartTag();
     }
-    
+
     /**
      * Ends marshalling of an element.
      * Pops the internal stack.
@@ -292,7 +292,7 @@ public final class XMLSerializer extends Coordinator {
                 try {
                         out.text(data,false);
                 } catch (IllegalArgumentException e) {
-                    throw new IllegalArgumentException(org.glassfish.jaxb.runtime.v2.runtime.Messages.ILLEGAL_CONTENT.format(fieldName, e.getMessage()));
+                    throw new IllegalArgumentException(cn.lzgabel.jaxb.runtime.v2.runtime.Messages.ILLEGAL_CONTENT.format(fieldName, e.getMessage()));
                 }
             out.endTag(tagName);
             nse = nse.pop();
@@ -305,7 +305,7 @@ public final class XMLSerializer extends Coordinator {
                 try {
                     out.text(data, false);
                 } catch (IllegalArgumentException e) {
-                    throw new IllegalArgumentException(org.glassfish.jaxb.runtime.v2.runtime.Messages.ILLEGAL_CONTENT.format(fieldName, e.getMessage()));
+                    throw new IllegalArgumentException(cn.lzgabel.jaxb.runtime.v2.runtime.Messages.ILLEGAL_CONTENT.format(fieldName, e.getMessage()));
                 }
             endElement();
         }
@@ -414,13 +414,13 @@ public final class XMLSerializer extends Coordinator {
     public NamespaceContext2 getNamespaceContext() {
         return nsContext;
     }
-    
-    
+
+
     public String onID( Object owner, String value ) {
         objectsWithId.add(owner);
         return value;
     }
-    
+
     public String onIDREF( Object obj ) throws SAXException {
         String id;
         try {
@@ -433,13 +433,13 @@ public final class XMLSerializer extends Coordinator {
         if(id==null) {
             reportError( new NotIdentifiableEventImpl(
                 ValidationEvent.ERROR,
-                org.glassfish.jaxb.runtime.v2.runtime.Messages.NOT_IDENTIFIABLE.format(),
+                cn.lzgabel.jaxb.runtime.v2.runtime.Messages.NOT_IDENTIFIABLE.format(),
                 new ValidationEventLocatorImpl(obj) ) );
         }
         return id;
     }
-    
-    
+
+
     // TODO: think about the exception handling.
     // I suppose we don't want to use SAXException. -kk
 
@@ -502,7 +502,7 @@ public final class XMLSerializer extends Coordinator {
         // cycle detected and no one is catching the error.
         reportError(new ValidationEventImpl(
             ValidationEvent.ERROR,
-            org.glassfish.jaxb.runtime.v2.runtime.Messages.CYCLE_IN_MARSHALLER.format(cycleDetectionStack.getCycleString()),
+            cn.lzgabel.jaxb.runtime.v2.runtime.Messages.CYCLE_IN_MARSHALLER.format(cycleDetectionStack.getCycleString()),
             getCurrentLocation(fieldName),
             null));
         return null;
@@ -628,7 +628,7 @@ public final class XMLSerializer extends Coordinator {
                     if(actualTypeName==null) {
                         reportError(new ValidationEventImpl(
                                 ValidationEvent.ERROR,
-                                org.glassfish.jaxb.runtime.v2.runtime.Messages.SUBSTITUTED_BY_ANONYMOUS_TYPE.format(
+                                cn.lzgabel.jaxb.runtime.v2.runtime.Messages.SUBSTITUTED_BY_ANONYMOUS_TYPE.format(
                                     expected.jaxbType.getName(),
                                     child.getClass().getName(),
                                     actual.jaxbType.getName()),
@@ -645,7 +645,7 @@ public final class XMLSerializer extends Coordinator {
             if (nillable) {
                 getNamespaceContext().declareNamespace(XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI,"xsi",true);
             }
-            
+
             endNamespaceDecls(child);
             if(!asExpected) {
                 attribute(XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI,"type",
@@ -657,7 +657,7 @@ public final class XMLSerializer extends Coordinator {
             if ((nillable) && (!nilDefined)) {
                 attribute(XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI,"nil","true");
             }
-            
+
             endAttributes();
             actual.serializeBody(child,this);
 
@@ -971,7 +971,7 @@ public final class XMLSerializer extends Coordinator {
                 String id = getIdFromObject(idObj);
                 reportError( new NotIdentifiableEventImpl(
                     ValidationEvent.ERROR,
-                    org.glassfish.jaxb.runtime.v2.runtime.Messages.DANGLING_IDREF.format(id),
+                    cn.lzgabel.jaxb.runtime.v2.runtime.Messages.DANGLING_IDREF.format(id),
                     new ValidationEventLocatorImpl(idObj) ) );
             } catch (JAXBException e) {
                 // this error should have been reported already. just ignore here.
@@ -1009,7 +1009,7 @@ public final class XMLSerializer extends Coordinator {
     private void reportMissingObjectError(String fieldName) throws SAXException {
         reportError(new ValidationEventImpl(
             ValidationEvent.ERROR,
-            org.glassfish.jaxb.runtime.v2.runtime.Messages.MISSING_OBJECT.format(fieldName),
+            cn.lzgabel.jaxb.runtime.v2.runtime.Messages.MISSING_OBJECT.format(fieldName),
                 getCurrentLocation(fieldName),
             new NullPointerException() ));
     }
@@ -1020,7 +1020,7 @@ public final class XMLSerializer extends Coordinator {
     public void errorMissingId(Object obj) throws SAXException {
         reportError( new ValidationEventImpl(
             ValidationEvent.ERROR,
-            org.glassfish.jaxb.runtime.v2.runtime.Messages.MISSING_ID.format(obj),
+            cn.lzgabel.jaxb.runtime.v2.runtime.Messages.MISSING_ID.format(obj),
             new ValidationEventLocatorImpl(obj)) );
     }
 
@@ -1049,7 +1049,7 @@ public final class XMLSerializer extends Coordinator {
             currentProperty.remove();
         }
     }
-    
+
     /**
      * When called from within the realm of the marshaller, this method
      * returns the current {@link XMLSerializer} in charge.

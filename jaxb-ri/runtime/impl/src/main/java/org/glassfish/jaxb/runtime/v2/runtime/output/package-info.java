@@ -11,4 +11,4 @@
 /**
  * Code that writes well-formed XML ({@link XmlOutput} and its implementations}.
  */
-package org.glassfish.jaxb.runtime.v2.runtime.output;
+package cn.lzgabel.jaxb.runtime.v2.runtime.output;

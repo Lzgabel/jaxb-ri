@@ -8,11 +8,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.lzgabel.jaxb.runtime.v2.model.impl;
 
 import com.sun.istack.FinalArrayList;
-import org.glassfish.jaxb.core.v2.model.core.*;
-import org.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
+import cn.lzgabel.jaxb.core.v2.model.core.*;
+import cn.lzgabel.jaxb.core.v2.runtime.IllegalAnnotationException;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlElements;
 import jakarta.xml.bind.annotation.XmlList;
@@ -25,7 +25,7 @@ import java.util.List;
 /**
  * Common {@link ElementPropertyInfo} implementation used for both
  * Annotation Processing and runtime.
- * 
+ *
  * @author Kohsuke Kawaguchi
  */
 class ElementPropertyInfoImpl<TypeT,ClassDeclT,FieldT,MethodT>

@@ -8,12 +8,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core;
+package cn.lzgabel.jaxb.core;
 
 /**
  * Utils for stack trace analysis. Indirection so that a more efficient
  * implementation can be used in later Java versions.
- * 
+ *
  * @author Philippe Marschall
  */
 final class StackHelper {
@@ -21,7 +21,7 @@ final class StackHelper {
 
     /**
      * Returns the name of the calling class of the second method in the call chain of this method.
-     * 
+     *
      * @return the name of the caller class
      * @throws SecurityException in case a security manager is installed that
      *                           prevents stack introspection
@@ -31,6 +31,6 @@ final class StackHelper {
        if (2 < trace.length) {
            return trace[2].getClassName();
        }
-       return "org.glassfish.jaxb.core"; // use the default
+       return "cn.lzgabel.jaxb.core"; // use the default
     }
 }

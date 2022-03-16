@@ -58,12 +58,12 @@ import com.sun.tools.xjc.outline.FieldAccessor;
 import com.sun.tools.xjc.outline.FieldOutline;
 import com.sun.tools.xjc.reader.TypeUtil;
 import com.sun.tools.xjc.Options;
-import org.glassfish.jaxb.core.api.impl.NameConverter;
-import org.glassfish.jaxb.core.v2.TODO;
+import cn.lzgabel.jaxb.core.api.impl.NameConverter;
+import cn.lzgabel.jaxb.core.v2.TODO;
 
 /**
  * Useful base class for implementing {@link FieldOutline}.
- * 
+ *
  * <p>
  * This class just provides a few utility methods and keep some
  * important variables so that they can be readily accessed any time.
@@ -72,11 +72,11 @@ import org.glassfish.jaxb.core.v2.TODO;
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
 abstract class AbstractField implements FieldOutline {
-    
+
     protected final ClassOutlineImpl outline;
-    
+
     protected final CPropertyInfo prop;
-    
+
     protected final JCodeModel codeModel;
 
     /**
@@ -368,7 +368,7 @@ abstract class AbstractField implements FieldOutline {
          * Evaluates to the target object this accessor should access.
          */
         protected final JExpression $target;
-        
+
         protected Accessor( JExpression $target ) {
             this.$target = $target;
         }
@@ -383,8 +383,8 @@ abstract class AbstractField implements FieldOutline {
             return prop;
         }
     }
-    
-    
+
+
 //
 //
 //     utility methods

@@ -8,16 +8,16 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.reflect.opt;
+package cn.lzgabel.jaxb.runtime.v2.runtime.reflect.opt;
 
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
+import cn.lzgabel.jaxb.runtime.v2.runtime.reflect.Accessor;
 
 /**
  * Template {@link Accessor} for byte fields.
  *
  * <p>
  * All the FieldAccessors are generated from <code>FieldAccessor_B y t e</code>
- * 
+ *
  * @author Kohsuke Kawaguchi
  */
 public class FieldAccessor_Byte extends Accessor {

@@ -8,9 +8,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.model.annotation;
+package cn.lzgabel.jaxb.core.v2.model.annotation;
 
-import org.glassfish.jaxb.core.v2.runtime.Location;
+import cn.lzgabel.jaxb.core.v2.runtime.Location;
 
 /**
  * {@link Location} that is chained.

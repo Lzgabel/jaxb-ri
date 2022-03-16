@@ -16,13 +16,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.sun.xml.bind.mvn</groupId>
+        <groupId>cn.lzgabel.jaxb.xml.bind.mvn</groupId>
         <artifactId>jaxb-bundles</artifactId>
-        <version>4.0.0-SNAPSHOT</version>
+        <version>4.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>com.sun.xml.bind</groupId>
+    <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
     <artifactId>jaxb-ri</artifactId>
 
     <packaging>pom</packaging>
@@ -36,19 +36,19 @@
             <artifactId>jakarta.xml.bind-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.sun.xml.bind</groupId>
+            <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
             <artifactId>jaxb-core</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.sun.xml.bind</groupId>
+            <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
             <artifactId>jaxb-impl</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.sun.xml.bind</groupId>
+            <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
             <artifactId>jaxb-xjc</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.sun.xml.bind</groupId>
+            <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
             <artifactId>jaxb-jxc</artifactId>
         </dependency>
         <dependency>
@@ -62,14 +62,14 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>com.sun.xml.bind</groupId>
+            <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
             <artifactId>jaxb-release-documentation</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
             <classifier>docbook</classifier>
         </dependency>
         <dependency>
-            <groupId>com.sun.xml.bind</groupId>
+            <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
             <artifactId>jaxb-samples</artifactId>
             <version>${project.version}</version>
             <type>zip</type>

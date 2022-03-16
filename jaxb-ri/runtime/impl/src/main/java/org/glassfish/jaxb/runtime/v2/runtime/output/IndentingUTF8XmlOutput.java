@@ -8,10 +8,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.output;
+package cn.lzgabel.jaxb.runtime.v2.runtime.output;
 
-import org.glassfish.jaxb.core.marshaller.CharacterEscapeHandler;
-import org.glassfish.jaxb.runtime.v2.runtime.Name;
+import cn.lzgabel.jaxb.core.marshaller.CharacterEscapeHandler;
+import cn.lzgabel.jaxb.runtime.v2.runtime.Name;
 import org.xml.sax.SAXException;
 
 import javax.xml.stream.XMLStreamException;

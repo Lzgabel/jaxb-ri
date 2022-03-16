@@ -12,7 +12,7 @@
  * JAXB Binding Compiler. Contains source code needed for binding customization files into java sources.
  * In other words: the *tool* to generate java classes for the given xml representation.
  */
-module org.glassfish.jaxb.xjc {
+module cn.lzgabel.jaxb.xjc {
 
     requires transitive jakarta.activation;
 
@@ -25,7 +25,7 @@ module org.glassfish.jaxb.xjc {
     requires com.sun.tools.rngdatatype;
     requires transitive com.sun.codemodel;
     requires transitive jakarta.xml.bind;
-    requires transitive org.glassfish.jaxb.core;
+    requires transitive cn.lzgabel.jaxb.core;
     requires com.sun.istack.runtime;
     requires com.sun.istack.tools;
     requires transitive com.sun.xml.xsom;
@@ -34,7 +34,7 @@ module org.glassfish.jaxb.xjc {
     requires com.sun.xml.txw2;
 
     opens com.sun.tools.xjc.reader.xmlschema.bindinfo to jakarta.xml.bind;
-    opens com.sun.tools.xjc.generator.bean to org.glassfish.jaxb.runtime;
+    opens com.sun.tools.xjc.generator.bean to cn.lzgabel.jaxb.runtime;
 
     exports com.sun.tools.xjc;
     exports com.sun.tools.xjc.api;

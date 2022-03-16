@@ -16,13 +16,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.sun.xml.bind.mvn</groupId>
+        <groupId>cn.lzgabel.jaxb.xml.bind.mvn</groupId>
         <artifactId>jaxb-bundles</artifactId>
-        <version>4.0.0-SNAPSHOT</version>
+        <version>4.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>com.sun.xml.bind</groupId>
+    <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
     <artifactId>jaxb-xjc</artifactId>
 
     <packaging>jar</packaging>
@@ -36,7 +36,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.sun.xml.bind</groupId>
+            <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
             <artifactId>jaxb-core</artifactId>
         </dependency>
 
@@ -55,17 +55,17 @@
         </dependency>
 
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.lzgabel.jaxb</groupId>
             <artifactId>jaxb-xjc</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.lzgabel.jaxb</groupId>
             <artifactId>codemodel</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.lzgabel.jaxb</groupId>
             <artifactId>xsom</artifactId>
             <scope>provided</scope>
         </dependency>
@@ -75,12 +75,12 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.sun.xml.bind.external</groupId>
+            <groupId>cn.lzgabel.jaxb.xml.bind.external</groupId>
             <artifactId>relaxng-datatype</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.sun.xml.bind.external</groupId>
+            <groupId>cn.lzgabel.jaxb.xml.bind.external</groupId>
             <artifactId>rngom</artifactId>
             <scope>provided</scope>
         </dependency>
@@ -118,13 +118,13 @@
                     <scope>test</scope>
                 </dependency>
                 <dependency>
-                    <groupId>org.glassfish.jaxb</groupId>
+                    <groupId>cn.lzgabel.jaxb</groupId>
                     <artifactId>osgi-test-xjc</artifactId>
                     <version>${project.version}</version>
                     <scope>test</scope>
                 </dependency>
                 <dependency>
-                    <groupId>org.glassfish.jaxb</groupId>
+                    <groupId>cn.lzgabel.jaxb</groupId>
                     <artifactId>osgi-test-parent</artifactId>
                     <version>${project.version}</version>
                     <scope>test</scope>
@@ -144,7 +144,7 @@
                             <goal>unpack-dependencies</goal>
                         </goals>
                         <configuration>
-                            <includeGroupIds>org.glassfish.jaxb,com.sun.istack,com.sun.xml.bind.external,com.sun.xml.dtd-parser</includeGroupIds>
+                            <includeGroupIds>cn.lzgabel.jaxb,com.sun.istack,cn.lzgabel.jaxb.xml.bind.external,com.sun.xml.dtd-parser</includeGroupIds>
                             <includeScope>provided</includeScope>
                             <classifier>sources</classifier>
                             <excludeTransitive>true</excludeTransitive>
@@ -159,7 +159,7 @@
                             <goal>unpack-dependencies</goal>
                         </goals>
                         <configuration>
-                            <includeGroupIds>org.glassfish.jaxb,com.sun.istack,com.sun.xml.bind.external,com.sun.xml.dtd-parser</includeGroupIds>
+                            <includeGroupIds>cn.lzgabel.jaxb,com.sun.istack,cn.lzgabel.jaxb.xml.bind.external,com.sun.xml.dtd-parser</includeGroupIds>
                             <includeScope>provided</includeScope>
                             <classifier>sources</classifier>
                             <excludeTransitive>true</excludeTransitive>

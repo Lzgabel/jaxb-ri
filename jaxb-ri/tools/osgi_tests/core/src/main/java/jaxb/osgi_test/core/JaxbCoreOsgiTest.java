@@ -20,7 +20,7 @@ import org.osgi.framework.Bundle;
  */
 public class JaxbCoreOsgiTest extends JaxbOsgiTest {
 
-    private static final String BUNDLE = "com.sun.xml.bind.jaxb-core";
+    private static final String BUNDLE = "cn.lzgabel.jaxb.xml.bind.jaxb-core";
 
     private Bundle bundle;
 
@@ -35,7 +35,7 @@ public class JaxbCoreOsgiTest extends JaxbOsgiTest {
     }
 
     public void testClassFactory() {
-        checkClassInBundle("org.glassfish.jaxb.core.v2.ClassFactory", bundle);
+        checkClassInBundle("cn.lzgabel.jaxb.core.v2.ClassFactory", bundle);
     }
 
     public void testBuilder() {

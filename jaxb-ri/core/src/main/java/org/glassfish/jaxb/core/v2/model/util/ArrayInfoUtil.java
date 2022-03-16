@@ -8,13 +8,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.model.util;
+package cn.lzgabel.jaxb.core.v2.model.util;
 
 import javax.xml.XMLConstants;
 import javax.xml.namespace.QName;
 
-import org.glassfish.jaxb.core.v2.TODO;
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
+import cn.lzgabel.jaxb.core.v2.TODO;
+import cn.lzgabel.jaxb.core.v2.WellKnownNamespace;
 
 /**
  * Util class for ArrayInfo

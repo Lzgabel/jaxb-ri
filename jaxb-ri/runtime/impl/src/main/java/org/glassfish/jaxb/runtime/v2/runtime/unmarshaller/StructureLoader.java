@@ -8,22 +8,22 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller;
 
-import org.glassfish.jaxb.core.Utils;
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.runtime.api.JAXBRIContext;
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
-import org.glassfish.jaxb.runtime.v2.runtime.ClassBeanInfoImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.JaxBeanInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.property.AttributeProperty;
-import org.glassfish.jaxb.runtime.v2.runtime.property.Property;
-import org.glassfish.jaxb.runtime.v2.runtime.property.StructureLoaderBuilder;
-import org.glassfish.jaxb.runtime.v2.runtime.property.UnmarshallerChain;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.TransducedAccessor;
-import org.glassfish.jaxb.runtime.v2.util.QNameMap;
+import cn.lzgabel.jaxb.core.Utils;
+import cn.lzgabel.jaxb.runtime.api.AccessorException;
+import cn.lzgabel.jaxb.runtime.api.JAXBRIContext;
+import cn.lzgabel.jaxb.core.v2.WellKnownNamespace;
+import cn.lzgabel.jaxb.runtime.v2.runtime.ClassBeanInfoImpl;
+import cn.lzgabel.jaxb.runtime.v2.runtime.JAXBContextImpl;
+import cn.lzgabel.jaxb.runtime.v2.runtime.JaxBeanInfo;
+import cn.lzgabel.jaxb.runtime.v2.runtime.property.AttributeProperty;
+import cn.lzgabel.jaxb.runtime.v2.runtime.property.Property;
+import cn.lzgabel.jaxb.runtime.v2.runtime.property.StructureLoaderBuilder;
+import cn.lzgabel.jaxb.runtime.v2.runtime.property.UnmarshallerChain;
+import cn.lzgabel.jaxb.runtime.v2.runtime.reflect.Accessor;
+import cn.lzgabel.jaxb.runtime.v2.runtime.reflect.TransducedAccessor;
+import cn.lzgabel.jaxb.runtime.v2.util.QNameMap;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 
@@ -147,10 +147,10 @@ public final class StructureLoader extends Loader {
         // let's see if we can reuse the existing peer object
         child = context.getInnerPeer();
 
-        if(child != null && beanInfo.jaxbType!=child.getClass()) 
+        if(child != null && beanInfo.jaxbType!=child.getClass())
             child = null;   // unexpected type.
 
-        if(child != null) 
+        if(child != null)
             beanInfo.reset(child,context);
 
         if(child == null)
@@ -174,7 +174,7 @@ public final class StructureLoader extends Loader {
                 if ("".equals(alocal)) {
                     alocal = atts.getQName(i);
                 }
-                String avalue = atts.getValue(i);                
+                String avalue = atts.getValue(i);
                 TransducedAccessor xacc = attUnmarshallers.get(auri, alocal);
                 try {
                     if(xacc!=null) {
@@ -237,7 +237,7 @@ public final class StructureLoader extends Loader {
                     super.childElement(state,arg);
                     return;
                 }
-            }                    
+            }
         }
 
         state.setLoader(child.loader);

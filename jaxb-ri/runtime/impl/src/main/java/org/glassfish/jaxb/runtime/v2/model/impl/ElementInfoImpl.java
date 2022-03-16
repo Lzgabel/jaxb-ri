@@ -8,16 +8,16 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.lzgabel.jaxb.runtime.v2.model.impl;
 
 import com.sun.istack.FinalArrayList;
-import org.glassfish.jaxb.core.v2.TODO;
-import org.glassfish.jaxb.core.v2.model.annotation.AnnotationSource;
-import org.glassfish.jaxb.core.v2.model.annotation.Locatable;
-import org.glassfish.jaxb.core.v2.model.core.*;
-import org.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
-import org.glassfish.jaxb.core.v2.runtime.Location;
-import org.glassfish.jaxb.runtime.v2.runtime.SwaRefAdapter;
+import cn.lzgabel.jaxb.core.v2.TODO;
+import cn.lzgabel.jaxb.core.v2.model.annotation.AnnotationSource;
+import cn.lzgabel.jaxb.core.v2.model.annotation.Locatable;
+import cn.lzgabel.jaxb.core.v2.model.core.*;
+import cn.lzgabel.jaxb.core.v2.runtime.IllegalAnnotationException;
+import cn.lzgabel.jaxb.core.v2.runtime.Location;
+import cn.lzgabel.jaxb.runtime.v2.runtime.SwaRefAdapter;
 import jakarta.activation.MimeType;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.annotation.*;
@@ -268,7 +268,7 @@ class ElementInfoImpl<T,C,F,M> extends TypeInfoImpl<T,C,F,M> implements ElementI
         tOfJAXBElementT =
             methodParams.length>0 ? methodParams[0] // this is more reliable, as it works even for ObjectFactory that sometimes have to return public types
             : nav().getTypeArgument(baseClass,0); // fall back to infer from the return type if no parameter.
-        
+
         if(adapter==null) {
             T list = nav().getBaseClass(tOfJAXBElementT,nav().asDecl(List.class));
             if(list==null) {

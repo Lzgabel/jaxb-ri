@@ -39,18 +39,18 @@ import com.sun.tools.xjc.reader.Const;
 import com.sun.tools.xjc.reader.Ring;
 import com.sun.tools.xjc.reader.TypeUtil;
 import com.sun.tools.xjc.reader.xmlschema.ClassSelector;
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
+import cn.lzgabel.jaxb.core.v2.WellKnownNamespace;
 import com.sun.xml.xsom.XSSimpleType;
 
 import org.xml.sax.Locator;
 
 /**
  * Conversion declaration.
- * 
+ *
  * <p>
  * A conversion declaration specifies how an XML type gets mapped
  * to a Java type.
- * 
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
@@ -78,7 +78,7 @@ public abstract class BIConversion extends AbstractDeclarationImpl {
 
     @Override
     public QName getName() { return NAME; }
-    
+
     /** Name of the conversion declaration. */
     public static final QName NAME = new QName(
         Const.JAXB_NSURI, "conversion" );
@@ -224,7 +224,7 @@ public abstract class BIConversion extends AbstractDeclarationImpl {
 
                 // RESULT: <value>.<method>()
                 inv = $value.invoke(printMethod);
-                
+
                 // check value is not null ... if(value == null) return null;
                 JConditional jcon = marshal.body()._if($value.eq(JExpr._null()));
                 jcon._then()._return(JExpr._null());

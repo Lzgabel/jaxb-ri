@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.util;
+package cn.lzgabel.jaxb.runtime.v2.util;
 
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXException;
@@ -16,7 +16,7 @@ import org.xml.sax.SAXParseException;
 
 /**
  * Maps an error to a fatal error.
- * 
+ *
  * @author Kohsuke Kawaguchi
  */
 public class FatalAdapter implements ErrorHandler {

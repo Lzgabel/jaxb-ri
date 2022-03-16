@@ -8,12 +8,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.schemagen;
+package cn.lzgabel.jaxb.runtime.v2.schemagen;
 
-import org.glassfish.jaxb.runtime.v2.schemagen.xmlschema.ContentModelContainer;
-import org.glassfish.jaxb.runtime.v2.schemagen.xmlschema.Occurs;
-import org.glassfish.jaxb.runtime.v2.schemagen.xmlschema.Particle;
-import org.glassfish.jaxb.runtime.v2.schemagen.xmlschema.TypeDefParticle;
+import cn.lzgabel.jaxb.runtime.v2.schemagen.xmlschema.ContentModelContainer;
+import cn.lzgabel.jaxb.runtime.v2.schemagen.xmlschema.Occurs;
+import cn.lzgabel.jaxb.runtime.v2.schemagen.xmlschema.Particle;
+import cn.lzgabel.jaxb.runtime.v2.schemagen.xmlschema.TypeDefParticle;
 
 import java.util.ArrayList;
 import java.util.Arrays;

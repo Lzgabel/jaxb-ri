@@ -12,11 +12,11 @@ package com.sun.tools.xjc.servlet;
 
 import java.io.IOException;
 
-import com.sun.xml.bind.webapp.AbstractTagImpl;
+import cn.lzgabel.jaxb.xml.bind.webapp.AbstractTagImpl;
 
 /**
  * Custom tag that produces XJC build id.
- * 
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
@@ -31,14 +31,14 @@ public class VersionTag extends AbstractTagImpl {
         try {
             Class driverClass = XJCClassLoader.getInstance(context.getServletContext())
                 .loadClass("com.sun.tools.xjc.Driver");
-            
-            
+
+
             context.getOut().write( (String)
                 driverClass.getMethod("getBuildID",new Class[0]).invoke(null,null));
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
+
         return EVAL_PAGE;
     }
 }

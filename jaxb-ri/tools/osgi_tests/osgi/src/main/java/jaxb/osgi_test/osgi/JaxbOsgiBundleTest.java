@@ -19,7 +19,7 @@ import org.osgi.framework.Bundle;
  * @author yaroska
  */
 public class JaxbOsgiBundleTest extends JaxbOsgiTest {
-    private static final String BUNDLE = "com.sun.xml.bind.jaxb-osgi";
+    private static final String BUNDLE = "cn.lzgabel.jaxb.xml.bind.jaxb-osgi";
 
     private Bundle bundle;
 
@@ -38,6 +38,6 @@ public class JaxbOsgiBundleTest extends JaxbOsgiTest {
     }
 
 //    public void testContextFactoryJaxb1() {
-//        checkClassInBundle("com.sun.xml.bind.ContextFactory_1_0_1", bundle);
+//        checkClassInBundle("cn.lzgabel.jaxb.xml.bind.ContextFactory_1_0_1", bundle);
 //    }
 }

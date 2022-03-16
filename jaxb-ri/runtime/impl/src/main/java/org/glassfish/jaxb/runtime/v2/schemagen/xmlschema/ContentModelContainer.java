@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.schemagen.xmlschema;
+package cn.lzgabel.jaxb.runtime.v2.schemagen.xmlschema;
 
 import com.sun.xml.txw2.TypedXmlWriter;
 import com.sun.xml.txw2.annotation.XmlElement;
@@ -17,7 +17,7 @@ import com.sun.xml.txw2.annotation.XmlElement;
  * Used to write a content model.
  *
  * This mixes the particle and model group as the child of complex type.
- * 
+ *
  * @author Kohsuke Kawaguchi
  */
 public interface ContentModelContainer extends TypedXmlWriter {

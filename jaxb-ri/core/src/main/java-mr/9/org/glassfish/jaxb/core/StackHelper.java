@@ -8,13 +8,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core;
+package cn.lzgabel.jaxb.core;
 
 import java.lang.StackWalker.StackFrame;
 
 /**
  * Utils for stack trace analysis in Java 9+.
- * 
+ *
  * @author Philippe Marschall
  */
 final class StackHelper {
@@ -22,7 +22,7 @@ final class StackHelper {
 
     /**
      * Returns the name of the calling class of the second method in the call chain of this method.
-     * 
+     *
      * @return the name of the caller class
      * @throws SecurityException in case a security manager is installed that
      *                           prevents stack introspection

@@ -16,13 +16,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.sun.xml.bind.mvn</groupId>
+        <groupId>cn.lzgabel.jaxb.xml.bind.mvn</groupId>
         <artifactId>osgi-tests</artifactId>
-        <version>4.0.0-SNAPSHOT</version>
+        <version>4.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>org.glassfish.jaxb</groupId>
+    <groupId>cn.lzgabel.jaxb</groupId>
     <artifactId>osgi-test-core</artifactId>
     <packaging>jar</packaging>
     <name>osgi-test-core</name>

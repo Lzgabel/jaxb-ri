@@ -17,8 +17,8 @@ import com.sun.tools.xjc.outline.ClassOutline;
 import com.sun.tools.xjc.outline.EnumOutline;
 import com.sun.tools.xjc.outline.Outline;
 import com.sun.tools.xjc.reader.Const;
-import org.glassfish.jaxb.core.v2.schemagen.episode.Bindings;
-import org.glassfish.jaxb.core.v2.schemagen.episode.SchemaBindings;
+import cn.lzgabel.jaxb.core.v2.schemagen.episode.Bindings;
+import cn.lzgabel.jaxb.core.v2.schemagen.episode.SchemaBindings;
 import com.sun.xml.txw2.TXW;
 import com.sun.xml.txw2.output.StreamSerializer;
 import com.sun.xml.xsom.XSAnnotation;
@@ -338,17 +338,17 @@ public class PluginImpl extends Plugin {
             outlineType.bindingsBuilder.build(this, bindings);
         }
     }
-    
+
     private final static class PerSchemaOutlineAdaptors {
-    	
+
     	private final List<OutlineAdaptor> outlineAdaptors = new ArrayList<>();
-    	
+
     	private final Set<String> packageNames = new HashSet<>();
 
         private void add(OutlineAdaptor outlineAdaptor) {
             this.outlineAdaptors.add(outlineAdaptor);
             this.packageNames.add(outlineAdaptor.packageName);
     	}
-    	
+
     }
 }

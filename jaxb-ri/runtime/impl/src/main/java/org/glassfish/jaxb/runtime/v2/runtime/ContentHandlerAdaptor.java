@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime;
+package cn.lzgabel.jaxb.runtime.v2.runtime;
 
 import com.sun.istack.FinalArrayList;
 import com.sun.istack.SAXException2;
@@ -22,7 +22,7 @@ import java.io.IOException;
 /**
  * Receives SAX2 events and send the equivalent events to
  * {@link XMLSerializer}
- * 
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
@@ -33,14 +33,14 @@ final class ContentHandlerAdaptor extends DefaultHandler {
 
     /** Events will be sent to this object. */
     private final XMLSerializer serializer;
-    
+
     private final StringBuffer text = new StringBuffer();
-    
-    
+
+
     ContentHandlerAdaptor( XMLSerializer _serializer ) {
         this.serializer = _serializer;
     }
-    
+
     @Override
     public void startDocument() {
         prefixMap.clear();
@@ -132,7 +132,7 @@ final class ContentHandlerAdaptor extends DefaultHandler {
             throw new SAXException2(e);
         }
     }
-    
+
     private void flushText() throws SAXException, IOException, XMLStreamException {
         if( text.length()!=0 ) {
             serializer.text(text.toString(),null);

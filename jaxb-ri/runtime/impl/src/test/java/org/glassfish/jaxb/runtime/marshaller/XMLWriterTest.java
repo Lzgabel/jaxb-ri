@@ -8,10 +8,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.marshaller;
+package cn.lzgabel.jaxb.runtime.marshaller;
 
-import org.glassfish.jaxb.core.marshaller.DumbEscapeHandler;
-import org.glassfish.jaxb.core.marshaller.XMLWriter;
+import cn.lzgabel.jaxb.core.marshaller.DumbEscapeHandler;
+import cn.lzgabel.jaxb.core.marshaller.XMLWriter;
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
 import org.xml.sax.InputSource;
@@ -25,7 +25,7 @@ import java.io.StringWriter;
  * Manual test of XMLWriter.
  */
 public class XMLWriterTest extends TestCase {
-    
+
     public XMLWriterTest(String name) {
         super(name);
     }
@@ -39,25 +39,25 @@ public class XMLWriterTest extends TestCase {
         XMLWriter w = new XMLWriter(sw, "US-ASCII", DumbEscapeHandler.theInstance );
         w.startDocument();
         w.startElement("","root","root",new AttributesImpl());
-        
+
         w.startPrefixMapping("ns1","aaa");
         w.startPrefixMapping("ns2","bbb");
         w.startPrefixMapping("ns3","ccc");
-        
+
         w.startElement("ccc","child","ns3:child",new AttributesImpl());
         w.endElement("ccc","child","ns3:child");
 
         w.endPrefixMapping("ns2");
         w.endPrefixMapping("ns1");
-        
+
         w.endElement("","root","root");
         w.endDocument();
-        
+
         checkWellformedness(sw.toString());
     }
-    
+
     // test if the empty tag optimization is happening.
-    public void testEmptyTag() throws Exception { 
+    public void testEmptyTag() throws Exception {
         StringWriter sw = new StringWriter();
         XMLWriter w = new XMLWriter(sw, "US-ASCII", DumbEscapeHandler.theInstance );
         w.startDocument();
@@ -70,13 +70,13 @@ public class XMLWriterTest extends TestCase {
         w.endDocument();
 
         String body = sw.toString();
-        
+
         checkWellformedness(body);
 
         // cut XML header
         body = body.substring(body.indexOf("?>")+2);
         assertEquals( "<root><child/><kid/></root>", body);
-        
+
     }
 
     /** Checks the well-formedness of XML. */
@@ -84,6 +84,6 @@ public class XMLWriterTest extends TestCase {
         SAXParserFactory spf = SAXParserFactory.newInstance();
         spf.setNamespaceAware(true);
         spf.newSAXParser().getXMLReader().parse(
-            new InputSource(new StringReader(xml))); 
+            new InputSource(new StringReader(xml)));
     }
 }

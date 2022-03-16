@@ -9,7 +9,7 @@
  */
 
 /**
- * Implementation of the {@link org.glassfish.jaxb.core.v2.model.core} package for XJC.
+ * Implementation of the {@link cn.lzgabel.jaxb.core.v2.model.core} package for XJC.
  *
  * <p>
  * This model is the recipes for the code generation.
@@ -19,7 +19,7 @@
  *
  * <p>
  * Most of the classes/interfaces in this package has one-to-one relationship
- * with the parameterized core model in the {@link org.glassfish.jaxb.core.v2.model.core} package.
+ * with the parameterized core model in the {@link cn.lzgabel.jaxb.core.v2.model.core} package.
  * Refer to the core model for better documentation.
  *
  * <p>

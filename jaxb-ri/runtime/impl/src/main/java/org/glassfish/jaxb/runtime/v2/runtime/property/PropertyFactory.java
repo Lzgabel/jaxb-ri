@@ -8,13 +8,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.property;
+package cn.lzgabel.jaxb.runtime.v2.runtime.property;
 
-import org.glassfish.jaxb.core.v2.model.core.ClassInfo;
-import org.glassfish.jaxb.core.v2.model.core.ID;
-import org.glassfish.jaxb.core.v2.model.core.PropertyKind;
-import org.glassfish.jaxb.runtime.v2.model.runtime.*;
-import org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
+import cn.lzgabel.jaxb.core.v2.model.core.ClassInfo;
+import cn.lzgabel.jaxb.core.v2.model.core.ID;
+import cn.lzgabel.jaxb.core.v2.model.core.PropertyKind;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.*;
+import cn.lzgabel.jaxb.runtime.v2.runtime.JAXBContextImpl;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;

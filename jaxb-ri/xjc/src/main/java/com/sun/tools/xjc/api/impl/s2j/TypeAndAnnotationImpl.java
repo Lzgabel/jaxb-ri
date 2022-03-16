@@ -23,7 +23,7 @@ import com.sun.tools.xjc.model.TypeUse;
 import com.sun.tools.xjc.model.nav.NType;
 import static com.sun.tools.xjc.outline.Aspect.EXPOSED;
 import com.sun.tools.xjc.outline.Outline;
-import org.glassfish.jaxb.core.v2.runtime.SwaRefAdapterMarker;
+import cn.lzgabel.jaxb.core.v2.runtime.SwaRefAdapterMarker;
 
 /**
  * {@link TypeAndAnnotation} implementation.

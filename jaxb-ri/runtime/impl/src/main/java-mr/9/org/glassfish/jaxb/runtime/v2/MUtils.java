@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2;
+package cn.lzgabel.jaxb.runtime.v2;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -17,7 +17,7 @@ import jakarta.xml.bind.JAXBException;
 
 final class MUtils {
 
-    private static final Logger logger = Logger.getLogger("org.glassfish.jaxb.runtime");
+    private static final Logger logger = Logger.getLogger("cn.lzgabel.jaxb.runtime");
 
     /**
      * Api may be defined in a different module, in such case we need to delegate
@@ -29,7 +29,7 @@ final class MUtils {
      * @throws JAXBException if any of a classes package is not open to our module.
      */
     static void open(Class[] classes) throws JAXBException {
-        final Module coreModule = org.glassfish.jaxb.core.v2.ClassFactory.class.getModule();
+        final Module coreModule = cn.lzgabel.jaxb.core.v2.ClassFactory.class.getModule();
         final Module rtModule = JAXBContextFactory.class.getModule();
 
         if (rtModule == coreModule) {

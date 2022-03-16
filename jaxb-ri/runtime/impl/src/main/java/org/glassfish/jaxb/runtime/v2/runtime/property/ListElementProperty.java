@@ -8,25 +8,25 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.property;
+package cn.lzgabel.jaxb.runtime.v2.runtime.property;
 
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.runtime.v2.util.QNameMap;
-import org.glassfish.jaxb.core.v2.model.core.ElementPropertyInfo;
-import org.glassfish.jaxb.core.v2.model.core.PropertyKind;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeElementPropertyInfo;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeTypeRef;
-import org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.Name;
-import org.glassfish.jaxb.runtime.v2.runtime.Transducer;
-import org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.Accessor;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.ListTransducedAccessorImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.TransducedAccessor;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.ChildLoader;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.DefaultValueLoaderDecorator;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.LeafPropertyLoader;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Loader;
+import cn.lzgabel.jaxb.runtime.api.AccessorException;
+import cn.lzgabel.jaxb.runtime.v2.util.QNameMap;
+import cn.lzgabel.jaxb.core.v2.model.core.ElementPropertyInfo;
+import cn.lzgabel.jaxb.core.v2.model.core.PropertyKind;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.RuntimeElementPropertyInfo;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.RuntimeTypeRef;
+import cn.lzgabel.jaxb.runtime.v2.runtime.JAXBContextImpl;
+import cn.lzgabel.jaxb.runtime.v2.runtime.Name;
+import cn.lzgabel.jaxb.runtime.v2.runtime.Transducer;
+import cn.lzgabel.jaxb.runtime.v2.runtime.XMLSerializer;
+import cn.lzgabel.jaxb.runtime.v2.runtime.reflect.Accessor;
+import cn.lzgabel.jaxb.runtime.v2.runtime.reflect.ListTransducedAccessorImpl;
+import cn.lzgabel.jaxb.runtime.v2.runtime.reflect.TransducedAccessor;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.ChildLoader;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.DefaultValueLoaderDecorator;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.LeafPropertyLoader;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.Loader;
 import org.xml.sax.SAXException;
 
 import javax.xml.stream.XMLStreamException;
@@ -42,7 +42,7 @@ final class ListElementProperty<BeanT,ListT,ItemT> extends ArrayProperty<BeanT,L
 
     private final Name tagName;
     private final String defaultValue;
-    
+
     /**
      * Converts all the values to a list and back.
      */
@@ -57,7 +57,7 @@ final class ListElementProperty<BeanT,ListT,ItemT> extends ArrayProperty<BeanT,L
 
         tagName = grammar.nameBuilder.createElementName(ref.getTagName());
         defaultValue = ref.getDefaultValue();
-        
+
         // transducer for each item
         Transducer xducer = ref.getTransducer();
         // transduced accessor for the whole thing

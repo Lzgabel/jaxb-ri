@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.model.core;
+package cn.lzgabel.jaxb.core.v2.model.core;
 
 import java.util.Collection;
 import java.util.Set;
@@ -47,7 +47,7 @@ public interface ReferencePropertyInfo<T,C> extends PropertyInfo<T,C> {
      * {@inheritDoc}.
      *
      * If this {@link ReferencePropertyInfo} has a wildcard in it,
-     * then the returned list will contain {@link WildcardTypeInfo}. 
+     * then the returned list will contain {@link WildcardTypeInfo}.
      */
     @Override
     Collection<? extends TypeInfo<T,C>> ref();

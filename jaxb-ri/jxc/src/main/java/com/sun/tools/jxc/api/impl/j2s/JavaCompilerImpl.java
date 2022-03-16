@@ -31,11 +31,11 @@ import com.sun.tools.jxc.model.nav.ApNavigator;
 import com.sun.tools.xjc.api.J2SJAXBModel;
 import com.sun.tools.xjc.api.JavaCompiler;
 import com.sun.tools.xjc.api.Reference;
-import org.glassfish.jaxb.core.v2.model.core.ErrorHandler;
-import org.glassfish.jaxb.core.v2.model.core.Ref;
-import org.glassfish.jaxb.core.v2.model.core.TypeInfoSet;
-import org.glassfish.jaxb.runtime.v2.model.impl.ModelBuilder;
-import org.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
+import cn.lzgabel.jaxb.core.v2.model.core.ErrorHandler;
+import cn.lzgabel.jaxb.core.v2.model.core.Ref;
+import cn.lzgabel.jaxb.core.v2.model.core.TypeInfoSet;
+import cn.lzgabel.jaxb.runtime.v2.model.impl.ModelBuilder;
+import cn.lzgabel.jaxb.core.v2.runtime.IllegalAnnotationException;
 
 /**
  * @author Kohsuke Kawaguchi (kk@kohsuke.org)

@@ -8,14 +8,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.api;
+package cn.lzgabel.jaxb.runtime.api;
 
 import com.sun.istack.NotNull;
 import com.sun.istack.Nullable;
-import org.glassfish.jaxb.core.api.impl.NameConverter;
-import org.glassfish.jaxb.runtime.v2.ContextFactory;
-import org.glassfish.jaxb.runtime.v2.model.annotation.RuntimeAnnotationReader;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeTypeInfoSet;
+import cn.lzgabel.jaxb.core.api.impl.NameConverter;
+import cn.lzgabel.jaxb.runtime.v2.ContextFactory;
+import cn.lzgabel.jaxb.runtime.v2.model.annotation.RuntimeAnnotationReader;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.RuntimeTypeInfoSet;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
@@ -410,7 +410,7 @@ public abstract class JAXBRIContext extends JAXBContext {
      *
      * @since 2.0 EA1
      */
-    public static final String DEFAULT_NAMESPACE_REMAP = "org.glassfish.jaxb.defaultNamespaceRemap";
+    public static final String DEFAULT_NAMESPACE_REMAP = "cn.lzgabel.jaxb.defaultNamespaceRemap";
 
     /**
      * The property that you can specify to {@link JAXBContext#newInstance}
@@ -426,7 +426,7 @@ public abstract class JAXBRIContext extends JAXBContext {
      *
      * @since 2.0 EA1
      */
-    public static final String TYPE_REFERENCES = "org.glassfish.jaxb.typeReferences";
+    public static final String TYPE_REFERENCES = "cn.lzgabel.jaxb.typeReferences";
 
     /**
      * The property that you can specify to {@link JAXBContext#newInstance}
@@ -436,7 +436,7 @@ public abstract class JAXBRIContext extends JAXBContext {
      * Boolean
      * @since 2.0 EA2
      */
-    public static final String CANONICALIZATION_SUPPORT = "org.glassfish.jaxb.c14n";
+    public static final String CANONICALIZATION_SUPPORT = "cn.lzgabel.jaxb.c14n";
 
     /**
      * The property that you can specify to {@link JAXBContext#newInstance}
@@ -446,7 +446,7 @@ public abstract class JAXBRIContext extends JAXBContext {
      * Boolean
      * @since 2.1.3
      */
-    public static final String TREAT_EVERYTHING_NILLABLE = "org.glassfish.jaxb.treatEverythingNillable";
+    public static final String TREAT_EVERYTHING_NILLABLE = "cn.lzgabel.jaxb.treatEverythingNillable";
 
     /**
      * The property that you can specify to {@link JAXBContext#newInstance}
@@ -461,7 +461,7 @@ public abstract class JAXBRIContext extends JAXBContext {
      *
      * @since 2.0 EA2
      */
-    public static final String ENABLE_XOP = "org.glassfish.jaxb.XOP";
+    public static final String ENABLE_XOP = "cn.lzgabel.jaxb.XOP";
 
     /**
      * The property that you can specify to {@link JAXBContext#newInstance}
@@ -472,7 +472,7 @@ public abstract class JAXBRIContext extends JAXBContext {
      *
      * @since 2.1 EA2
      */
-    public static final String SUBCLASS_REPLACEMENTS = "org.glassfish.jaxb.subclassReplacements";
+    public static final String SUBCLASS_REPLACEMENTS = "cn.lzgabel.jaxb.subclassReplacements";
 
     /**
      * The property that you can specify to {@link JAXBContext#newInstance}
@@ -480,7 +480,7 @@ public abstract class JAXBRIContext extends JAXBContext {
      *
      * @since 2.1 EA2
      */
-    public static final String XMLACCESSORFACTORY_SUPPORT = "org.glassfish.jaxb.XmlAccessorFactory";
+    public static final String XMLACCESSORFACTORY_SUPPORT = "cn.lzgabel.jaxb.XmlAccessorFactory";
 
     /**
      * Retains references to PropertyInfos.
@@ -504,7 +504,7 @@ public abstract class JAXBRIContext extends JAXBContext {
      * Boolean
      * @since 2.2.3
      */
-    public static final String IMPROVED_XSI_TYPE_HANDLING = "org.glassfish.jaxb.improvedXsiTypeHandling";
+    public static final String IMPROVED_XSI_TYPE_HANDLING = "cn.lzgabel.jaxb.improvedXsiTypeHandling";
 
     /**
      * If true XML security features when parsing XML documents will be disabled.
@@ -513,7 +513,7 @@ public abstract class JAXBRIContext extends JAXBContext {
      * Boolean
      * @since 2.2.6
      */
-    public static final String DISABLE_XML_SECURITY  = "org.glassfish.jaxb.disableXmlSecurity";
+    public static final String DISABLE_XML_SECURITY  = "cn.lzgabel.jaxb.disableXmlSecurity";
 
     /**
      * If true and element namespace is not specified, namespace of parent element will be used.
@@ -522,7 +522,7 @@ public abstract class JAXBRIContext extends JAXBContext {
      * Boolean
      * @since 2.3.0
      */
-    public static final String BACKUP_WITH_PARENT_NAMESPACE = "org.glassfish.jaxb.backupWithParentNamespace";
+    public static final String BACKUP_WITH_PARENT_NAMESPACE = "cn.lzgabel.jaxb.backupWithParentNamespace";
 
     /**
      * The maximum number of errors to report. Use negative value to report all errors.
@@ -531,6 +531,6 @@ public abstract class JAXBRIContext extends JAXBContext {
      * Boolean
      * @since 2.3.3
      */
-    public static final String MAX_ERRORS = "org.glassfish.jaxb.maxErrorsCount";
+    public static final String MAX_ERRORS = "cn.lzgabel.jaxb.maxErrorsCount";
 
 }

@@ -129,7 +129,7 @@
             here to do so, like this:</title>
 
             <programlisting language="xml"><![CDATA[<dependency>
-  <groupId>com.sun.xml.bind</groupId>
+  <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
   <artifactId>jaxb-xjc</artifactId>
   <version>2.1.2</version>
 </dependency>]]></programlisting>

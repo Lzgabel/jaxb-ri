@@ -42,8 +42,8 @@ import com.sun.codemodel.JPackage;
 import com.sun.codemodel.JArray;
 import com.sun.codemodel.writer.FileCodeWriter;
 import com.sun.istack.tools.MaskingClassLoader;
-import com.sun.xml.bind.v2.model.annotation.Locatable;
-import com.sun.xml.bind.v2.model.annotation.Quick;
+import cn.lzgabel.jaxb.xml.bind.v2.model.annotation.Locatable;
+import cn.lzgabel.jaxb.xml.bind.v2.model.annotation.Quick;
 import java.io.FileReader;
 import java.io.LineNumberReader;
 import java.net.URL;
@@ -70,9 +70,9 @@ public class GeneratorTask extends Task {
     private final Path classpath;
     private final List<Pattern> patterns = new ArrayList<Pattern>();
     private final List<URL> endorsedJars = new ArrayList<URL>();
-    
+
     private File licence = null;
-    
+
     /**
      * Used during the build to load annotation classes.
      */
@@ -195,7 +195,7 @@ public class GeneratorTask extends Task {
     public void setLicence(File licence) {
         this.licence = licence;
     }
-    
+
     @Override
     public void setProject(Project project) {
         super.setProject(project);
@@ -385,7 +385,7 @@ public class GeneratorTask extends Task {
                     Logger.getLogger(GeneratorTask.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 fcw = new LicenceCodeWriter(fcw, licenceHeader);
-            } 
+            }
             codeModel.build(fcw);
         } catch (IOException ex) {
             Logger.getLogger(GeneratorTask.class.getName()).log(Level.SEVERE, null, ex);

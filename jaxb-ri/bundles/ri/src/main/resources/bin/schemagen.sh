@@ -16,13 +16,13 @@
 if [ -z "$JAXB_HOME" ]
 then
     # search the installation directory
-    
+
     PRG=$0
     progname=`basename $0`
     saveddir=`pwd`
-    
+
     cd `dirname $PRG`
-    
+
     while [ -h "$PRG" ] ; do
         ls=`ls -ld "$PRG"`
         link=`expr "$ls" : '.*-> \(.*\)$'`
@@ -32,13 +32,13 @@ then
             PRG="`dirname $PRG`/$link"
         fi
     done
-    
+
     JAXB_HOME=`dirname "$PRG"`/..
-    
+
     # make it fully qualified
     cd "$saveddir"
     JAXB_HOME=`cd "$JAXB_HOME" && pwd`
-    
+
     cd $saveddir
 fi
 
@@ -105,5 +105,5 @@ then
   exec "${JAVA}" ${SCHEMAGEN_OPTS} -cp "${LOCALPATH}" com.sun.tools.jxc.SchemaGeneratorFacade "$@"
 else
   #module path
-  exec "${JAVA}" ${SCHEMAGEN_OPTS} --module-path "${LOCALPATH}" --add-modules com.sun.xml.bind -m com.sun.tools.jxc "$@"
+  exec "${JAVA}" ${SCHEMAGEN_OPTS} --module-path "${LOCALPATH}" --add-modules cn.lzgabel.jaxb.xml.bind -m com.sun.tools.jxc "$@"
 fi

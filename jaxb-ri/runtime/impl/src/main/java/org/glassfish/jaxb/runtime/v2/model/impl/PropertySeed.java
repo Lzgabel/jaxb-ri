@@ -8,12 +8,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.impl;
+package cn.lzgabel.jaxb.runtime.v2.model.impl;
 
-import org.glassfish.jaxb.core.v2.model.annotation.AnnotationSource;
-import org.glassfish.jaxb.core.v2.model.annotation.Locatable;
-import org.glassfish.jaxb.core.v2.model.core.PropertyInfo;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
+import cn.lzgabel.jaxb.core.v2.model.annotation.AnnotationSource;
+import cn.lzgabel.jaxb.core.v2.model.annotation.Locatable;
+import cn.lzgabel.jaxb.core.v2.model.core.PropertyInfo;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.RuntimePropertyInfo;
 
 /**
  * Exposes the core information that forms a {@link PropertyInfo}.

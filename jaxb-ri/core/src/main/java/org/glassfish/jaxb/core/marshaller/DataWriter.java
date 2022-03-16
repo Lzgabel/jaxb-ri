@@ -12,7 +12,7 @@
 
 // DataWriter.java - XML writer for data-oriented files.
 
-package org.glassfish.jaxb.core.marshaller;
+package cn.lzgabel.jaxb.core.marshaller;
 
 import java.io.IOException;
 import java.io.Writer;
@@ -96,7 +96,7 @@ public class DataWriter extends XMLWriter
      *
      * @param writer The character stream where the XML document
      *        will be written.
-     * @param encoding 
+     * @param encoding
      *      If non-null string is specified, it is written as a part
      *      of the XML declaration.
      */
@@ -107,7 +107,7 @@ public class DataWriter extends XMLWriter
 
 
     public DataWriter (Writer writer, String encoding ) {
-        this( writer, encoding, DumbEscapeHandler.theInstance ); 
+        this( writer, encoding, DumbEscapeHandler.theInstance );
     }
 
 
@@ -127,7 +127,7 @@ public class DataWriter extends XMLWriter
      * @return The number of spaces in each indentation step,
      *         or 0 or less for no indentation.
      * @see #setIndentStep(int)
-     * 
+     *
      * @deprecated
      *      Only return the length of the indent string.
      */
@@ -144,7 +144,7 @@ public class DataWriter extends XMLWriter
      * @param indentStep The new indent step (0 or less for no
      *        indentation).
      * @see #getIndentStep()
-     * 
+     *
      * @deprecated
      *      Should use the version that takes string.
      */
@@ -156,7 +156,7 @@ public class DataWriter extends XMLWriter
             buf.append(' ');
         setIndentStep(buf.toString());
     }
-    
+
     public void setIndentStep(String s) {
         this.indentStep = s;
     }

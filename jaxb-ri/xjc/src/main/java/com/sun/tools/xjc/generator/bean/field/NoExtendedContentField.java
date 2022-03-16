@@ -26,17 +26,17 @@ import com.sun.tools.xjc.model.CElement;
 import com.sun.tools.xjc.model.CPropertyInfo;
 import com.sun.tools.xjc.model.CReferencePropertyInfo;
 import com.sun.tools.xjc.outline.Aspect;
-import org.glassfish.jaxb.core.api.impl.NameConverter;
+import cn.lzgabel.jaxb.core.api.impl.NameConverter;
 import java.io.Serializable;
 import java.util.Set;
 
 /**
  * Realizes a property as an untyped {@link List}.
- * 
+ *
  * <pre>
  * List getXXX();
  * </pre>
- * 
+ *
  * <h2>Default value handling</h2>
  * <p>
  * Since unmarshaller just adds new values into the storage,
@@ -48,14 +48,14 @@ import java.util.Set;
  * When the getXXX method is called, we'll check if the storage is
  * modified in anyway. If it is modified, it must mean that the values
  * are found in the document, so we just return it.
- * 
+ *
  * Otherwise we will fill in default values and return it to the user.
- * 
+ *
  * <p>
  * When a list has default values, its dirty flag is set to true.
  * Marshaller will check this and treat it appropriately.
- * 
- * 
+ *
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
@@ -164,14 +164,14 @@ public class NoExtendedContentField extends AbstractListField {
         if (Aspect.IMPLEMENTATION.equals(aspect)) {
             return super.getType(aspect);
         }
-        
+
         if (prop instanceof CReferencePropertyInfo) {
             Set<CElement> elements = ((CReferencePropertyInfo)prop).getElements();
             if ((elements != null) && (elements.size() > 0)) {
                 return codeModel.ref(Serializable.class);
             }
         }
-        
+
         return codeModel.ref(String.class);
     }
 }

@@ -34,15 +34,15 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
 import com.sun.codemodel.JDocComment;
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
+import cn.lzgabel.jaxb.core.v2.WellKnownNamespace;
 import com.sun.tools.xjc.SchemaCache;
 import com.sun.tools.xjc.model.CCustomizations;
 import com.sun.tools.xjc.model.CPluginCustomization;
 import com.sun.tools.xjc.model.Model;
 import com.sun.tools.xjc.reader.Ring;
 import com.sun.tools.xjc.reader.xmlschema.BGMBuilder;
-import org.glassfish.jaxb.core.annotation.XmlLocation;
-import org.glassfish.jaxb.core.marshaller.MinimumEscapeHandler;
+import cn.lzgabel.jaxb.core.annotation.XmlLocation;
+import cn.lzgabel.jaxb.core.marshaller.MinimumEscapeHandler;
 import com.sun.xml.xsom.XSComponent;
 
 import org.w3c.dom.Element;
@@ -64,7 +64,7 @@ public final class BindInfo implements Iterable<BIDeclaration> {
 
     @XmlLocation
     private Locator location;
-    
+
     /**
      * Documentation taken from {@code <xs:documentation>s}.
      */
@@ -141,7 +141,7 @@ public final class BindInfo implements Iterable<BIDeclaration> {
 
     /**
      * Gets the location of this annotation in the source file.
-     * 
+     *
      * @return
      *      If the declarations are in fact specified in the source
      *      code, a non-null valid object will be returned.
@@ -149,8 +149,8 @@ public final class BindInfo implements Iterable<BIDeclaration> {
      *      null will be returned.
      */
     public Locator getSourceLocation() { return location; }
-    
-    
+
+
     private XSComponent owner;
     /**
      * Sets the owner schema component and a reference to BGMBuilder.
@@ -164,7 +164,7 @@ public final class BindInfo implements Iterable<BIDeclaration> {
             d.onSetOwner();
     }
     public XSComponent getOwner() { return owner; }
-    
+
     /**
      * Back pointer to the BGMBuilder which is building
      * a BGM from schema components including this customization.
@@ -177,7 +177,7 @@ public final class BindInfo implements Iterable<BIDeclaration> {
         decl.setParent(this);
         decls.add(decl);
     }
-    
+
     /**
      * Gets the first declaration with a given name, or null
      * if none is found.
@@ -190,10 +190,10 @@ public final class BindInfo implements Iterable<BIDeclaration> {
         }
         return null; // not found
     }
-   
+
     /**
      * Gets all the declarations
-     */ 
+     */
     public BIDeclaration[] getDecls() {
         return decls.toArray(new BIDeclaration[decls.size()]);
     }
@@ -261,10 +261,10 @@ public final class BindInfo implements Iterable<BIDeclaration> {
         else
             this.documentation.addAll(bi.documentation);
     }
-    
+
     /** Gets the number of declarations. */
     public int size() { return decls.size(); }
-    
+
     public BIDeclaration get( int idx ) { return decls.get(idx); }
 
     @Override

@@ -16,20 +16,20 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.glassfish.jaxb</groupId>
+        <groupId>cn.lzgabel.jaxb</groupId>
         <artifactId>jaxb-bom</artifactId>
         <relativePath>../bom/pom.xml</relativePath>
-        <version>4.0.0-SNAPSHOT</version>
+        <version>4.0.0</version>
     </parent>
 
-    <groupId>com.sun.xml.bind</groupId>
+    <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
     <artifactId>jaxb-bom-ext</artifactId>
 
     <packaging>pom</packaging>
     <name>JAXB BOM with ALL dependencies</name>
     <description>
         JAXB Bill of Materials (BOM) with all dependencies.
-        If you are not sure - DON'T USE THIS BOM. Use com.sun.xml.bind:jaxb-bom instead.
+        If you are not sure - DON'T USE THIS BOM. Use cn.lzgabel.jaxb.xml.bind:jaxb-bom instead.
     </description>
     <url>https://eclipse-ee4j.github.io/jaxb-ri/</url>
 
@@ -44,13 +44,13 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.sun.xml.bind.external</groupId>
+                <groupId>cn.lzgabel.jaxb.xml.bind.external</groupId>
                 <artifactId>rngom</artifactId>
                 <version>${relaxng.version}</version>
             </dependency>
             <!-- Dependencies -->
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.lzgabel.jaxb</groupId>
                 <artifactId>xsom</artifactId>
                 <version>${xsom.version}</version>
             </dependency>
@@ -65,13 +65,13 @@
                 <version>${istack.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.lzgabel.jaxb</groupId>
                 <artifactId>codemodel</artifactId>
                 <version>${codemodel.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>cn.lzgabel.jaxb</groupId>
                 <artifactId>txw2</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -82,7 +82,7 @@
                 <version>${ant.version}</version>
             </dependency>
             <dependency> <!-- xjc dependency... needed to be specified for xjc maven-dependency-plugin -->
-                <groupId>com.sun.xml.bind.external</groupId>
+                <groupId>cn.lzgabel.jaxb.xml.bind.external</groupId>
                 <artifactId>relaxng-datatype</artifactId>
                 <version>${relaxng.version}</version>
             </dependency>

@@ -8,25 +8,25 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.model.core;
+package cn.lzgabel.jaxb.core.v2.model.core;
 
-import org.glassfish.jaxb.core.v2.runtime.IllegalAnnotationException;
+import cn.lzgabel.jaxb.core.v2.runtime.IllegalAnnotationException;
 
 /**
  * listen to static errors found during building a JAXB model from a set of classes.
- * Implemented by the client of {@link org.glassfish.jaxb.core.v2.model.impl.ModelBuilderI}.
+ * Implemented by the client of {@link cn.lzgabel.jaxb.core.v2.model.impl.ModelBuilderI}.
  *
  * <p>
  * All the static errors have to be reported while constructing a
- * model, not when a model is used (IOW, until the {@link org.glassfish.jaxb.core.v2.model.impl.ModelBuilderI} completes.
- * Internally, {@link org.glassfish.jaxb.core.v2.model.impl.ModelBuilderI} wraps an {@link ErrorHandler} and all the model
+ * model, not when a model is used (IOW, until the {@link cn.lzgabel.jaxb.core.v2.model.impl.ModelBuilderI} completes.
+ * Internally, {@link cn.lzgabel.jaxb.core.v2.model.impl.ModelBuilderI} wraps an {@link ErrorHandler} and all the model
  * components should report errors through it.
  *
  * <p>
  * {@link IllegalAnnotationException} is a checked exception to remind
  * the model classes to report it rather than to throw it.
  *
- * @see org.glassfish.jaxb.core.v2.model.impl.ModelBuilderI
+ * @see cn.lzgabel.jaxb.core.v2.model.impl.ModelBuilderI
  * @author Kohsuke Kawaguchi
  */
 public interface ErrorHandler {

@@ -16,13 +16,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.sun.xml.bind.mvn</groupId>
+        <groupId>cn.lzgabel.jaxb.xml.bind.mvn</groupId>
         <artifactId>jaxb-bundles</artifactId>
-        <version>4.0.0-SNAPSHOT</version>
+        <version>4.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>com.sun.xml.bind</groupId>
+    <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
     <artifactId>jaxb-core</artifactId>
 
     <packaging>jar</packaging>
@@ -37,12 +37,12 @@
             <artifactId>jakarta.xml.bind-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.lzgabel.jaxb</groupId>
             <artifactId>jaxb-core</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.lzgabel.jaxb</groupId>
             <artifactId>txw2</artifactId>
             <scope>provided</scope>
         </dependency>
@@ -79,13 +79,13 @@
                     <scope>test</scope>
                 </dependency>
                 <dependency>
-                    <groupId>org.glassfish.jaxb</groupId>
+                    <groupId>cn.lzgabel.jaxb</groupId>
                     <artifactId>osgi-test-core</artifactId>
                     <version>${project.version}</version>
                     <scope>test</scope>
                 </dependency>
                 <dependency>
-                    <groupId>org.glassfish.jaxb</groupId>
+                    <groupId>cn.lzgabel.jaxb</groupId>
                     <artifactId>osgi-test-parent</artifactId>
                     <version>${project.version}</version>
                     <scope>test</scope>
@@ -142,7 +142,7 @@
                             <goal>unpack-dependencies</goal>
                         </goals>
                         <configuration>
-                            <includeGroupIds>org.glassfish.jaxb,com.sun.istack</includeGroupIds>
+                            <includeGroupIds>cn.lzgabel.jaxb,com.sun.istack</includeGroupIds>
                             <includeScope>provided</includeScope>
                             <classifier>sources</classifier>
                             <excludeTransitive>true</excludeTransitive>
@@ -157,7 +157,7 @@
                             <goal>unpack-dependencies</goal>
                         </goals>
                         <configuration>
-                            <includeGroupIds>org.glassfish.jaxb,com.sun.istack</includeGroupIds>
+                            <includeGroupIds>cn.lzgabel.jaxb,com.sun.istack</includeGroupIds>
                             <includeScope>provided</includeScope>
                             <classifier>sources</classifier>
                             <excludeTransitive>true</excludeTransitive>

@@ -12,7 +12,7 @@ package com.sun.tools.xjc.reader.dtd.bindinfo;
 
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.glassfish.jaxb.core.marshaller.SAX2DOMEx;
+import cn.lzgabel.jaxb.core.marshaller.SAX2DOMEx;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.xml.sax.Attributes;
@@ -27,7 +27,7 @@ final class DOMBuilder extends SAX2DOMEx {
     public DOMBuilder(DocumentBuilderFactory f) throws ParserConfigurationException {
         super(f);
     }
-    
+
     @Override
     public void setDocumentLocator(Locator locator) {
         super.setDocumentLocator(locator);

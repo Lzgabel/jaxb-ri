@@ -8,14 +8,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime;
+package cn.lzgabel.jaxb.runtime.v2.runtime;
 
-import org.glassfish.jaxb.core.v2.WellKnownNamespace;
-import org.glassfish.jaxb.runtime.v2.model.runtime.RuntimeTypeInfo;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.DomLoader;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Loader;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.XsiTypeLoader;
+import cn.lzgabel.jaxb.core.v2.WellKnownNamespace;
+import cn.lzgabel.jaxb.runtime.v2.model.runtime.RuntimeTypeInfo;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.DomLoader;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.Loader;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallingContext;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.XsiTypeLoader;
 import jakarta.xml.bind.ValidationEvent;
 import jakarta.xml.bind.annotation.W3CDomHandler;
 import jakarta.xml.bind.helpers.ValidationEventImpl;
@@ -35,7 +35,7 @@ import java.io.IOException;
 final class AnyTypeBeanInfo extends JaxBeanInfo<Object> implements AttributeAccessor {
 
     private boolean nilIncluded = false;
-    
+
     public AnyTypeBeanInfo(JAXBContextImpl grammar, RuntimeTypeInfo anyTypeInfo) {
         super(grammar, anyTypeInfo, Object.class, new QName(XMLConstants.W3C_XML_SCHEMA_NS_URI,"anyType"), false, true, false);
     }

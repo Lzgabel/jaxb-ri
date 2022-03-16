@@ -8,14 +8,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.reflect.opt;
+package cn.lzgabel.jaxb.runtime.v2.runtime.reflect.opt;
 
-import org.glassfish.jaxb.runtime.DatatypeConverterImpl;
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.runtime.v2.runtime.Name;
-import org.glassfish.jaxb.runtime.v2.runtime.XMLSerializer;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.DefaultTransducedAccessor;
-import org.glassfish.jaxb.runtime.v2.runtime.reflect.TransducedAccessor;
+import cn.lzgabel.jaxb.runtime.DatatypeConverterImpl;
+import cn.lzgabel.jaxb.runtime.api.AccessorException;
+import cn.lzgabel.jaxb.runtime.v2.runtime.Name;
+import cn.lzgabel.jaxb.runtime.v2.runtime.XMLSerializer;
+import cn.lzgabel.jaxb.runtime.v2.runtime.reflect.DefaultTransducedAccessor;
+import cn.lzgabel.jaxb.runtime.v2.runtime.reflect.TransducedAccessor;
 import org.xml.sax.SAXException;
 
 import javax.xml.stream.XMLStreamException;

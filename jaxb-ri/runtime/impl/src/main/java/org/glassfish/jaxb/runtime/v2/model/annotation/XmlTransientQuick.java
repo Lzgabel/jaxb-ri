@@ -8,9 +8,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.annotation;
+package cn.lzgabel.jaxb.runtime.v2.model.annotation;
 
-import org.glassfish.jaxb.core.v2.model.annotation.Locatable;
+import cn.lzgabel.jaxb.core.v2.model.annotation.Locatable;
 import jakarta.xml.bind.annotation.XmlTransient;
 
 import java.lang.annotation.Annotation;
@@ -18,7 +18,7 @@ import java.lang.annotation.Annotation;
 
 /**
  * <p><b>Auto-generated, do not edit.</b></p>
- * 
+ *
  */
 final class XmlTransientQuick
     extends Quick

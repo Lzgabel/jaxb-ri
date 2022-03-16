@@ -22,14 +22,14 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.ValidatorHandler;
 
-import org.glassfish.jaxb.core.v2.util.XmlFactory;
+import cn.lzgabel.jaxb.core.v2.util.XmlFactory;
 import javax.xml.XMLConstants;
 
 import org.w3c.dom.ls.LSInput;
 import org.w3c.dom.ls.LSResourceResolver;
 import org.xml.sax.SAXException;
 
-import static org.glassfish.jaxb.core.v2.util.XmlFactory.allowExternalAccess;
+import static cn.lzgabel.jaxb.core.v2.util.XmlFactory.allowExternalAccess;
 
 /**
  * Wraps a JAXP {@link Schema} object and lazily instantiate it.

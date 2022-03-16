@@ -8,13 +8,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime;
+package cn.lzgabel.jaxb.runtime.v2.runtime;
 
-import org.glassfish.jaxb.core.unmarshaller.InfosetScanner;
-import org.glassfish.jaxb.runtime.v2.runtime.output.DOMOutput;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.InterningXmlVisitor;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.SAXConnector;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallerImpl;
+import cn.lzgabel.jaxb.core.unmarshaller.InfosetScanner;
+import cn.lzgabel.jaxb.runtime.v2.runtime.output.DOMOutput;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.InterningXmlVisitor;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.SAXConnector;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.UnmarshallerImpl;
 import jakarta.xml.bind.*;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -25,11 +25,11 @@ import javax.xml.validation.Schema;
 
 /**
  * Implementation of {@link Binder}.
- * 
+ *
  * TODO: investigate how much in-place unmarshalling is implemented
  *      - some preliminary work is there. Probably buggy.
  * TODO: work on the marshaller side.
- * 
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
@@ -39,7 +39,7 @@ public class BinderImpl<XmlNode> extends Binder<XmlNode> {
      * The parent context object.
      */
     private final JAXBContextImpl context;
-    
+
     /**
      * Lazily created unmarshaller to do XML->Java binding.
      * @see #getUnmarshaller()
@@ -53,18 +53,18 @@ public class BinderImpl<XmlNode> extends Binder<XmlNode> {
     private MarshallerImpl marshaller;
 
     private final InfosetScanner<XmlNode> scanner;
-    
+
     /**
      * A {@link Binder} always works with the same
      * association map.
      */
     private final AssociationMap<XmlNode> assoc = new AssociationMap<>();
-    
+
     BinderImpl(JAXBContextImpl _context,InfosetScanner<XmlNode> scanner) {
         this.context = _context;
         this.scanner = scanner;
     }
-    
+
     private UnmarshallerImpl getUnmarshaller() {
         if(unmarshaller==null)
             unmarshaller = new UnmarshallerImpl(context,assoc);
@@ -133,7 +133,7 @@ public class BinderImpl<XmlNode> extends Binder<XmlNode> {
         } catch( SAXException e ) {
             throw unmarshaller.createUnmarshalException(e);
         }
-        
+
         return handler.getContext().getResult();
     }
 

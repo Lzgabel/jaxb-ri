@@ -8,13 +8,13 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.property;
+package cn.lzgabel.jaxb.runtime.v2.runtime.property;
 
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.ChildLoader;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.Loader;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.StructureLoader;
-import org.glassfish.jaxb.runtime.v2.runtime.unmarshaller.ValuePropertyLoader;
-import org.glassfish.jaxb.runtime.v2.util.QNameMap;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.ChildLoader;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.Loader;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.StructureLoader;
+import cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller.ValuePropertyLoader;
+import cn.lzgabel.jaxb.runtime.v2.util.QNameMap;
 
 import javax.xml.namespace.QName;
 

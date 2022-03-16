@@ -8,11 +8,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.schemagen;
+package cn.lzgabel.jaxb.runtime.v2.schemagen;
 
-import org.glassfish.jaxb.runtime.v2.schemagen.xmlschema.JaxbContainer;
-import org.glassfish.jaxb.runtime.v2.schemagen.xmlschema.JaxbDistribution;
-import org.glassfish.jaxb.runtime.v2.schemagen.xmlschema.JaxbEnvironmentModel;
+import cn.lzgabel.jaxb.runtime.v2.schemagen.xmlschema.JaxbContainer;
+import cn.lzgabel.jaxb.runtime.v2.schemagen.xmlschema.JaxbDistribution;
+import cn.lzgabel.jaxb.runtime.v2.schemagen.xmlschema.JaxbEnvironmentModel;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -33,8 +33,8 @@ import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 
-import org.glassfish.jaxb.runtime.v2.schemagen.xmlschema.JaxbConcreteContainer;
-import org.glassfish.jaxb.runtime.v2.schemagen.xmlschema.JaxbConcreteDeployment;
+import cn.lzgabel.jaxb.runtime.v2.schemagen.xmlschema.JaxbConcreteContainer;
+import cn.lzgabel.jaxb.runtime.v2.schemagen.xmlschema.JaxbConcreteDeployment;
 
 import java.io.StringReader;
 import java.io.StringWriter;

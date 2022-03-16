@@ -8,12 +8,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.reflect;
+package cn.lzgabel.jaxb.runtime.v2.runtime.reflect;
 
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.core.v2.ClassFactory;
-import org.glassfish.jaxb.core.v2.model.core.Adapter;
-import org.glassfish.jaxb.runtime.v2.runtime.Coordinator;
+import cn.lzgabel.jaxb.runtime.api.AccessorException;
+import cn.lzgabel.jaxb.core.v2.ClassFactory;
+import cn.lzgabel.jaxb.core.v2.model.core.Adapter;
+import cn.lzgabel.jaxb.runtime.v2.runtime.Coordinator;
 import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 
 /**

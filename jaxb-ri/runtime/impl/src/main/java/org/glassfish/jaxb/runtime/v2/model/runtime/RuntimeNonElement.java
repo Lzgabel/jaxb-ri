@@ -8,10 +8,10 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.model.runtime;
+package cn.lzgabel.jaxb.runtime.v2.model.runtime;
 
-import org.glassfish.jaxb.core.v2.model.core.NonElement;
-import org.glassfish.jaxb.runtime.v2.runtime.Transducer;
+import cn.lzgabel.jaxb.core.v2.model.core.NonElement;
+import cn.lzgabel.jaxb.runtime.v2.runtime.Transducer;
 
 import java.lang.reflect.Type;
 

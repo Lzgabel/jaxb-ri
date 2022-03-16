@@ -11,4 +11,4 @@
 /**
  * Abstraction around accessing data of actual objects.
  */
-package org.glassfish.jaxb.runtime.v2.runtime.reflect;
+package cn.lzgabel.jaxb.runtime.v2.runtime.reflect;

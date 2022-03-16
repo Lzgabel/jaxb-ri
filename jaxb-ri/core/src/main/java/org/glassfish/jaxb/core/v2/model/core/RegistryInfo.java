@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.v2.model.core;
+package cn.lzgabel.jaxb.core.v2.model.core;
 
 import java.util.Set;
 
@@ -19,7 +19,7 @@ import jakarta.xml.bind.annotation.XmlRegistry;
  *
  * <p>
  * This interface is only meant to be used as a return type from
- * {@link org.glassfish.jaxb.core.v2.model.impl.ModelBuilderI}.
+ * {@link cn.lzgabel.jaxb.core.v2.model.impl.ModelBuilderI}.
  *
  * @author Kohsuke Kawaguchi
  * @param <T>
@@ -28,13 +28,13 @@ import jakarta.xml.bind.annotation.XmlRegistry;
 public interface RegistryInfo<T,C> {
     /**
      * Returns all the references to other types in this registry.
-     * @return 
+     * @return
      */
     Set<TypeInfo<T,C>> getReferences();
 
     /**
      * Returns the class with {@link XmlRegistry}.
-     * @return 
+     * @return
      */
     C getClazz();
 }

@@ -33,7 +33,7 @@
                 <question>
                     <para>Which version of J2SE does JAXB 2.0 require?</para>
                 </question>
-                
+
                 <answer>
                     <para>Java SE 6 or higher.</para>
                 </answer>
@@ -46,7 +46,7 @@
                 </question>
 
                 <answer>
-                    <para>This is no longer supported. However, you should be able to deploy 
+                    <para>This is no longer supported. However, you should be able to deploy
                     <filename>http://search.maven.org/remotecontent?filepath=com/sun/xml/bind/jaxb1-impl/2.2.5-1/jaxb1-impl-2.2.5-1.jar</filename> with your
                     with your application application.</para>
                 </answer>
@@ -288,11 +288,11 @@ Created-By: 1.6.0_29-b11 (Sun Microsystems Inc.)
 Specification-Title: Java Architecture for XML Binding
 Specification-Version: 2.2.6
 Specification-Vendor: Oracle Corporation
-Implementation-Title: JAXB Reference Implementation 
+Implementation-Title: JAXB Reference Implementation
 Implementation-Version: 2.2.5-SNAPSHOT
 Implementation-Vendor: Oracle Corporation
 Implementation-Vendor-Id: com.sun
-Extension-Name: com.sun.xml.bind
+Extension-Name: cn.lzgabel.jaxb.xml.bind
 Build-Id: 02/09/2012 01:42PM (hudson)
 Class-Path: jakarta.xml.bind-api.jar]]></programlisting>
                     </informalexample>

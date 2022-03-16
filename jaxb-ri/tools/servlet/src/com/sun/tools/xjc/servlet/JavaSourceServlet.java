@@ -23,18 +23,18 @@ import org.kohsuke.gsc.sample.java.JavaColorizer;
 
 import antlr.ANTLRException;
 
-import com.sun.xml.bind.webapp.HttpServletEx;
+import cn.lzgabel.jaxb.xml.bind.webapp.HttpServletEx;
 
 /**
  * Serves a static Java source file in the output directory.
- * 
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
 public class JavaSourceServlet extends HttpServletEx {
-    
+
     private final static SyntaxColorizer colorizer = new JavaColorizer("/xjc/java.css");
-    
+
     protected void run() throws ServletException, IOException {
         String fileName = request.getPathInfo().substring(1);
         File doc = new File( Compiler.get(request).getOutDir(), fileName );

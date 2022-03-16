@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
@@ -55,7 +55,7 @@ final class StAXEventConnector extends StAXConnector {
     /**
      * Construct a new StAX to SAX adapter that will convert a StAX event
      * stream into a SAX event stream.
-     * 
+     *
      * @param staxCore
      *                StAX event source
      * @param visitor
@@ -259,7 +259,7 @@ final class StAXEventConnector extends StAXConnector {
                 qName = prefix + ':' + localName;
             String type = staxAttr.getDTDType();
             String value = staxAttr.getValue();
-            
+
             attrs.addAttribute(uri, localName, qName, type, value);
         }
 

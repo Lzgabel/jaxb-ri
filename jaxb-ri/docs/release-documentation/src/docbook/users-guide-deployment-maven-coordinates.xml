@@ -34,35 +34,35 @@
                     Required to compile against &binding.spec.name;.</para>
             </listitem>
             <listitem>
-                <para><emphasis role="bold">org.glassfish.jaxb:jaxb-runtime:</emphasis> Contains the main runtime used
+                <para><emphasis role="bold">cn.lzgabel.jaxb:jaxb-runtime:</emphasis> Contains the main runtime used
                     for serialization and deserialization java objects to/from xml.</para>
             </listitem>
             <listitem>
-                <para><emphasis role="bold">org.glassfish.jaxb:jaxb-xjc:</emphasis> Tool to generate &binding.spec.name; java sources
+                <para><emphasis role="bold">cn.lzgabel.jaxb:jaxb-xjc:</emphasis> Tool to generate &binding.spec.name; java sources
                     from XML representation.</para>
             </listitem>
             <listitem>
-                <para><emphasis role="bold">org.glassfish.jaxb:jaxb-jxc:</emphasis> Tool to generate XML schema from
+                <para><emphasis role="bold">cn.lzgabel.jaxb:jaxb-jxc:</emphasis> Tool to generate XML schema from
                     &binding.spec.name; java sources.</para>
             </listitem>
         </itemizedlist>
-        <para>In general <literal>com.sun.xml.bind</literal> artifacts are supposed to be used instead.</para>
+        <para>In general <literal>cn.lzgabel.jaxb.xml.bind</literal> artifacts are supposed to be used instead.</para>
     </section>
 
     <section xml:id="Fat-jar">
         <title>JAXB RI bundles</title>
         <itemizedlist>
             <listitem>
-                <para><emphasis role="bold">com.sun.xml.bind:jaxb-impl:</emphasis> &binding.impl.name; runtime jar.</para>
+                <para><emphasis role="bold">cn.lzgabel.jaxb.xml.bind:jaxb-impl:</emphasis> &binding.impl.name; runtime jar.</para>
             </listitem>
             <listitem>
-                <para><emphasis role="bold">com.sun.xml.bind:jaxb-xjc:</emphasis> Class generation tool jar.</para>
+                <para><emphasis role="bold">cn.lzgabel.jaxb.xml.bind:jaxb-xjc:</emphasis> Class generation tool jar.</para>
             </listitem>
             <listitem>
-                <para><emphasis role="bold">com.sun.xml.bind:jaxb-jxc:</emphasis> Schema generation tool jar.</para>
+                <para><emphasis role="bold">cn.lzgabel.jaxb.xml.bind:jaxb-jxc:</emphasis> Schema generation tool jar.</para>
             </listitem>
         </itemizedlist>
-        <para>In contrast to <literal>org.glassfish.jaxb</literal> artifacts, these jars have all dependency classes included inside.
+        <para>In contrast to <literal>cn.lzgabel.jaxb</literal> artifacts, these jars have all dependency classes included inside.
             </para>
     </section>
 
@@ -70,7 +70,7 @@
         <title>Binary distribution</title>
         <itemizedlist>
             <listitem>
-                <para><emphasis role="bold">com.sun.xml.bind:jaxb-ri:</emphasis> Zip distribution containing tooling
+                <para><emphasis role="bold">cn.lzgabel.jaxb.xml.bind:jaxb-ri:</emphasis> Zip distribution containing tooling
                     scripts and all dependency jars in one archive.</para>
             </listitem>
         </itemizedlist>
@@ -109,7 +109,7 @@
 
                 <!-- Runtime -->
                 <dependency>
-                    <groupId>com.sun.xml.bind</groupId>
+                    <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
                     <artifactId>jaxb-impl</artifactId>
                     <version>${impl.version}</version>
                 </dependency>
@@ -156,12 +156,12 @@
             <programlisting language="xml"><![CDATA[
             <!-- Tooling dependencies -->
             <dependency>
-                <groupId>com.sun.xml.bind</groupId>
+                <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
                 <artifactId>jaxb-xjc</artifactId>
                 <version>${xjc.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.sun.xml.bind</groupId>
+                <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
                 <artifactId>jaxb-jxc</artifactId>
                 <version>${jxc.version}</version>
             </dependency>

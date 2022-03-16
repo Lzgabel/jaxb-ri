@@ -21,12 +21,12 @@ import com.sun.tools.xjc.model.nav.NClass;
 import com.sun.tools.xjc.model.nav.NType;
 import com.sun.tools.xjc.outline.Aspect;
 import com.sun.tools.xjc.outline.Outline;
-import org.glassfish.jaxb.core.v2.model.annotation.Locatable;
-import org.glassfish.jaxb.core.v2.model.core.EnumLeafInfo;
-import org.glassfish.jaxb.core.v2.model.core.ID;
-import org.glassfish.jaxb.core.v2.model.core.NonElement;
-import org.glassfish.jaxb.core.v2.model.core.Element;
-import org.glassfish.jaxb.core.v2.runtime.Location;
+import cn.lzgabel.jaxb.core.v2.model.annotation.Locatable;
+import cn.lzgabel.jaxb.core.v2.model.core.EnumLeafInfo;
+import cn.lzgabel.jaxb.core.v2.model.core.ID;
+import cn.lzgabel.jaxb.core.v2.model.core.NonElement;
+import cn.lzgabel.jaxb.core.v2.model.core.Element;
+import cn.lzgabel.jaxb.core.v2.runtime.Location;
 import com.sun.xml.xsom.XSComponent;
 import com.sun.xml.xsom.XmlString;
 
@@ -34,10 +34,10 @@ import org.xml.sax.Locator;
 
 /**
  * Transducer that converts a string into an "enumeration class."
- * 
+ *
  * The structure of the generated class needs to precisely
  * follow the JAXB spec.
- * 
+ *
  * @author Kohsuke KAWAGUCHI
  */
 public final class CEnumLeafInfo implements EnumLeafInfo<NType,NClass>, NClass, CNonElement

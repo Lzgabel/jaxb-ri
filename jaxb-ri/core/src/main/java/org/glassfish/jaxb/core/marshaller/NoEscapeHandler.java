@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.core.marshaller;
+package cn.lzgabel.jaxb.core.marshaller;
 
 import java.io.IOException;
 import java.io.Writer;

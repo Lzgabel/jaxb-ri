@@ -8,22 +8,22 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package org.glassfish.jaxb.runtime.v2.runtime.unmarshaller;
+package cn.lzgabel.jaxb.runtime.v2.runtime.unmarshaller;
 
 import com.sun.istack.NotNull;
 import com.sun.istack.Nullable;
 import com.sun.istack.SAXParseException2;
-import org.glassfish.jaxb.runtime.IDResolver;
-import org.glassfish.jaxb.runtime.api.AccessorException;
-import org.glassfish.jaxb.runtime.api.ClassResolver;
-import org.glassfish.jaxb.core.unmarshaller.InfosetScanner;
-import org.glassfish.jaxb.core.v2.ClassFactory;
-import org.glassfish.jaxb.runtime.v2.runtime.AssociationMap;
-import org.glassfish.jaxb.runtime.v2.runtime.Coordinator;
-import org.glassfish.jaxb.runtime.v2.runtime.JAXBContextImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.ElementBeanInfoImpl;
-import org.glassfish.jaxb.runtime.v2.runtime.JaxBeanInfo;
-import org.glassfish.jaxb.core.v2.runtime.unmarshaller.LocatorEx;
+import cn.lzgabel.jaxb.runtime.IDResolver;
+import cn.lzgabel.jaxb.runtime.api.AccessorException;
+import cn.lzgabel.jaxb.runtime.api.ClassResolver;
+import cn.lzgabel.jaxb.core.unmarshaller.InfosetScanner;
+import cn.lzgabel.jaxb.core.v2.ClassFactory;
+import cn.lzgabel.jaxb.runtime.v2.runtime.AssociationMap;
+import cn.lzgabel.jaxb.runtime.v2.runtime.Coordinator;
+import cn.lzgabel.jaxb.runtime.v2.runtime.JAXBContextImpl;
+import cn.lzgabel.jaxb.runtime.v2.runtime.ElementBeanInfoImpl;
+import cn.lzgabel.jaxb.runtime.v2.runtime.JaxBeanInfo;
+import cn.lzgabel.jaxb.core.v2.runtime.unmarshaller.LocatorEx;
 import jakarta.xml.bind.*;
 import jakarta.xml.bind.helpers.ValidationEventImpl;
 import org.xml.sax.ErrorHandler;

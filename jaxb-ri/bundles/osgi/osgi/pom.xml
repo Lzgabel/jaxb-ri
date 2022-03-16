@@ -16,13 +16,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.sun.xml.bind.mvn</groupId>
+        <groupId>cn.lzgabel.jaxb.xml.bind.mvn</groupId>
         <artifactId>jaxb-osgi</artifactId>
-        <version>4.0.0-SNAPSHOT</version>
+        <version>4.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>com.sun.xml.bind</groupId>
+    <groupId>cn.lzgabel.jaxb.xml.bind</groupId>
     <artifactId>jaxb-osgi</artifactId>
 
     <packaging>jar</packaging>
@@ -37,17 +37,17 @@
         </dependency>
 
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.lzgabel.jaxb</groupId>
             <artifactId>jaxb-core</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.lzgabel.jaxb</groupId>
             <artifactId>jaxb-runtime</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.lzgabel.jaxb</groupId>
             <artifactId>txw2</artifactId>
             <scope>provided</scope>
         </dependency>
@@ -68,17 +68,17 @@
         </dependency>
 
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.lzgabel.jaxb</groupId>
             <artifactId>jaxb-xjc</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.lzgabel.jaxb</groupId>
             <artifactId>codemodel</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.lzgabel.jaxb</groupId>
             <artifactId>xsom</artifactId>
             <scope>provided</scope>
         </dependency>
@@ -88,12 +88,12 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.sun.xml.bind.external</groupId>
+            <groupId>cn.lzgabel.jaxb.xml.bind.external</groupId>
             <artifactId>relaxng-datatype</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.sun.xml.bind.external</groupId>
+            <groupId>cn.lzgabel.jaxb.xml.bind.external</groupId>
             <artifactId>rngom</artifactId>
             <scope>provided</scope>
         </dependency>
@@ -104,7 +104,7 @@
         </dependency>
 
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>cn.lzgabel.jaxb</groupId>
             <artifactId>jaxb-jxc</artifactId>
             <scope>provided</scope>
         </dependency>
@@ -155,7 +155,7 @@
                             <goal>unpack-dependencies</goal>
                         </goals>
                         <configuration>
-                            <includeGroupIds>org.glassfish.jaxb,com.sun.istack,com.sun.xml.bind.external,com.sun.xml.dtd-parser,com.sun.xml.fastinfoset,org.jvnet.staxex</includeGroupIds>
+                            <includeGroupIds>cn.lzgabel.jaxb,com.sun.istack,cn.lzgabel.jaxb.xml.bind.external,com.sun.xml.dtd-parser,com.sun.xml.fastinfoset,org.jvnet.staxex</includeGroupIds>
                             <includeScope>provided</includeScope>
                             <classifier>sources</classifier>
                             <excludeTransitive>true</excludeTransitive>
@@ -170,7 +170,7 @@
                             <goal>unpack-dependencies</goal>
                         </goals>
                         <configuration>
-                            <includeGroupIds>org.glassfish.jaxb,com.sun.istack,com.sun.xml.bind.external,com.sun.xml.dtd-parser,com.sun.xml.fastinfoset,org.jvnet.staxex</includeGroupIds>
+                            <includeGroupIds>cn.lzgabel.jaxb,com.sun.istack,cn.lzgabel.jaxb.xml.bind.external,com.sun.xml.dtd-parser,com.sun.xml.fastinfoset,org.jvnet.staxex</includeGroupIds>
                             <includeScope>provided</includeScope>
                             <classifier>sources</classifier>
                             <excludeTransitive>true</excludeTransitive>
@@ -259,7 +259,7 @@
                         <configuration>
                             <compilerArgs>
                                 <arg>--add-reads</arg>
-                                <arg>com.sun.xml.bind.osgi=ALL-UNNAMED</arg>
+                                <arg>cn.lzgabel.jaxb.xml.bind.osgi=ALL-UNNAMED</arg>
                             </compilerArgs>
                         </configuration>
                     </execution>
@@ -305,10 +305,10 @@
                                     com.sun.xml.txw2.*;version=${jaxb.osgiVersion},
                                     com.sun.xml.xsom;version=${jaxb.osgiVersion},
                                     com.sun.xml.xsom.*;version=${jaxb.osgiVersion},
-                                    org.glassfish.jaxb.core;version=${jaxb.osgiVersion},
-                                    org.glassfish.jaxb.core.*;version=${jaxb.osgiVersion},
-                                    org.glassfish.jaxb.runtime;version=${jaxb.osgiVersion},
-                                    org.glassfish.jaxb.runtime.*;version=${jaxb.osgiVersion},
+                                    cn.lzgabel.jaxb.core;version=${jaxb.osgiVersion},
+                                    cn.lzgabel.jaxb.core.*;version=${jaxb.osgiVersion},
+                                    cn.lzgabel.jaxb.runtime;version=${jaxb.osgiVersion},
+                                    cn.lzgabel.jaxb.runtime.*;version=${jaxb.osgiVersion},
                                     org.jvnet.fastinfoset;version=${fastinfoset.version},
                                     org.jvnet.fastinfoset.*;version=${fastinfoset.version},
                                     org.jvnet.staxex;version=${stax-ex.version},
@@ -401,7 +401,7 @@
                     <includeDependencySources>false</includeDependencySources>
                     <additionalJOptions>
                         <additionalJOption>--add-reads</additionalJOption>
-                        <additionalJOption>com.sun.xml.bind.osgi=ALL-UNNAMED</additionalJOption>
+                        <additionalJOption>cn.lzgabel.jaxb.xml.bind.osgi=ALL-UNNAMED</additionalJOption>
                     </additionalJOptions>
                 </configuration>
             </plugin>

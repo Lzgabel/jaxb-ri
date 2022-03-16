@@ -20,30 +20,30 @@ import org.xml.sax.InputSource;
 import com.sun.tools.xjc.Options;
 import com.sun.tools.xjc.servlet.CloseProofReader;
 import com.sun.tools.xjc.servlet.Compiler;
-import com.sun.xml.bind.webapp.SecureEntityResolver;
-import com.sun.xml.bind.webapp.multipart.MultiPartRequest;
+import cn.lzgabel.jaxb.xml.bind.webapp.SecureEntityResolver;
+import cn.lzgabel.jaxb.xml.bind.webapp.multipart.MultiPartRequest;
 
 /**
- * 
- * 
+ *
+ *
  * @author
  *     Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
  */
 public class SubmissionParser {
-    
+
     private static InputSource getSourceFromBinary( MultiPartRequest multiPart, String name) {
         InputSource is = new InputSource(multiPart.getInputStream(name));
         is.setSystemId("post://"+multiPart.getFilename(name));
         return is;
     }
-    
+
     private static InputSource getSourceFromString( MultiPartRequest multiPart, String name, String systemId) {
         InputSource is = new InputSource(
             new CloseProofReader(new StringReader(multiPart.getString(name))));
         is.setSystemId(systemId);
         return is;
     }
-    
+
     /** Parses a submission into a Compiler object. */
     public static Compiler parse( HttpServletRequest request ) throws IOException {
         // parse parameter
@@ -68,23 +68,23 @@ public class SubmissionParser {
         if( multiPart.has("extension") ) {
             opt.compatibilityMode = Options.EXTENSION;
         }
-        
-        
+
+
         if( multiPart.has("schema") )
             opt.addGrammar (getSourceFromBinary(multiPart, "schema"));
         if( multiPart.has("binding") )
             opt.addBindFile(getSourceFromBinary(multiPart, "binding"));
-        
+
         if( multiPart.has("schemaURL") )
             opt.addGrammar (new InputSource(multiPart.getString("schemaURL")));
         if( multiPart.has("bindingURL") )
             opt.addBindFile(new InputSource(multiPart.getString("bindingURL")));
-        
+
         if( multiPart.has("schemaLiteral") )
             opt.addGrammar (getSourceFromString(multiPart, "schemaLiteral", "http://dummy/test.xsd"));
         if( multiPart.has("bindingLiteral") )
             opt.addBindFile(getSourceFromString(multiPart, "bindingLiteral", "http://dummy/test.jaxb"));
-        
+
         if( opt.getGrammars().length==0 )
             return new FailedCompilerImpl("no schema was specified");
         // launch compilation

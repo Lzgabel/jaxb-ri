@@ -20,21 +20,21 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xjc="&XJCURI;"
   xmlns:p="post-processor-to-build-schema-for-validation"
-  
+
   ns="https://jakarta.ee/xml/ns/jaxb"
-  
+
   cc:runtime-type="com.sun.tools.xjc.reader.xmlschema.bindinfo.NGCCRuntimeEx"
   cc:package="com.sun.tools.xjc.reader.xmlschema.bindinfo.parser"
   datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
 <!--  cc:$runtime-type="com.sun.xml.xsom.impl.parser.NGCCRuntimeEx">-->
-  
+
   <cc:java-import>
     import com.sun.codemodel.*;
     import com.sun.tools.xjc.generator.bean.field.*;
     import com.sun.tools.xjc.model.*;
-    import org.glassfish.jaxb.core.api.impl.NameConverter;
-    import org.glassfish.jaxb.core.v2.WellKnownNamespace;
-    import org.glassfish.jaxb.core.marshaller.SAX2DOMEx;
+    import cn.lzgabel.jaxb.core.api.impl.NameConverter;
+    import cn.lzgabel.jaxb.core.v2.WellKnownNamespace;
+    import cn.lzgabel.jaxb.core.marshaller.SAX2DOMEx;
     import com.sun.tools.xjc.reader.xmlschema.bindinfo.*;
     import com.sun.tools.xjc.reader.Const;
     import org.xml.sax.*;
@@ -44,7 +44,7 @@
     import javax.xml.namespace.QName;
     import javax.xml.parsers.ParserConfigurationException;
   </cc:java-import>
-  
+
   <start cc:class="Root">
     <choice>
       <!-- root of the external binding file. -->
@@ -53,30 +53,30 @@
       <ref name="annotation"/>
     </choice>
   </start>
-  
+
   <!--
     in context of XML Schema annotation
   -->
   <define name="annotation" cc:access="public" cc:class="AnnotationState"
     cc:return-type="BindInfo" cc:return-value="bi">
-    
+
     <cc:java-import>
       import java.io.StringWriter;
-      import org.glassfish.jaxb.core.marshaller.DataWriter;
+      import cn.lzgabel.jaxb.core.marshaller.DataWriter;
     </cc:java-import>
     <cc:java-body>
       // customization declarations
       public BindInfo bi;
-      
+
       private StringWriter w;
 
       private SAX2DOMEx sax2dom;
     </cc:java-body>
-    
+
     <element name="xs:annotation">
       bi = new BindInfo($runtime.copyLocator());
       $runtime.currentBindInfo = bi;
-      
+
       <p:ignore><ref name="anyAttributes"/></p:ignore>
       <zeroOrMore>
         <choice>
@@ -152,18 +152,18 @@
       </zeroOrMore>
     </element>
   </define>
-  
-  
-  
+
+
+
   <!--
-  
+
     Individual customization declarations
-  
+
   -->
-  
+
   <define name="declaration"
     cc:return-type="BIDeclaration" cc:return-value="result">
-    
+
     <cc:java-body>
       private BIDeclaration result;
     </cc:java-body>
@@ -180,11 +180,11 @@
       <!-- result = <ref name="dom"/-->
     </choice>
   </define>
-  
-  
+
+
   <define name="globalBindings"
     cc:return-type="BIGlobalBinding" cc:return-value="makeResult()">
-    
+
     <cc:java-body>
       private Locator loc;
       private Map globalConvs = new HashMap();
@@ -207,7 +207,7 @@
       public BIGlobalBinding makeResult() {
         if( enumBaseTypes.size()==0 )
           enumBaseTypes.add(new QName(WellKnownNamespace.XML_SCHEMA,"NCName")); // defaults to NCName
-        
+
         return new BIGlobalBinding(
           globalConvs,nameConverter,
           choiceContentPropertyWithModelGroupBinding,
@@ -232,7 +232,7 @@
     </cc:java-body>
     <element name="globalBindings">
       loc = $runtime.copyLocator();
-      
+
       <optional>
         <attribute name="underscoreBinding">
           <choice>
@@ -244,19 +244,19 @@
           </choice>
         </attribute>
       </optional>
-      
+
       <optional>
         <attribute name="enableJavaNamingConventions">
           enableJavaNamingConvention = <data type="boolean"/>
         </attribute>
       </optional>
-      
+
       <optional>
         <attribute name="fixedAttributeAsConstantProperty">
           fixedAttrToConstantProperty = <data type="boolean"/>
         </attribute>
       </optional>
-      
+
       <optional>
         <attribute name="generateIsSetMethod">
           needIsSetMethod = <data type="boolean"/>
@@ -289,7 +289,7 @@
           ct = <ref name="collectionType" />
         </attribute>
       </optional>
-      
+
       <optional>
         <attribute name="typesafeEnumMemberName">
           <choice>
@@ -301,7 +301,7 @@
           </choice>
         </attribute>
       </optional>
-      
+
       <optional>
         <attribute name="typesafeEnumBase">
           <list>
@@ -369,7 +369,7 @@
             $runtime.reportUnsupportedFeature("enableFailFastCheck");
         </attribute>
       </optional>
-      
+
       <!-- body -->
       <zeroOrMore>
         <choice>
@@ -378,7 +378,7 @@
               xmlType = <data type="QName"/>
             </attribute>
             conv = <ref name="conversionBody" />
-            
+
             globalConvs.put( $runtime.parseQName(xmlType), conv );
           </element>
           <element name="serializable">
@@ -433,21 +433,21 @@
       </zeroOrMore>
     </element>
   </define>
-  
-  
+
+
   <define name="schemaBindings"
     cc:return-type="BISchemaBinding" cc:return-value="makeResult()">
-    
+
     <cc:java-body>
       private Locator loc;
       public BISchemaBinding makeResult() {
         return new BISchemaBinding(packageName,javadoc,tt,et,at,mt,nt,loc);
       }
     </cc:java-body>
-    
+
     <element name="schemaBindings">
       loc = $runtime.copyLocator();
-      
+
       <optional>
         <element name="package">
           <optional>
@@ -458,7 +458,7 @@
           </optional>
         </element>
       </optional>
-      
+
       <optional>
         <element name="nameXmlTransform">
           <!-- use newer version of RELAXNGCC and wrap them by <interleave> -->
@@ -485,17 +485,17 @@
       </optional>
     </element>
   </define>
-  
+
   <define name="nameXmlTransformRule"
     cc:return-type="BISchemaBinding.NamingRule"
     cc:return-value="new BISchemaBinding.NamingRule(prefix,suffix)">
-    
+
     <cc:java-body>
       private String prefix="";
       private String suffix="";
     </cc:java-body>
-    
-    
+
+
     <optional>
       <attribute name="prefix">
         prefix = <data type="NCName"/>
@@ -507,23 +507,23 @@
       </attribute>
     </optional>
   </define>
-  
-  
-  
+
+
+
   <define name="javadoc" cc:return-type="String" cc:return-value="javadoc">
       <element name="javadoc">
         javadoc = <text />
         javadoc = $runtime.truncateDocComment(javadoc);
       </element>
   </define>
-  
+
   <define name="collectionType" cc:class="CollectionTypeState"
     cc:return-type="FieldRenderer" cc:return-value="r">
     <cc:java-body>
       private FieldRenderer r = null;
     </cc:java-body>
     type = <data type="token"/>
-    
+
     if( type.equals("indexed") )
       r = FieldRenderer.ARRAY;
     else
@@ -533,19 +533,19 @@
         throw new NoClassDefFoundError(e.getMessage());
       }
   </define>
-  
-  
-  
+
+
+
   <define name="class" cc:class="BIClassState"
     cc:return-type="BIClass" cc:return-value="makeResult()">
-    
+
     <cc:java-body>
       private Locator loc;
       public BIClass makeResult() {
         return new BIClass(loc,name,implClass,javadoc);
       }
     </cc:java-body>
-    
+
     <element name="class">
       loc = $runtime.copyLocator();
       <optional>
@@ -561,10 +561,10 @@
       </optional>
     </element>
   </define>
-  
+
   <define name="property"
     cc:return-type="BIProperty" cc:return-value="makeResult()">
-    
+
     <cc:java-body>
       private Locator loc;
       private Boolean isConst = null;
@@ -575,11 +575,11 @@
         JType baseTypeRef = null;
         if(baseType!=null)
           baseTypeRef = $runtime.getType(baseType);
-          
+
         return new BIProperty(loc,name,javadoc,baseTypeRef,conv,ct,isConst,isSet,genElemProp);
       }
     </cc:java-body>
-    
+
     <element name="property">
       loc = $runtime.copyLocator();
       <optional>
@@ -633,18 +633,18 @@
       </interleave>
     </element>
   </define>
-  
+
   <define name="conversion"
     cc:return-type="BIConversion" cc:return-value="r">
     <element name="javaType">
       r = <ref name="conversionBody"/>
     </element>
   </define>
-  
-  
+
+
   <define name="conversionBody"
     cc:return-type="BIConversion" cc:return-value="makeResult()">
-    
+
     <cc:java-import>
       import com.sun.tools.xjc.generator.util.WhitespaceNormalizer;
     </cc:java-import>
@@ -659,8 +659,8 @@
       private String print = null;
       private boolean context = false;
     ]]></cc:java-body>
-    
-    
+
+
     <optional>
       parse = <attribute name="parseMethod" />
     </optional>
@@ -675,12 +675,12 @@
       </attribute>
     </optional>
   </define>
-  
-  
+
+
   <!-- type safe enum customization -->
   <define name="typesafeEnum"
     cc:return-type="BIEnum" cc:return-value="makeResult()">
-    
+
     <cc:java-import>
       import java.util.HashMap;
     </cc:java-import>
@@ -688,12 +688,12 @@
       private HashMap members = new HashMap();
       private boolean dontBind = false;
       private Locator loc,loc2;
-      
+
       private BIEnum makeResult() {
         return new BIEnum(loc,dontBind,name,javadoc,members);
       }
     </cc:java-body>
-    
+
     <element name="typesafeEnumClass">
       loc = $runtime.copyLocator();
       <choice>
@@ -727,8 +727,8 @@
       </choice>
     </element>
   </define>
-  
-  
+
+
   <!-- stand-alone type safe enum member customization -->
   <!--
      Note that only the name attribute is allowed here, and the same element
@@ -742,7 +742,7 @@
         return new BIEnumMember(loc,name,javadoc);
       }
     </cc:java-body>
-  
+
     <element name="typesafeEnumMember">
       loc = $runtime.copyLocator();
       name = <attribute name="name"/>
@@ -751,8 +751,8 @@
       </optional>
     </element>
   </define>
-  
-  
+
+
   <!-- XJC-exntension: root class support -->
   <define name="superClass" cc:return-type="JDefinedClass" cc:return-value="makeResult()">
     <cc:java-body>
@@ -766,12 +766,12 @@
         }
       }
     </cc:java-body>
-    
+
     <element name="xjc:superClass">
       name = <attribute name="name" />
     </element>
   </define>
-  
+
   <!-- XJC-exntension: root interface support -->
   <define name="superInterface" cc:return-type="JDefinedClass" cc:return-value="makeResult()">
     <cc:java-body>
@@ -799,7 +799,7 @@
         return new BISerializable(uid);
       }
     </cc:java-body>
-    
+
     <element name="xjc:serializable">
 //      loc = $runtime.copyLocator();
       <optional>
@@ -810,16 +810,16 @@
       </optional>
     </element>
   </define>
-  
-  
+
+
   <!-- XJC extension: type substitution -->
   <define name="typeSubstitution" cc:return-type="boolean" cc:return-value="true">
     <element name="xjc:typeSubstitution">
       <attribute name="type"><value>complex</value></attribute>
     </element>
   </define>
-  
-  
+
+
   <!-- XJC extension: ID symbol space support -->
   <!--define name="idSymbolSpace" cc:return-type="BIXIdSymbolSpace" cc:return-value="makeResult()">
     <cc:java-body>
@@ -828,14 +828,14 @@
         return new BIXIdSymbolSpace(loc,name);
       }
     </cc:java-body>
-    
+
     <element name="xjc:idSymbolSpace">
       loc = $runtime.copyLocator();
       name = <attribute name="name"/>
     </element>
   </define-->
-  
-  
+
+
   <!-- XJC extension: DOM support -->
   <!--define name="dom" cc:return-type="BIXDom" cc:return-value="makeResult()">
     <cc:java-import>
@@ -852,7 +852,7 @@
         }
       }
     </cc:java-body>
-    
+
     <element name="xjc:dom">
       loc = $runtime.copyLocator();
       <optional>
@@ -865,12 +865,12 @@
       </optional>
     </element>
   </define-->
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
   <p:ignore>
     <!-- these patterns are ignored when using RelaxNGCC -->
     <define name="anyContents">
@@ -885,7 +885,7 @@
         </choice>
       </zeroOrMore>
     </define>
-    
+
     <define name="anyAttributes">
       <zeroOrMore>
         <attribute>

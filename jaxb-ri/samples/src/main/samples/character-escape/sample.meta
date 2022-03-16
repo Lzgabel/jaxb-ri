@@ -14,7 +14,7 @@
 <sample since="1.0">
     <title>character-escape</title>
     <description>This example shows how you can use the new JAXB RI Marshaller
-        property &quot;org.glassfish.jaxb.characterEscapeHandler&quot; to change
+        property &quot;cn.lzgabel.jaxb.characterEscapeHandler&quot; to change
         the default character escaping behavior.</description>
 
     <readme/>

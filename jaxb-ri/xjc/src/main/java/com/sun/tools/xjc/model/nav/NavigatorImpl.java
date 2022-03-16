@@ -14,8 +14,8 @@ import java.lang.reflect.Type;
 import java.util.Collection;
 
 import com.sun.codemodel.JClass;
-import org.glassfish.jaxb.core.v2.model.nav.Navigator;
-import org.glassfish.jaxb.core.v2.runtime.Location;
+import cn.lzgabel.jaxb.core.v2.model.nav.Navigator;
+import cn.lzgabel.jaxb.core.v2.runtime.Location;
 
 /**
  * {@link Navigator} implementation for XJC.
